@@ -1,2 +1,0 @@
-# ProjectNmsh
- Free QBCore Files
