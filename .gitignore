@@ -99,6 +99,5 @@ resources/\[AntiCheat\]
 # resources/\[Encrypted\]
 Artifacts
 # resources/\[wizscripts\]
+server.cfg
 stream
-*.mp3
-resources/\[scripts\]/me-loadingscreen/assets/media/music.mp3

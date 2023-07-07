@@ -320,6 +320,20 @@ Config.Teleports = {
             ["AllowVehicle"] = false,
             label = '[E] Leave'
         }
+    },
+    --- Weedlab
+    [3] = {
+        [1] = {
+            coords = vector4(1066.2, -3183.38, -39.16, 89.3),
+            ["AllowVehicle"] = false,
+            drawText = '[E] Exit Lab'
+        },
+        [2] = {
+            coords = vector4(-66.95, -1312.37, 29.28, 180.95),
+            ["AllowVehicle"] = false,
+            drawText = '[E] Enter Lab'
+        },
+
     }
 }
 
