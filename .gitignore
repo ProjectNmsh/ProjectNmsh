@@ -99,5 +99,5 @@ resources/\[AntiCheat\]
 # resources/\[Encrypted\]
 Artifacts
 # resources/\[wizscripts\]
-.cfg
+server-data/server.cfg
 stream
