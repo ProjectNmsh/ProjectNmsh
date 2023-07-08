@@ -47,6 +47,10 @@ files {
     'html/js/*.js'
 }
 
-dependency 'oxmysql'
+dependency {
+    'oxmysql',
+    'ox_lib'
+}
+
 
 lua54 'yes'

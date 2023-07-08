@@ -43,6 +43,9 @@ provides {
     'tokovoip_script'
 }
 
+
+dependency 'pma-voice'
+
 convar_category 'PMA-Voice' {
     "PMA-Voice Configuration Options",
     {
