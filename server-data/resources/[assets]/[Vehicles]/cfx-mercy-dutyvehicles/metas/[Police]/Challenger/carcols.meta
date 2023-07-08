@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVarGlobal>
+    <Kits>
+        <Item>
+            <kitName>4046_polchal_modkit</kitName>
+            <id value="4046" />
+            <kitType>MKT_SPECIAL</kitType>
+            <visibleMods>
+                <Item>
+                    <modelName>polchal_livery1</modelName>
+                    <modShopLabel>POL_LIV5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_livery2</modelName>
+                    <modShopLabel>POL_LIV3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_livery3</modelName>
+                    <modShopLabel>POL_LIV1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_livery4</modelName>
+                    <modShopLabel>POL_LIV_INT</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_alpr</modelName>
+                    <modShopLabel>POL_ALPR</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_ROOF</type>
+                    <bone>extra_1</bone>
+                    <collisionBone>extra_1</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_null1</modelName>
+                    <modShopLabel>POL_SLICK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>extra_1</Item>
+                    </turnOffBones>
+                    <type>VMT_ROOF</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_ant_1a</modelName>
+                    <modShopLabel>POL_ANT4</modShopLabel>
+                    <linkedModels>
+                        <Item>polchal_ant_1b</Item>
+                        <Item>polchal_ant_1c</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_CHASSIS3</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_console2</modelName>
+                    <modShopLabel>POL_CONS</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_INTERIOR3</type>
+                    <bone>misc_v</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_intlight</modelName>
+                    <modShopLabel>POL_LIGHT</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_INTERIOR4</type>
+                    <bone>misc_j</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_radar</modelName>
+                    <modShopLabel>POL_RADAR</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_INTERIOR2</type>
+                    <bone>misc_t</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_ram2a</modelName>
+                    <modShopLabel>POL_RAM4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_GRILL</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <!-- <collisionBone>mod_col_2</collisionBone> -->
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_a</modelName>
+                    <modShopLabel>POL_TRUNK1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_TRUNK</type>
+                    <bone>misc_p</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_b</modelName>
+                    <modShopLabel>POL_TRUNK2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_TRUNK</type>
+                    <bone>misc_r</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_a</modelName>
+                    <modShopLabel>POL_TRUNK3</modShopLabel>
+                    <linkedModels>
+                        <Item>pol_trunk_c</Item>
+                        <Item>pol_trunk_b</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_TRUNK</type>
+                    <bone>misc_p</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_spoiler</modelName>
+                    <modShopLabel>POLCHAL_SPOIL</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_SPOILER</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_cage</modelName>
+                    <modShopLabel>POL_CAGE</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_cage</modelName>
+                    <modShopLabel>POL_CAGE2</modShopLabel>
+                    <linkedModels>
+                        <Item>polchal_div_gunrack</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_CHASSIS</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!--Mustang Callsigns-->
+                <!-- Callsings Digit 1 -->
+                <Item>
+                    <modelName>polchal_csign_a0</modelName>
+                    <modShopLabel>POL_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a1</modelName>
+                    <modShopLabel>POL_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a2</modelName>
+                    <modShopLabel>POL_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a3</modelName>
+                    <modShopLabel>POL_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a4</modelName>
+                    <modShopLabel>POL_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a5</modelName>
+                    <modShopLabel>POL_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a6</modelName>
+                    <modShopLabel>POL_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a7</modelName>
+                    <modShopLabel>POL_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a8</modelName>
+                    <modShopLabel>POL_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_a9</modelName>
+                    <modShopLabel>POL_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 2 -->
+                <Item>
+                    <modelName>polchal_csign_b0</modelName>
+                    <modShopLabel>POL_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b1</modelName>
+                    <modShopLabel>POL_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b2</modelName>
+                    <modShopLabel>POL_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b3</modelName>
+                    <modShopLabel>POL_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b4</modelName>
+                    <modShopLabel>POL_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b5</modelName>
+                    <modShopLabel>POL_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b6</modelName>
+                    <modShopLabel>POL_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b7</modelName>
+                    <modShopLabel>POL_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b8</modelName>
+                    <modShopLabel>POL_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_b9</modelName>
+                    <modShopLabel>POL_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 3 -->
+                <Item>
+                    <modelName>polchal_csign_c0</modelName>
+                    <modShopLabel>POL_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c1</modelName>
+                    <modShopLabel>POL_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c2</modelName>
+                    <modShopLabel>POL_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c3</modelName>
+                    <modShopLabel>POL_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c4</modelName>
+                    <modShopLabel>POL_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c5</modelName>
+                    <modShopLabel>POL_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c6</modelName>
+                    <modShopLabel>POL_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c7</modelName>
+                    <modShopLabel>POL_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c8</modelName>
+                    <modShopLabel>POL_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_c9</modelName>
+                    <modShopLabel>POL_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 4 -->
+                <Item>
+                    <modelName>polchal_csign_d0</modelName>
+                    <modShopLabel>POL_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d1</modelName>
+                    <modShopLabel>POL_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d2</modelName>
+                    <modShopLabel>POL_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d3</modelName>
+                    <modShopLabel>POL_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d4</modelName>
+                    <modShopLabel>POL_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d5</modelName>
+                    <modShopLabel>POL_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d6</modelName>
+                    <modShopLabel>POL_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d7</modelName>
+                    <modShopLabel>POL_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d8</modelName>
+                    <modShopLabel>POL_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_d9</modelName>
+                    <modShopLabel>POL_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 5 -->
+                <Item>
+                    <modelName>polchal_csign_e0</modelName>
+                    <modShopLabel>POL_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e1</modelName>
+                    <modShopLabel>POL_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e2</modelName>
+                    <modShopLabel>POL_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e3</modelName>
+                    <modShopLabel>POL_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e4</modelName>
+                    <modShopLabel>POL_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e5</modelName>
+                    <modShopLabel>POL_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e6</modelName>
+                    <modShopLabel>POL_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e7</modelName>
+                    <modShopLabel>POL_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e8</modelName>
+                    <modShopLabel>POL_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polchal_csign_e9</modelName>
+                    <modShopLabel>POL_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+            </visibleMods>
+            <linkMods>
+                <Item>
+                    <modelName>polchal_ant_1b</modelName>
+                    <bone>boot</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>polchal_ant_1c</modelName>
+                    <bone>miscwobble_1</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_b</modelName>
+                    <bone>misc_r</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_c</modelName>
+                    <bone>misc_q</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>polchal_div_gunrack</modelName>
+                    <bone>chassis</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+            </linkMods>
+            <statMods>
+                <Item>
+                    <identifier />
+                    <modifier value="25" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="150" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="200" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="25" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_BRAKES</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_BRAKES</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_BRAKES</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="25" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="150" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="8" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="15" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="30" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="20" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="40" />
+                    <audioApply value="1.000000" />
+                    <weight value="10" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="60" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="80" />
+                    <audioApply value="1.000000" />
+                    <weight value="30" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="40" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_TRUCK</identifier>
+                    <modifier value="1766676233" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_COP</identifier>
+                    <modifier value="2904189469" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_CLOWN</identifier>
+                    <modifier value="2543206147" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_1</identifier>
+                    <modifier value="1732399718" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_2</identifier>
+                    <modifier value="2046162893" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_3</identifier>
+                    <modifier value="2194999691" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_4</identifier>
+                    <modifier value="2508304100" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_5</identifier>
+                    <modifier value="3707223535" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_SAD_TROMBONE</identifier>
+                    <modifier value="632950117" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_1</identifier>
+                    <modifier value="3628534289" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_2</identifier>
+                    <modifier value="3892554122" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_3</identifier>
+                    <modifier value="4112892878" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_4</identifier>
+                    <modifier value="116877169" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_5</identifier>
+                    <modifier value="2684983719" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_6</identifier>
+                    <modifier value="2982690084" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_7</identifier>
+                    <modifier value="3203290992" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_C0</identifier>
+                    <modifier value="771284519" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_D0</identifier>
+                    <modifier value="2586621229" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_E0</identifier>
+                    <modifier value="283386134" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_F0</identifier>
+                    <modifier value="3884502400" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_G0</identifier>
+                    <modifier value="265723083" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_A0</identifier>
+                    <modifier value="1746883687" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_B0</identifier>
+                    <modifier value="1919870950" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_C1</identifier>
+                    <modifier value="1085277077" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_1</identifier>
+                    <modifier value="444549672" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_2</identifier>
+                    <modifier value="1603064898" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_3</identifier>
+                    <modifier value="240366033" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_4</identifier>
+                    <modifier value="960137118" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_1</identifier>
+                    <modifier value="3572144790" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_2</identifier>
+                    <modifier value="3801396714" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_3</identifier>
+                    <modifier value="2843657151" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_4</identifier>
+                    <modifier value="3341811489" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+            </statMods>
+            <slotNames></slotNames>
+            <liveryNames>
+                <Item>MUSTANG19_LV1</Item>
+            </liveryNames>
+        </Item>
+    </Kits>
+</CVehicleModelInfoVarGlobal>

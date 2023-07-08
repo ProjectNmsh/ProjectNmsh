@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>w_sb_mpx</modelName>
+			<txdName>w_sb_mpx</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>w_sb_mpx_mag1</modelName>
+			<txdName>w_sb_mpx</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>w_at_scope_mpx_01</modelName>
+			<txdName>w_sb_mpx</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>w_at_scope_mpx_02</modelName>
+			<txdName>w_at_mpx_scope</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>w_at_px_lasr</modelName>
+			<txdName>w_at_px_lasr</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

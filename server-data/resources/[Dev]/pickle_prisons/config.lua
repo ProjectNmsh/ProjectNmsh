@@ -25,7 +25,7 @@ Config.ServeTimeOffline = false -- When set to true, players can serve their tim
 
 Config.EnableSneakout = false -- When set to true, anytime the player is outside the prison without being part of a breakout, they are freed instead of being brought back.
 
-Config.XPEnabled = true -- When set to true, this will enable Pickle's XP compatibility, and enable xp rewards.
+Config.XPEnabled = false -- When set to true, this will enable Pickle's XP compatibility, and enable xp rewards.
 
 Config.XPCategories = { -- Registered XP Types for Pickle's XP.
     ["strength"] = {

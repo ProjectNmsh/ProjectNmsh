@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>W_AR_M70</modelName>
+			<txdName>W_AR_M70</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="1000"/>
+		</Item>
+		<Item>
+			<modelName>W_AR_M70_Mag1</modelName>
+			<txdName>W_AR_M70_Mag1</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="1000"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

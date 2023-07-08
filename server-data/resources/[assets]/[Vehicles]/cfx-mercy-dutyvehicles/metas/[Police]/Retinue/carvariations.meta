@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+    <variationData>
+        <Item>
+        <modelName>polretinue</modelName>
+        <colors>
+            <Item>
+            <indices content="char_array">
+                112
+                112
+                0
+                156
+                112
+                0
+            </indices>
+            <liveries>
+                <Item value="false" />
+                <Item value="false" />
+                <Item value="false" />
+                <Item value="false" />
+                <Item value="false" />
+                <Item value="false" />
+                <Item value="false" />
+                <Item value="false" />
+            </liveries>
+            </Item>
+        </colors>
+        <kits>
+            <Item>2252_npolretinue_modkit</Item>
+        </kits>
+        <windowsWithExposedEdges />
+        <plateProbabilities>
+            <Item>
+            <Name>Police guv plate</Name>
+            <Value value="100" />
+            </Item>
+        </plateProbabilities>
+        <lightSettings value="1" />
+        <sirenSettings value="455" />
+        </Item>
+    </variationData>
+</CVehicleModelInfoVariation>

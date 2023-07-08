@@ -422,6 +422,197 @@ Config.Products = {
             requiresLicense = true
         },
     },
+    ["petshop"] = {
+        [1] = {
+            name = 'keepcompanionwesty',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 1
+        },
+        [2] = {
+            name = 'keepcompanionshepherd',
+            price = 150000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 2
+        },
+        [3] = {
+            name = 'keepcompanionretriever',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 3
+        },
+        [4] = {
+            name = 'keepcompanionrottweiler',
+            price = 75000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 4
+        },
+        [5] = {
+            name = 'keepcompanionpug',
+            price = 95000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 5
+        },
+        [6] = {
+            name = 'keepcompanionpoodle',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 6
+        },
+
+        [7] = {
+            name = 'keepcompanionmtlion2',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 7
+        },
+        [8] = {
+            name = 'keepcompanioncat',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 8
+        },
+        [9] = {
+            name = 'keepcompanionmtlion',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 9
+        },
+        [10] = {
+            name = 'keepcompanionhusky',
+            price = 50000,
+            amount = 5,
+            info = {},
+            type = 'item',
+            slot = 10
+        },
+        [11] = {
+            name = 'petfood',
+            price = 500,
+            amount = 1000,
+            info = {},
+            type = 'item',
+            slot = 11
+        },
+        [12] = {
+            name = 'collarpet',
+            price = 50000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 12
+        },
+        [13] = {
+            name = 'firstaidforpet',
+            price = 5000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 13
+        },
+        [14] = {
+            name = 'petnametag',
+            price = 5000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 14
+        },
+        [15] = {
+            name = 'petwaterbottleportable',
+            price = 5000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 15
+        },
+        [16] = {
+            name = 'petgroomingkit',
+            price = 5000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 16
+        },
+        [17] = {
+            name = 'keepcompanionrabbit',
+            price = 15000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 17
+        },
+        [18] = {
+            name = 'keepcompanionhen',
+            price = 5000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 18
+        },
+        [19] = {
+            name = 'keepcompanioncoyote',
+            price = 50000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 19
+        },
+    },
+    ["huntingshop"] = {
+        [1] = {
+            name = 'weapon_musket',
+            price = 1500,
+            amount = 10,
+            info = {},
+            type = 'weapon',
+            slot = 1,
+            requiresLicense = true
+        },
+        [2] = {
+            name = 'shotgun_ammo',
+            price = 100,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 2,
+            requiresLicense = true
+        },
+        [3] = {
+            name = 'huntingbait',
+            price = 150,
+            amount = 150,
+            info = {},
+            type = 'item',
+            slot = 3
+        },
+        [4] = {
+            name = 'weapon_knife',
+            price = 500,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 4
+        }
+    },
     ["casino"] = {
         [1] = {
             name = 'casinochips',
@@ -1050,5 +1241,32 @@ Config.Locations = {
         ["blipscale"] = 0.8,
         ["blipcolor"] = 0,
         ["delivery"] = vector4(-1507.64, 1505.52, 115.29, 262.2)
+    },
+    ["petshop"] = {
+        ["label"] = "Pet Shop",
+        ["coords"] = vector4(561.18, 2741.51, 42.87, 199.08), --or vector4(-659.87, -936.46, 21.83, 130.04), --  for mlo https://www.gta5-mods.com/maps/
+        ["ped"] = 'S_M_M_StrVend_01',
+        ["scenario"] = "WORLD_HUMAN_COP_IDLES",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-paw",
+        ["targetLabel"] = "Open Pet Shop",
+        ["products"] = Config.Products["petshop"],
+        ["showblip"] = true,
+        ["blipsprite"] = 267,
+        ["blipcolor"] = 5
+    },
+    ["huntingshop"] = {
+        ["label"] = "Hunting Shop",
+        ["type"] = "weapon",
+        ["coords"] = vector4(-679.47, 5834.49, 17.33, 127.62),
+        ["ped"] = 'ig_hunter',
+        ["scenario"] = "WORLD_HUMAN_COP_IDLES",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-gun",
+        ["targetLabel"] = "Open Hunting Shop",
+        ["products"] = Config.Products["huntingshop"],
+        ["showblip"] = true,
+        ["blipsprite"] = 626,
+        ["blipcolor"] = 1
     },
 }

@@ -1,0 +1,1818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVarGlobal>
+    <Kits>
+        <Item>
+            <kitName>4037_polvic_modkit</kitName>
+            <id value="4037" />
+            <kitType>MKT_SPECIAL</kitType>
+            <visibleMods>
+                <Item>
+                    <modelName>pol_alpr</modelName>
+                    <modShopLabel>pol_ALPR2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_SPOILER</type>
+                    <bone>extra_1</bone>
+                    <collisionBone>extra_1</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>null</modelName>
+                    <modShopLabel>pol_SLICK2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>extra_1</Item>
+                    </turnOffBones>
+                    <type>VMT_SPOILER</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_ant_1a</modelName>
+                    <modShopLabel>pol_ANT1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS3</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_ant_2a</modelName>
+                    <modShopLabel>pol_ANT2</modShopLabel>
+                    <linkedModels>
+                        <Item>pol_ant_2b</Item>
+                        <Item>pol_ant_2c</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_CHASSIS3</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_ant_3a</modelName>
+                    <modShopLabel>pol_ANT3</modShopLabel>
+                    <linkedModels>
+                        <Item>pol_ant_3b</Item>
+                        <Item>pol_ant_3c</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_CHASSIS3</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_console</modelName>
+                    <modShopLabel>pol_CONS</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_INTERIOR3</type>
+                    <bone>misc_v</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_intlight</modelName>
+                    <modShopLabel>pol_LIGHT</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_INTERIOR4</type>
+                    <bone>misc_u</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_radar</modelName>
+                    <modShopLabel>pol_RADAR</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_INTERIOR2</type>
+                    <bone>misc_t</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_ram1</modelName>
+                    <modShopLabel>pol_RAM1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_BUMPER_F</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <!-- <collisionBone>mod_col_1</collisionBone> -->
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_ram2a</modelName>
+                    <modShopLabel>pol_RAM2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_BUMPER_F</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <!-- <collisionBone>mod_col_2</collisionBone> -->
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_ram2a</modelName>
+                    <modShopLabel>pol_RAM3</modShopLabel>
+                    <linkedModels>
+                        <Item>pol_ram2b</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_BUMPER_F</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <!-- <collisionBone>mod_col_3</collisionBone> -->
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_a</modelName>
+                    <modShopLabel>pol_TRUNK1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_TRUNK</type>
+                    <bone>misc_p</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_b</modelName>
+                    <modShopLabel>pol_TRUNK2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_TRUNK</type>
+                    <bone>misc_r</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_a</modelName>
+                    <modShopLabel>pol_TRUNK3</modShopLabel>
+                    <linkedModels>
+                        <Item>pol_trunk_c</Item>
+                        <Item>pol_trunk_b</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_TRUNK</type>
+                    <bone>misc_p</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_divider</modelName>
+                    <modShopLabel>pol_DIV</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_divider</modelName>
+                    <modShopLabel>pol_DIV2</modShopLabel>
+                    <linkedModels>
+                        <Item>polvic_div_gunrack</Item>
+                    </linkedModels>
+                    <turnOffBones />
+                    <type>VMT_CHASSIS</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_k9_a</modelName>
+                    <modShopLabel>pol_K9</modShopLabel>
+                    <linkedModels>
+                        <Item>polvic_k9_b</Item>
+                        <Item>polvic_k9_c</Item>
+                    </linkedModels>
+                    <turnOffBones>
+                        <Item>misc_b</Item>
+                        <Item>misc_e</Item>
+                        <Item>misc_l</Item>
+                    </turnOffBones>
+                    <type>VMT_SEATS</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Liveries -->
+                <Item>
+                    <modelName>pol_livery1</modelName>
+                    <modShopLabel>pol_LIV1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery2</modelName>
+                    <modShopLabel>pol_LIV2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery3</modelName>
+                    <modShopLabel>pol_LIV3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>misc_s</Item>
+                    </turnOffBones>
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery4</modelName>
+                    <modShopLabel>pol_LIV4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>misc_s</Item>
+                    </turnOffBones>
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery5</modelName>
+                    <modShopLabel>pol_LIV5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>misc_s</Item>
+                    </turnOffBones>
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery6</modelName>
+                    <modShopLabel>pol_LIV6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>misc_s</Item>
+                    </turnOffBones>
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery7</modelName>
+                    <modShopLabel>pol_LIV7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones>
+                        <Item>misc_s</Item>
+                    </turnOffBones>
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery8</modelName>
+                    <modShopLabel>pol_LIV8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery9</modelName>
+                    <modShopLabel>pol_LIV9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery10</modelName>
+                    <modShopLabel>pol_LIV10</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!--
+        <Item><modelName>pol_livery11</modelName><modShopLabel>pol_LIV11</modShopLabel><linkedModels /><turnOffBones /><type>VMT_LIVERY_MOD</type><bone>chassis</bone><collisionBone>chassis</collisionBone><cameraPos>VMCP_DEFAULT</cameraPos><audioApply value="1.000000" /><weight value="20" /><turnOffExtra value="false" /><disableBonnetCamera value="false" /><allowBonnetSlide value="true" /></Item><Item><modelName>pol_livery12</modelName><modShopLabel>pol_LIV12</modShopLabel><linkedModels /><turnOffBones /><type>VMT_LIVERY_MOD</type><bone>chassis</bone><collisionBone>chassis</collisionBone><cameraPos>VMCP_DEFAULT</cameraPos><audioApply value="1.000000" /><weight value="20" /><turnOffExtra value="false" /><disableBonnetCamera value="false" /><allowBonnetSlide value="true" /></Item><Item><modelName>pol_livery13</modelName><modShopLabel>pol_LIV13</modShopLabel><linkedModels /><turnOffBones /><type>VMT_LIVERY_MOD</type><bone>chassis</bone><collisionBone>chassis</collisionBone><cameraPos>VMCP_DEFAULT</cameraPos><audioApply value="1.000000" /><weight value="20" /><turnOffExtra value="false" /><disableBonnetCamera value="false" /><allowBonnetSlide value="true" /></Item><Item><modelName>pol_livery14</modelName><modShopLabel>pol_LIV14</modShopLabel><linkedModels /><turnOffBones /><type>VMT_LIVERY_MOD</type><bone>chassis</bone><collisionBone>chassis</collisionBone><cameraPos>VMCP_DEFAULT</cameraPos><audioApply value="1.000000" /><weight value="20" /><turnOffExtra value="false" /><disableBonnetCamera value="false" /><allowBonnetSlide value="true" /></Item><Item><modelName>pol_livery15</modelName><modShopLabel>pol_LIV15</modShopLabel><linkedModels /><turnOffBones /><type>VMT_LIVERY_MOD</type><bone>chassis</bone><collisionBone>chassis</collisionBone><cameraPos>VMCP_DEFAULT</cameraPos><audioApply value="1.000000" /><weight value="20" /><turnOffExtra value="false" /><disableBonnetCamera value="false" /><allowBonnetSlide value="true" /></Item><Item><modelName>pol_livery16</modelName><modShopLabel>pol_LIV16</modShopLabel><linkedModels /><turnOffBones /><type>VMT_LIVERY_MOD</type><bone>chassis</bone><collisionBone>chassis</collisionBone><cameraPos>VMCP_DEFAULT</cameraPos><audioApply value="1.000000" /><weight value="20" /><turnOffExtra value="false" /><disableBonnetCamera value="false" /><allowBonnetSlide value="true" /></Item>
+        -->
+                <Item>
+                    <modelName>pol_livery17</modelName>
+                    <modShopLabel>pol_LIV17</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>pol_livery18</modelName>
+                    <modShopLabel>pol_LIV18</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_LIVERY_MOD</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 1 -->
+                <Item>
+                    <modelName>polvic_csign_a0</modelName>
+                    <modShopLabel>pol_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a1</modelName>
+                    <modShopLabel>pol_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a2</modelName>
+                    <modShopLabel>pol_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a3</modelName>
+                    <modShopLabel>pol_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a4</modelName>
+                    <modShopLabel>pol_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a5</modelName>
+                    <modShopLabel>pol_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a6</modelName>
+                    <modShopLabel>pol_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a7</modelName>
+                    <modShopLabel>pol_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a8</modelName>
+                    <modShopLabel>pol_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_a9</modelName>
+                    <modShopLabel>pol_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS2</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 2 -->
+                <Item>
+                    <modelName>polvic_csign_b0</modelName>
+                    <modShopLabel>pol_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b1</modelName>
+                    <modShopLabel>pol_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b2</modelName>
+                    <modShopLabel>pol_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b3</modelName>
+                    <modShopLabel>pol_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b4</modelName>
+                    <modShopLabel>pol_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b5</modelName>
+                    <modShopLabel>pol_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b6</modelName>
+                    <modShopLabel>pol_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b7</modelName>
+                    <modShopLabel>pol_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b8</modelName>
+                    <modShopLabel>pol_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_b9</modelName>
+                    <modShopLabel>pol_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS4</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 3 -->
+                <Item>
+                    <modelName>polvic_csign_c0</modelName>
+                    <modShopLabel>pol_C0</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c1</modelName>
+                    <modShopLabel>pol_C1</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c2</modelName>
+                    <modShopLabel>pol_C2</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c3</modelName>
+                    <modShopLabel>pol_C3</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c4</modelName>
+                    <modShopLabel>pol_C4</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c5</modelName>
+                    <modShopLabel>pol_C5</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c6</modelName>
+                    <modShopLabel>pol_C6</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c7</modelName>
+                    <modShopLabel>pol_C7</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c8</modelName>
+                    <modShopLabel>pol_C8</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_c9</modelName>
+                    <modShopLabel>pol_C9</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_CHASSIS5</type>
+                    <bone>chassis</bone>
+                    <collisionBone>chassis</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 4 -->
+                <Item>
+                    <modelName>polvic_csign_d0</modelName>
+                    <modShopLabel>pol_C0_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d1</modelName>
+                    <modShopLabel>pol_C1_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d2</modelName>
+                    <modShopLabel>pol_C2_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d3</modelName>
+                    <modShopLabel>pol_C3_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d4</modelName>
+                    <modShopLabel>pol_C4_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d5</modelName>
+                    <modShopLabel>pol_C5_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d6</modelName>
+                    <modShopLabel>pol_C6_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d7</modelName>
+                    <modShopLabel>pol_C7_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d8</modelName>
+                    <modShopLabel>pol_C8_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_d9</modelName>
+                    <modShopLabel>pol_C9_DEP</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_L</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <!-- Callsings Digit 5 -->
+                <Item>
+                    <modelName>polvic_csign_e0</modelName>
+                    <modShopLabel>pol_C0_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e1</modelName>
+                    <modShopLabel>pol_C1_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e2</modelName>
+                    <modShopLabel>pol_C2_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e3</modelName>
+                    <modShopLabel>pol_C3_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e4</modelName>
+                    <modShopLabel>pol_C4_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e5</modelName>
+                    <modShopLabel>pol_C5_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e6</modelName>
+                    <modShopLabel>pol_C6_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e7</modelName>
+                    <modShopLabel>pol_C7_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e8</modelName>
+                    <modShopLabel>pol_C8_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+                <Item>
+                    <modelName>polvic_csign_e9</modelName>
+                    <modShopLabel>pol_C9_RANK</modShopLabel>
+                    <linkedModels />
+                    <turnOffBones />
+                    <type>VMT_WING_R</type>
+                    <bone>boot</bone>
+                    <collisionBone>boot</collisionBone>
+                    <cameraPos>VMCP_DEFAULT</cameraPos>
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <turnOffExtra value="false" />
+                    <disableBonnetCamera value="false" />
+                    <allowBonnetSlide value="true" />
+                </Item>
+            </visibleMods>
+            <linkMods>
+                <Item>
+                    <modelName>pol_ant_2b</modelName>
+                    <bone>boot</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_ant_2c</modelName>
+                    <bone>bobble_head</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_ant_3b</modelName>
+                    <bone>boot</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_ant_3c</modelName>
+                    <bone>miscwobble_1</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_ram2b</modelName>
+                    <bone>chassis</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_b</modelName>
+                    <bone>misc_r</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>pol_trunk_c</modelName>
+                    <bone>misc_q</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>polvic_div_gunrack</modelName>
+                    <bone>chassis</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>polvic_k9_b</modelName>
+                    <bone>door_dside_r</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+                <Item>
+                    <modelName>polvic_k9_c</modelName>
+                    <bone>door_pside_r</bone>
+                    <turnOffExtra value="false" />
+                </Item>
+            </linkMods>
+            <statMods>
+                <Item>
+                    <identifier />
+                    <modifier value="10" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="25" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="75" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ENGINE</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="25" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_BRAKES</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_BRAKES</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_BRAKES</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="25" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="50" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="75" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="5" />
+                    <type>VMT_GEARBOX</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="20" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="40" />
+                    <audioApply value="1.000000" />
+                    <weight value="10" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="60" />
+                    <audioApply value="1.000000" />
+                    <weight value="20" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="80" />
+                    <audioApply value="1.000000" />
+                    <weight value="30" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="100" />
+                    <audioApply value="1.000000" />
+                    <weight value="40" />
+                    <type>VMT_ARMOUR</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="4" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="8" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="12" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier />
+                    <modifier value="16" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_SUSPENSION</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_TRUCK</identifier>
+                    <modifier value="1766676233" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_COP</identifier>
+                    <modifier value="2904189469" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_CLOWN</identifier>
+                    <modifier value="2543206147" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_1</identifier>
+                    <modifier value="1732399718" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_2</identifier>
+                    <modifier value="2046162893" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_3</identifier>
+                    <modifier value="2194999691" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_4</identifier>
+                    <modifier value="2508304100" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_MUSICAL_5</identifier>
+                    <modifier value="3707223535" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HORN_SAD_TROMBONE</identifier>
+                    <modifier value="632950117" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_1</identifier>
+                    <modifier value="3628534289" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_2</identifier>
+                    <modifier value="3892554122" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_3</identifier>
+                    <modifier value="4112892878" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_4</identifier>
+                    <modifier value="116877169" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_5</identifier>
+                    <modifier value="2684983719" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_6</identifier>
+                    <modifier value="2982690084" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>MUSICAL_HORN_BUSINESS_7</identifier>
+                    <modifier value="3203290992" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_C0</identifier>
+                    <modifier value="771284519" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_D0</identifier>
+                    <modifier value="2586621229" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_E0</identifier>
+                    <modifier value="283386134" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_F0</identifier>
+                    <modifier value="3884502400" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_G0</identifier>
+                    <modifier value="265723083" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_A0</identifier>
+                    <modifier value="1746883687" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_B0</identifier>
+                    <modifier value="1919870950" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>DLC_BUSI2_C_MAJOR_NOTES_C1</identifier>
+                    <modifier value="1085277077" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_1</identifier>
+                    <modifier value="444549672" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_2</identifier>
+                    <modifier value="1603064898" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_3</identifier>
+                    <modifier value="240366033" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>HIPSTER_HORN_4</identifier>
+                    <modifier value="960137118" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_1</identifier>
+                    <modifier value="3572144790" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_2</identifier>
+                    <modifier value="3801396714" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_3</identifier>
+                    <modifier value="2843657151" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>INDEP_HORN_4</identifier>
+                    <modifier value="3341811489" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>LUXE_HORN_1</identifier>
+                    <modifier value="3199657341" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>LUXE_HORN_2</identifier>
+                    <modifier value="2900378064" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>LUXE_HORN_3</identifier>
+                    <modifier value="3956195248" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>LUXORY_HORN_1</identifier>
+                    <modifier value="676333254" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>LUXURY_HORN_2</identifier>
+                    <modifier value="2099578296" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>LUXURY_HORN_3</identifier>
+                    <modifier value="1373384483" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>ORGAN_HORN_LOOP_01</identifier>
+                    <modifier value="2916775806" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>ORGAN_HORN_LOOP_01_PREVIEW</identifier>
+                    <modifier value="3714706952" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>ORGAN_HORN_LOOP_02</identifier>
+                    <modifier value="2611860261" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>ORGAN_HORN_LOOP_02_PREVIEW</identifier>
+                    <modifier value="3206770359" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>LOWRIDER_HORN_1</identifier>
+                    <modifier value="310529291" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>LOWRIDER_HORN_1_PREVIEW</identifier>
+                    <modifier value="2965568987" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>LOWRIDER_HORN_2</identifier>
+                    <modifier value="55291550" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>LOWRIDER_HORN_2_PREVIEW</identifier>
+                    <modifier value="965054819" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>XM15_HORN_01</identifier>
+                    <modifier value="55862314" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>XM15_HORN_01_PREVIEW</identifier>
+                    <modifier value="2156743178" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>XM15_HORN_02</identifier>
+                    <modifier value="400002352" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>XM15_HORN_02_PREVIEW</identifier>
+                    <modifier value="897484282" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <Item>
+                    <identifier>XM15_HORN_03</identifier>
+                    <modifier value="560832604" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+                <!-- PREVIEW HORN - FOR MOD SHOP USE ONLY -->
+                <Item>
+                    <identifier>XM15_HORN_03_PREVIEW</identifier>
+                    <modifier value="314232747" />
+                    <audioApply value="1.000000" />
+                    <weight value="0" />
+                    <type>VMT_HORN</type>
+                </Item>
+            </statMods>
+            <slotNames />
+            <liveryNames />
+        </Item>
+    </Kits>
+</CVehicleModelInfoVarGlobal>

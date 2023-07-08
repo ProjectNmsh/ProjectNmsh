@@ -318,6 +318,7 @@ end
 exports("GetItemsByName", GetItemsByName)
 
 
+
 local function ClearInventory(source, filterItems)
 	local Player = QBCore.Functions.GetPlayer(source)
 	local savedItemData = {}
@@ -536,6 +537,25 @@ local function GetStashItems(stashId)
 	end
 	return items
 end
+
+local function RegisterStash(stashId)
+	if not Stashes[stashId] then
+		local stashItems = GetStashItems(stashId)
+		if next(stashItems) then
+			Stashes[stashId] = {}
+			Stashes[stashId].items = stashItems
+			Stashes[stashId].isOpen = false
+			Stashes[stashId].label = stashId
+		else
+			Stashes[stashId] = {}
+			Stashes[stashId].items = {}
+			Stashes[stashId].isOpen = false
+			Stashes[stashId].label = stashId
+		end
+	end
+end
+
+exports('RegisterStash', RegisterStash)
 
 local function SaveStashItems(stashId, items)
 	if Stashes[stashId].label == "Stash-None" or not items then return end

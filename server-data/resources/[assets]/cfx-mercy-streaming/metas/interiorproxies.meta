@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+	<startFrom value="2000"/>
+		<!-- Sushi -->
+		<!-- <Item>school_interior_upper</Item>
+		<Item>school_exterior_01</Item>
+		<Item>ch2_07d_grass_0</Item>
+		<Item>apa_ss1_occl_03</Item>
+		<Item>apa_ss1_rd1_critical_1</Item>
+		<Item>apa_ss1_13_strm_0</Item> -->
+		<!-- Car Dealer -->
+		<!-- <Item>hei_bh1_13_strm_0</Item> -->
+		<Item>int_luxury_milo_</Item>
+		<!-- Rehab -->
+		<Item>ult-rehab_milo_</Item>
+		<!-- <Item>apa_ch2_10_long_0</Item>
+		<Item>apa_ch2_occl_00</Item>
+		<Item>apa_ch2_occl_02</Item>
+		<Item>hei_ch2_10_long_0</Item> -->
+		<!-- Hunting -->
+		<!-- <Item>hei_cs1_16_strm_0</Item> -->
+		<Item>int_genstore_milo_</Item>
+		<!-- Digital Den -->
+		<!-- <Item>hei_id2_occl_03</Item> -->
+		<!-- <Item>kt1_occl_03</Item> -->
+		<Item>lr_cs4_14_interior_v_hicksbar_np_milo_</Item>
+		<Item>xee_digital_den_ls_milo_</Item>
+		<Item>xee_digital_den_milo_</Item>
+		<!-- Yoga -->
+		<!-- <Item>story_props</Item> -->
+		<Item>v_int_m_yoga_milo_</Item>
+		<!-- <Item>yoga_beach</Item> -->
+		<!-- <Item>gta5interiors_krnt</Item> -->
+		<!-- <Item>hei_dt1_occl_05</Item> -->
+		<!-- <Item>cs1_far_occl_01</Item> -->
+		<!-- <Item>lr_cs4_14_strm_1</Item> -->
+		<Item>lr_cs4_14_interior_v_hicksbar_milo_</Item>
+		<!-- <Item>fairzz_can_suck_it</Item>
+		<Item>lr_sc1_04_strm_0</Item> -->
+		<Item>vu_fight_club_milo_</Item>
+		<!-- Trees -->
+		<!-- <Item>Forests</Item>
+		<Item>Forests_lod</Item>
+		<Item>Forests01</Item>
+		<Item>Forests01_lod</Item>
+		<Item>Forests2</Item>
+		<Item>Forests2_lod</Item>
+		<Item>Forests3</Item>
+		<Item>Forests3_lod</Item>
+		<Item>Forests4</Item>
+		<Item>Forests4_lod</Item>
+		<Item>Forests5</Item>
+		<Item>Forests5_lod</Item>
+		<Item>Forests6</Item>
+		<Item>Forests6_lod</Item>
+		<Item>Forests7</Item>
+		<Item>Forests7_lod</Item>
+		<Item>Forests8</Item>
+		<Item>Forests8_lod</Item>
+		<Item>map_06_closed_l4_X</Item>
+		<Item>map_07_closed_l_X</Item>
+		<Item>map_09_closed_l_X</Item>
+		<Item>map_10_closed_l2_X</Item>
+		<Item>map_11_closed_l_X</Item>
+		<Item>map_13_closed_LN_X2</Item>
+		<Item>map_14_closed_LN_X</Item>
+		<Item>map_15_closed_l_X</Item>
+		<Item>map_16_closed_l_X</Item>
+		<Item>map_17_closed_l_X</Item>
+		<Item>map_18_closed_l_X2</Item>
+		<Item>map_19_closed_l2_X</Item>
+		<Item>map_20_closed_l_X</Item>
+		<Item>map_21_closed_l_X</Item>
+		<Item>map_22_closed_l11_X2</Item>
+		<Item>map_23_closed_LN_X</Item>
+		<Item>map_25_closed_LN_X</Item>
+		<Item>map_26_closed_l_X</Item>
+		<Item>map_27_closed_l_X</Item>
+		<Item>map_28_closed_l_X</Item>
+		<Item>map_29_closed_l2_X</Item>
+		<Item>map_30_closed_l2_X</Item>
+		<Item>map_airport_l_X</Item>
+		<Item>map_details_frank_l2_X</Item>
+		<Item>map_downtown_01_X</Item>
+		<Item>map_downtown_02_X</Item>
+		<Item>map_downtown_03_X</Item>
+		<Item>map_downtown_l2_X</Item>
+		<Item>map_finaltouch_01_l_X</Item>
+		<Item>map_finaltouch_03_l_X</Item>
+		<Item>map_finitions_3_LN_X</Item>
+		<Item>map_p_eastls_02_X</Item>
+		<Item>map_p_eastls_03_X</Item>
+		<Item>map_p_eastls_05_X</Item>
+		<Item>map_perfect01_l_Win_X</Item>
+		<Item>map_pine_02_l5_X</Item>
+		<Item>map_pine_03_l4_X2</Item>
+		<Item>map_pine_04_LN2_X</Item>
+		<Item>map_pine_05_l5_X</Item>
+		<Item>map_pine_8_l_X</Item>
+		<Item>map_pine_10_l3_X</Item>
+		<Item>map_pine_11_l3_X</Item>
+		<Item>map_pine_12_l_X</Item>
+		<Item>map_pine_13_l_X2</Item>
+		<Item>map_pine_14_l_X</Item>
+		<Item>map_pine_15_l_X</Item>
+		<Item>map_pine_19_l_X</Item>
+		<Item>map_pine_24_l_X</Item>
+		<Item>map_pine_26_l_X</Item>
+		<Item>map_south_part1_l_X</Item>
+		<Item>map_south_part2_l_X</Item>
+		<Item>map_story_rockford_Win20_X</Item>
+		<Item>map_zancudo_03</Item>
+		<Item>map_zancudo_04</Item>
+		<Item>map_zancudo_finitions_l</Item>
+		<Item>Shores</Item>
+		<Item>Shores_lod</Item>
+		<Item>Shores2</Item>
+		<Item>Shores2_lod</Item>
+		<Item>Shores3</Item>
+		<Item>Shores3_lod</Item>
+		<Item>Shores4</Item>
+		<Item>Shores4_lod</Item>
+		<Item>Shores5</Item>
+		<Item>Shores5_lod</Item>
+		<Item>Shores6</Item>
+		<Item>Shores6_lod</Item>
+		<Item>SouthernStyledVegetation</Item>
+		<Item>SouthernStyledVegetation_02</Item>
+		<Item>SouthernStyledVegetation_03</Item>
+		<Item>SouthernStyledVegetation_04</Item>
+		<Item>SouthernStyledVegetation_05</Item>
+		<Item>SouthernStyledVegetation_06</Item>
+		<Item>SouthernStyledVegetation_07</Item>
+		<Item>SouthernStyledVegetation_08</Item> -->
+		<!-- Burgershot -->
+		<!-- <Item>bs_distantlights</Item>
+		<Item>bs_extprops</Item>
+		<Item>bs_int</Item>
+		<Item>bs_int_lod1</Item>
+		<Item>bs_lodlights</Item>
+		<Item>bs_streetlights</Item>
+		<Item>hei_sm_19</Item>
+		<Item>hei_vb_03</Item>
+		<Item>hei_vb_03_strm_0</Item>
+		<Item>hei_vb_rd_strm_0</Item>
+		<Item>vb_03_strm_0</Item>
+		<Item>vb_occl_01</Item>
+		<Item>vw_distlodlights_small024</Item>
+		<Item>vw_lodlights_small024</Item> -->
+		<!-- Billard -->
+		<Item>patoche_billard_milo_</Item>
+		<!-- MRPD -->
+		<Item>hei_dt1_19_interior_0_heist_police_dlc_milo_</Item>
+		<!-- Casino -->
+		<Item>np2_int_placement_ch_interior_3_dlc_casino_back_milo_</Item>
+		<Item>np2_int_placement_ch_interior_4_dlc_casino_hotel_milo_</Item>
+		<Item>np2_int_placement_ch_interior_6_dlc_casino_vault_milo_</Item>
+		<Item>np2_int_placement_ch_interior_7_dlc_casino_utility_milo_</Item>
+		<Item>np2_int_placement_ch_interior_8_dlc_tunnel_milo_</Item>
+		<!-- Hub -->
+		<Item>gabz_lr_sc1_02_interior_0_supermod_int_milo_</Item>
+		<!-- Meth Labs -->
+		<Item>gabz_biker_interior_placement_interior_2_biker_dlc_int_ware01_milo_</Item>
+		<Item>gabz_biker_interior_placement_interior_2_biker_dlc_int_ware02_milo_</Item>
+		<Item>gabz_biker_interior_placement_interior_2_biker_dlc_int_ware03_milo_</Item>
+		<Item>gabz_biker_interior_placement_interior_2_biker_dlc_int_ware04_milo_</Item>
+		<Item>gabz_biker_interior_placement_interior_2_biker_dlc_int_ware05_milo_</Item>
+		<Item>gabz_biker_interior_placement_interior_2_biker_dlc_int_ware06_milo_</Item>
+		<!-- Ottos -->
+		<Item>ex_exec_warehouse_placement_interior_2_int_warehouse_l_dlc_milo_2</Item>
+		<!-- Sandy Clinic -->
+		<Item>interior_hospitalsandy_milo_</Item>
+		<!-- Sandy Cloth -->
+		<Item>np_sandycloth_milo_</Item>
+		<!-- Sandy PD -->
+		<Item>hedwig_sheriff_garage_milo</Item>
+		<Item>hedwig_sheriff_milo_</Item>
+		<Item>lr_cs4_10_interior_v_sheriff_milo_</Item>
+		<!-- Showroom -->
+		<Item>np_showroom_otto_milo_</Item>
+		<!-- Viceroy -->
+		<Item>gabz_pillbox_2_milo_</Item>
+		<!-- Comedy -->
+		<Item>int_standup_milo_</Item>
+		<!-- Containers -->
+		<Item>np_container_milo_</Item>
+		<Item>np_container_02_milo_</Item>
+		<Item>np_container_03_milo_ </Item>
+		<Item>np_container_04_milo_</Item>
+		<Item>np_container_05_milo_</Item>
+		<Item>np_container_06_milo_</Item>
+		<Item>np_container_07_milo_</Item>
+		<Item>np_container_08_milo_</Item>
+		<Item>np_container_09_milo_</Item>
+		<Item>np_container_10_milo_</Item>
+		<Item>np_container_11_milo_</Item>
+		<Item>np_container_12_milo_</Item>
+		<Item>np_container_13_milo_</Item>
+		<Item>np_container_14_milo_</Item>
+		<Item>np_container_15_milo_</Item>
+		<Item>np_container_16_milo_</Item>
+		<Item>np_container_17_milo_</Item>
+		<!-- Fightclub -->
+		<Item>vu_fight_club_milo_</Item>
+		<!-- 247 -->
+		<Item>gabz_hei_hw1_02_interior_v_shop_247_milo_</Item>
+		<Item>gabz_hei_sm_10_interior_v_gen_liquor_milo_</Item>
+		<!-- Showroom -->
+		<Item>np_showroom_tuner_milo_</Item>
+		<!-- Townhall -->
+		<Item>np_town_hall_milo_</Item>
+		<!-- Hayes -->
+		<Item>denis3d_hayes_auto_milo_</Item>
+		<!-- Gallery -->
+		<Item>nutt_auction_milo_</Item>
+		<!-- Vespucci PD -->
+		<Item>hei_dt1_19_interior_0_heist_police_dlc_np_milo_</Item>
+		<!-- Weazel -->
+		<Item>xee_news_milo_</Item>
+		<!-- LSBN -->
+		<Item>xee_news_lsbn_milo_</Item>
+		<!-- Billboards -->
+		<Item>hei_hw1_blimp_interior_15_dlc_apart_high_new_milo_</Item>
+		<Item>hei_hw1_blimp_interior_17_dlc_apart_high_new_milo_</Item>
+		<Item>hei_hw1_blimp_interior_19_dlc_apart_high_new_milo_</Item>
+		<!-- Beanmachine -->
+		<Item>int_bin_milo_</Item>
+		<!-- Carmeet -->
+		<Item>tr_int_placement_tr_interior_1_tuner_car_meet_milo_</Item>
+		<!-- Bowling -->
+		<Item>denis3d_bowling_alley_milo_</Item>
+		<!-- Catcafe -->
+		<Item>denis3d_catcafe_milo_</Item>
+		<!-- Tuners -->
+		<Item>denis3d_tunershop_milo_</Item>
+	</proxies>
+</SInteriorOrderData>

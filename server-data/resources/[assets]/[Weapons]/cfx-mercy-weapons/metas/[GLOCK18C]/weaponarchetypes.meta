@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<CWeaponModelInfo__InitDataList>
+    <InitDatas>
+        <Item>
+            <modelName>w_pi_glock18c_mag1</modelName>
+            <txdName>w_pi_glock18c_mag1</txdName>
+            <ptfxAssetName>NULL</ptfxAssetName>
+            <lodDist value="1000"/>
+        </Item>
+        <Item>
+            <modelName>w_pi_glock18c_mag2</modelName>
+            <txdName>w_pi_glock18c_mag2</txdName>
+            <ptfxAssetName>NULL</ptfxAssetName>
+            <lodDist value="1000"/>
+        </Item>
+        <Item>
+            <modelName>w_pi_glock18c</modelName>
+            <txdName>w_pi_glock18c</txdName>
+            <ptfxAssetName>NULL</ptfxAssetName>
+            <lodDist value="1000"/>
+        </Item>
+    </InitDatas>
+</CWeaponModelInfo__InitDataList>

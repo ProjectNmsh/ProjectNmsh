@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+    <variationData>
+        <Item>
+            <modelName>polchal</modelName>
+            <colors>
+                <Item>
+                    <indices content="char_array">
+            11
+            11
+            66
+            0
+            111
+            111
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+                <Item>
+                    <indices content="char_array">
+            141
+            141
+            66
+            0
+            111
+            111
+          </indices>
+                    <liveries>
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                        <Item value="false" />
+                    </liveries>
+                </Item>
+            </colors>
+            <kits>
+                <Item>4046_polchal_modkit</Item>
+            </kits>
+            <windowsWithExposedEdges />
+            <plateProbabilities>
+                <Item>
+                    <Name>Police guv plate</Name>
+                    <Value value="100" />
+                </Item>
+            </plateProbabilities>
+            <lightSettings value="438" />
+            <sirenSettings value="441" />
+        </Item>
+    </variationData>
+</CVehicleModelInfoVariation>

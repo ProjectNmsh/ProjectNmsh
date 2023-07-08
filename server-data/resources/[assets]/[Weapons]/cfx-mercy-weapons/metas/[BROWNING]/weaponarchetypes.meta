@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+<CWeaponModelInfo__InitDataList>
+    <InitDatas>
+        <Item>
+            <modelName>w_pi_browning</modelName>
+            <txdName>w_pi_browning</txdName>
+            <ptfxAssetName>null</ptfxAssetName>
+            <lodDist value="1000"/>
+        </Item>
+        <Item>
+            <modelName>w_pi_browning_mag1</modelName>
+            <txdName>w_pi_browning_mag1</txdName>
+            <ptfxAssetName>null</ptfxAssetName>
+            <lodDist value="1000"/>
+        </Item>
+        <Item>
+            <modelName>w_pi_browning_mag2</modelName>
+            <txdName>w_pi_browning_mag2</txdName>
+            <ptfxAssetName>null</ptfxAssetName>
+            <lodDist value="1000"/>
+        </Item>
+    </InitDatas>
+</CWeaponModelInfo__InitDataList>
