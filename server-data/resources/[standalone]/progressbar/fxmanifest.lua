@@ -1,13 +1,14 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author "qbcore-framework"
-description 'Dependency for creating progressbars in QB-Core.'
+description 'progressbar'
 version '1.0.0'
 
-ui_page "html/index.html"
+ui_page('html/index.html') 
 
-client_script "client/main.lua"
+client_scripts {
+    'client/main.lua',
+}
 
 files {
     'html/index.html',
@@ -22,6 +23,5 @@ exports {
     'Progress',
     'ProgressWithStartEvent',
     'ProgressWithTickEvent',
-    'ProgressWithStartAndTick',
-    'isDoingSomething'
+    'ProgressWithStartAndTick'
 }

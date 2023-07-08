@@ -100,5 +100,5 @@ resources/\[AntiCheat\]
 Artifacts
 # resources/\[wizscripts\]
 server-data/server.cfg
-.cfg
+.cfg*
 stream

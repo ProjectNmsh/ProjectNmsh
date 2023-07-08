@@ -1,3 +1,9 @@
+
+
+
+
+
+
 -- This resource is part of the default Cfx.re asset pack (cfx-server-data)
 -- Altering or recreating for local use only is strongly discouraged.
 
@@ -15,6 +21,7 @@ files {
   'dist/ui.html',
   'dist/index.css',
   'html/vendor/*.css',
+  'html/vendor/image/*.png',
   'html/vendor/fonts/*.woff2',
 }
 
@@ -23,8 +30,7 @@ games { 'rdr3', 'gta5' }
 rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 dependencies {
-  'yarn',
-  'webpack'
+	'qb-core'
 }
 
-webpack_config 'webpack.config.js'
+--webpack_config 'webpack.config.js'

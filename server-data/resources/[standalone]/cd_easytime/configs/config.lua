@@ -10,7 +10,7 @@ function L(cd) if Locales[Config.Language][cd] then return Locales[Config.Langua
 --╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 
 
-Config.Framework = 'qb' ---[ 'esx' / 'qbcore' / 'vrp' / 'aceperms' / 'identifiers', 'other' ] Choose your framework (by framework we mean choose the permission system you want to use).
+Config.Framework = 'qbcore' ---[ 'esx' / 'qbcore' / 'vrp' / 'aceperms' / 'identifiers', 'other' ] Choose your framework (by framework we mean choose the permission system you want to use).
 Config.Language = 'EN' --[ 'EN' / 'FR' / 'ES' ] You can add your own locales to the Locales.lua. But make sure to add it here.
 
 Config.FrameworkTriggers = { --You can change the esx/qbcore events (IF NEEDED).
