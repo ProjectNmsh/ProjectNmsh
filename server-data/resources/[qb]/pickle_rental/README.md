@@ -1,1 +1,0 @@
-# Pickle's Rental

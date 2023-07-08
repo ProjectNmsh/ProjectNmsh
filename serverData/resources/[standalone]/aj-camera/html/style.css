@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container {
+    height: 100vh;
+}
+
+#house-cam {
+    display: none;
+    height: 100vh;
+    /* background-color: black; */
+}
+
+#cam-label {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vh;
+    padding: 8vh;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+#cam-type {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5vh;
+    padding: 8vh;
+    top: 4vh;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+#cam-connection {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    padding: 8vh;
+    text-transform: uppercase;
+    color: rgb(37, 146, 23);
+    font-weight: bold;
+}

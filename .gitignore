@@ -90,15 +90,10 @@ out/
 
 crashes
 db
-server-data/cache
-# citizen
-# resources/\[vehicles\]
-# resources/\[assets\]
-# resources/\[Gabz\]
-resources/\[AntiCheat\]
-# resources/\[Encrypted\]
+serverData/cache
+serverData/resources/\[assets\]
+r
 Artifacts
 # resources/\[wizscripts\]
-server-data/server.cfg
+# serverData/server.cfg
 .cfg*
-stream
