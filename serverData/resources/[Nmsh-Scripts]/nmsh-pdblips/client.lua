@@ -1,4 +1,4 @@
-local ESX = nil
+local QBCore = exports['qb-core']:GetCoreObject()
 local PlayerData = {}
 local onDuty = false
 local inVeh = false
@@ -66,7 +66,7 @@ if Config.useBaseEvents then
             inVehChecks(veh, seat, vehiclelabel)
 
             local cfg = Config.emergencyJobs[PlayerData.job.name].vehBlip and Config.emergencyJobs[PlayerData.job.name].vehBlip[GetEntityModel(veh)] or nil
-            TriggerServerEvent('rflx_pdblips:enteredVeh', cfg)
+            TriggerServerEvent('nmsh-pdblips:enteredVeh', cfg)
         end
     end)
 
@@ -74,10 +74,10 @@ if Config.useBaseEvents then
         inVeh = false
         if lastSirenState then
             lastSirenState = false
-            TriggerServerEvent('rflx_pdblips:toggleSiren', false)
+            TriggerServerEvent('nmsh-pdblips:toggleSiren', false)
         end
         if onDuty then
-            TriggerServerEvent('rflx_pdblips:leftVeh')
+            TriggerServerEvent('nmsh-pdblips:leftVeh')
         end
     end)
 else
@@ -90,15 +90,15 @@ else
                     inVehChecks(veh)
 
                     local cfg = Config.emergencyJobs[PlayerData.job.name].vehBlip and Config.emergencyJobs[PlayerData.job.name].vehBlip[GetEntityModel(veh)] or nil
-                    TriggerServerEvent('rflx_pdblips:enteredVeh', cfg)
+                    TriggerServerEvent('nmsh-pdblips:enteredVeh', cfg)
                 elseif veh == 0 and inVeh then
                     inVeh = false
                     if lastSirenState then
                         lastSirenState = false
-                        TriggerServerEvent('rflx_pdblips:toggleSiren', false)
+                        TriggerServerEvent('nmsh-pdblips:toggleSiren', false)
                     end
                     if onDuty then
-                        TriggerServerEvent('rflx_pdblips:leftVeh')
+                        TriggerServerEvent('nmsh-pdblips:leftVeh')
                     end
                 end
                 Citizen.Wait(750)
@@ -114,10 +114,10 @@ function inVehChecks(veh, seat, vehiclelabel)
         while inVeh do
             if IsVehicleSirenOn(veh) and not lastSirenState then
                 lastSirenState = true
-                TriggerServerEvent('rflx_pdblips:toggleSiren', true)
+                TriggerServerEvent('nmsh-pdblips:toggleSiren', true)
             elseif not IsVehicleSirenOn(veh) and lastSirenState then
                 lastSirenState = false
-                TriggerServerEvent('rflx_pdblips:toggleSiren', false)
+                TriggerServerEvent('nmsh-pdblips:toggleSiren', false)
             end
             Citizen.Wait(500)
         end
@@ -132,7 +132,7 @@ end
 
 function goOnDuty()
     onDuty = true
-    TriggerServerEvent('rflx_pdblips:setDuty', true)
+    TriggerServerEvent('nmsh-pdblips:setDuty', true)
 
     if Config.notifications.enable and Config.notifications.useMythic then
         exports['mythic_notify']:SendAlert('inform', Config.notifications.onDutyText)
@@ -146,14 +146,14 @@ function goOnDuty()
         DisplayPlayerNameTagsOnBlips(true)
     end
     if inVeh then
-        TriggerServerEvent('rflx_pdblips:enteredVeh', Config.emergencyJobs[PlayerData.job.name].vehBlip[GetEntityModel(GetVehiclePedIsIn(PlayerPedId(), false))])
+        TriggerServerEvent('nmsh-pdblips:enteredVeh', Config.emergencyJobs[PlayerData.job.name].vehBlip[GetEntityModel(GetVehiclePedIsIn(PlayerPedId(), false))])
     end
 end
-AddEventHandler('rflx_pdblips:goOnDuty', goOnDuty)
+AddEventHandler('nmsh-pdblips:goOnDuty', goOnDuty)
 
 function goOffDuty()
     onDuty = false
-    TriggerServerEvent('rflx_pdblips:setDuty', false)
+    TriggerServerEvent('nmsh-pdblips:setDuty', false)
 
     if Config.notifications.enable and Config.notifications.useMythic then
         exports['mythic_notify']:SendAlert('inform', Config.notifications.offDutyText)
@@ -167,9 +167,9 @@ function goOffDuty()
     end
     removeAllBlips()
 end
-AddEventHandler('rflx_pdblips:goOffDuty', goOffDuty)
+AddEventHandler('nmsh-pdblips:goOffDuty', goOffDuty)
 
-AddEventHandler('rflx_pdblips:toggleDuty', function(bool)
+AddEventHandler('nmsh-pdblips:toggleDuty', function(bool)
     if bool then
         goOnDuty()
     else
@@ -190,8 +190,8 @@ function removeAllBlips()
     myBlip = {}
 end
 
-RegisterNetEvent('rflx_pdblips:removeUser')
-AddEventHandler('rflx_pdblips:removeUser', function(plyId)
+RegisterNetEvent('nmsh-pdblips:removeUser')
+AddEventHandler('nmsh-pdblips:removeUser', function(plyId)
     if nearBlips[plyId] then
         RemoveBlip(nearBlips[plyId].blip)
         nearBlips[plyId] = nil
@@ -202,8 +202,8 @@ AddEventHandler('rflx_pdblips:removeUser', function(plyId)
     end
 end)
 
-RegisterNetEvent('rflx_pdblips:receiveData')
-AddEventHandler('rflx_pdblips:receiveData', function(myId, data) -- ugly ass event
+RegisterNetEvent('nmsh-pdblips:receiveData')
+AddEventHandler('nmsh-pdblips:receiveData', function(myId, data) -- ugly ass event
     for k, v in pairs(data) do
         local cId = GetPlayerFromServerId(v.playerId)
         --local canSee = v.canSee and includes(v.canSee, PlayerData.job.name)
@@ -396,5 +396,3 @@ function restoreBlip(blip) -- idk better way, pls don't kill me bruh
     EndTextCommandSetBlipName(blip)
     SetBlipCategory(blip, 1)
 end
-
--- there used to be "includes" function, F

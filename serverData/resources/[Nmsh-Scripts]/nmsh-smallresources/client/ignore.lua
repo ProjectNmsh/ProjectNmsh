@@ -75,6 +75,94 @@ if Config.IdleCamera then --Disable Idle Cinamatic Cam
     end)
 end
 
+-- ViewCam Set
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(4)
+        if LocalPlayer.state.LoggedIn then
+            if GetFollowPedCamViewMode() == 1 or GetFollowPedCamViewMode() == 2 or GetFollowPedCamViewMode() == 3  then
+                SetFollowPedCamViewMode(4)
+            end
+			if GetFollowVehicleCamViewMode() == 2 or GetFollowVehicleCamViewMode() == 2 then
+				SetFollowVehicleCamViewMode(4)
+			end
+            Citizen.Wait(165)
+		else
+			Citizen.Wait(450)
+        end
+    end
+end)
+
+-- Air Control
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(4)
+		if LocalPlayer.state.LoggedIn then
+        	local Vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+        	if DoesEntityExist(Vehicle) and not IsEntityDead(Vehicle) then
+        	    local Model = GetEntityModel(Vehicle)
+        	    if not IsThisModelABoat(Model) and not IsThisModelAHeli(Model) and not IsThisModelAPlane(Model) and not IsThisModelABike(Model) and IsEntityInAir(Vehicle) then
+        	        DisableControlAction(0, 59)
+        	        DisableControlAction(0, 60)
+        	    end
+        	end
+		end
+    end
+end)
+
+-- Disable 'Combat Walk' after Combat
+Citizen.CreateThread( function()
+	while true do
+		Citizen.Wait(4)
+		if LocalPlayer.state.LoggedIn then
+			if not GetPedConfigFlag(PlayerPedId(), 78, 1) then
+				SetPedUsingActionMode(PlayerPedId(), false, -1, 0)
+			end
+		else
+			Citizen.Wait(450)
+		end
+    end
+end)
+
+-- Disable Blind Firing
+Citizen.CreateThread(function()
+    while true do
+        if IsPedInCover(PlayerPedId(), 0) and not IsPedAimingFromCover(PlayerPedId()) then
+            DisablePlayerFiring(PlayerPedId(), true)
+        end
+        Citizen.Wait(4)
+    end
+end)
+
+-- Disable Double Jump
+Citizen.CreateThread( function()
+	while true do
+		Citizen.Wait(4)
+		if LocalPlayer.state.LoggedIn then
+	  		if JumpDisabled and ResetCounter > 0 and IsPedJumping(PlayerPedId()) then
+				SetPedToRagdoll(PlayerPedId(), 1000, 1000, 3, 0, 0, 0)
+				ResetCounter = 0
+	  		end
+	  		if not JumpDisabled and IsPedJumping(PlayerPedId()) then
+				JumpDisabled = true
+				ResetCounter = 10
+				Citizen.Wait(1200)
+	  		end
+			if ResetCounter > 0 then
+				ResetCounter = ResetCounter - 1
+			else
+				if JumpDisabled then
+					ResetCounter = 0
+					JumpDisabled = false
+				end
+	  		end
+			Citizen.Wait(90)
+		else
+			Citizen.Wait(450)
+		end
+	end
+end)
+
 RegisterNetEvent('QBCore:Client:DrawWeapon', function()
     local sleep
     while true do

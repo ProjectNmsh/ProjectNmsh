@@ -133,6 +133,32 @@ Config.Products = {
             slot = 3,
         },
     },
+    ["pokemon"] = {
+        [1] = {
+            name = 'boosterpack',
+            price = 1000,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 1,
+        },
+        [2] = {
+            name = 'boosterbox',
+            price = 7500,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 2,
+        },
+        [3] = {
+            name = 'pokebox',
+            price = 3500,
+            amount = 50,
+            info = {},
+            type = 'item',
+            slot = 3,
+        },
+    },
     ["hardware"] = {
         [1] = {
             name = "lockpick",
@@ -1268,5 +1294,14 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 626,
         ["blipcolor"] = 1
+    },
+    ["pokemonstore"] = {
+        ["label"] = "Pokemon Shop",
+        ["coords"] = {
+            [1] = vector3(-143.97, 229.66, 94.95)
+        },
+        ["products"] = Config.Products["pokemon"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52
     },
 }
