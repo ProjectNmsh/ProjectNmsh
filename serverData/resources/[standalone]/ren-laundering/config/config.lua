@@ -1,4 +1,4 @@
-Core = { Target = 'qb-target', Core = 'qb-core' }--// targets: ('ox_target', 'qb-target', 'qtarget') core: ('esx', 'qb-core')
+Core = { Target = 'nmsh-target', Core = 'qb-core' }--// targets: ('ox_target', 'nmsh-target', 'qtarget') core: ('esx', 'qb-core')
 
 Laundering = {--//Don't touch
     [1] = {

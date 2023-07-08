@@ -17,7 +17,7 @@ local skinData = {
     },
 }
 
-RegisterNetEvent("illenium-appearance:client:migration:load-qb-clothing-skin", function(playerSkin)
+RegisterNetEvent("illenium-appearance:client:migration:load-nmsh-clothing-skin", function(playerSkin)
     local model = playerSkin.model
     model = model ~= nil and tonumber(model) or false
     Citizen.CreateThread(function()
@@ -25,12 +25,12 @@ RegisterNetEvent("illenium-appearance:client:migration:load-qb-clothing-skin", f
         SetPlayerModel(cache.playerId, model)
         Wait(150)
         SetPedComponentVariation(cache.ped, 0, 0, 0, 2)
-        TriggerEvent("illenium-appearance:client:migration:load-qb-clothing-clothes", playerSkin, cache.ped)
+        TriggerEvent("illenium-appearance:client:migration:load-nmsh-clothing-clothes", playerSkin, cache.ped)
         SetModelAsNoLongerNeeded(model)
     end)
 end)
 
-RegisterNetEvent("illenium-appearance:client:migration:load-qb-clothing-clothes", function(playerSkin, ped)
+RegisterNetEvent("illenium-appearance:client:migration:load-nmsh-clothing-clothes", function(playerSkin, ped)
     local data = json.decode(playerSkin.skin)
     if ped == nil then ped = cache.ped end
 
@@ -186,5 +186,5 @@ RegisterNetEvent("illenium-appearance:client:migration:load-qb-clothing-clothes"
 
     local appearance = client.getPedAppearance(ped)
 
-    TriggerServerEvent("illenium-appearance:server:migrate-qb-clothing-skin", playerSkin.citizenid, appearance)
+    TriggerServerEvent("illenium-appearance:server:migrate-nmsh-clothing-skin", playerSkin.citizenid, appearance)
 end)

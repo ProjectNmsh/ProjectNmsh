@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Inventory = "qb-inventory"
+Config.Inventory = "nmsh-inventory"
 Config.LaptopDevice = "laptop"
 
 Config.RenewedPhone = true

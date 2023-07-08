@@ -2,7 +2,7 @@
 
 -- Number Maze
 RegisterCommand("maze",function()
-    exports['ps-ui']:Maze(function(success)
+    exports['nmsh-ui']:Maze(function(success)
         if success then
             print("success")
 		else
@@ -13,7 +13,7 @@ end)
 
 -- VAR
 RegisterCommand("var", function()
-    exports['ps-ui']:VarHack(function(success)
+    exports['nmsh-ui']:VarHack(function(success)
         if success then
             print("success")
 		else
@@ -24,7 +24,7 @@ end)
 
 -- CIRCLE
 RegisterCommand("circle", function()
-    exports['ps-ui']:Circle(function(success)
+    exports['nmsh-ui']:Circle(function(success)
         if success then
             print("success")
 		else
@@ -35,7 +35,7 @@ end)
 
 -- THERMITE
 RegisterCommand("thermite", function()
-    exports['ps-ui']:Thermite(function(success)
+    exports['nmsh-ui']:Thermite(function(success)
         if success then
             print("success")
 		else
@@ -46,7 +46,7 @@ end)
 
 -- SCRAMBLER
 RegisterCommand("scrambler", function()
-    exports['ps-ui']:Scrambler(function(success)
+    exports['nmsh-ui']:Scrambler(function(success)
         if success then
             print("success")
 		else
@@ -57,11 +57,11 @@ end)
 
 -- DISPLAY TEXT
 RegisterCommand("display", function()
-    exports['ps-ui']:DisplayText("Example Text", "primary") -- Colors: primary, error, success, warning, info, mint
+    exports['nmsh-ui']:DisplayText("Example Text", "primary") -- Colors: primary, error, success, warning, info, mint
 end)
 
 RegisterCommand("hide", function()
-    exports['ps-ui']:HideText()
+    exports['nmsh-ui']:HideText()
 end)
 
 
@@ -69,19 +69,19 @@ local status = false
 RegisterCommand("status", function()
     if not status then
         status = true
-        exports['ps-ui']:StatusShow("Area Dominance", {
+        exports['nmsh-ui']:StatusShow("Area Dominance", {
             "Gang: Ballas",
             "Influence: %100",
         })
     else 
         status = false
-        exports['ps-ui']:StatusHide()
+        exports['nmsh-ui']:StatusHide()
     end
 end)
 
 
 RegisterCommand("cmenu", function()
-    exports['ps-ui']:CreateMenu({
+    exports['nmsh-ui']:CreateMenu({
         {
             header = "header1",
             text = "text1",
@@ -136,7 +136,7 @@ RegisterCommand("cmenu", function()
 end)
 
 RegisterCommand("input", function()
-    local input = exports['ps-ui']:Input({
+    local input = exports['nmsh-ui']:Input({
         title = "Test",
         inputs = {
             {
@@ -159,5 +159,5 @@ RegisterCommand("input", function()
 end)
 
 RegisterCommand("showimage", function()
-    exports['ps-ui']:ShowImage("https://user-images.githubusercontent.com/91661118/168956591-43462c40-e7c2-41af-8282-b2d9b6716771.png")
+    exports['nmsh-ui']:ShowImage("https://user-images.githubusercontent.com/91661118/168956591-43462c40-e7c2-41af-8282-b2d9b6716771.png")
 end)

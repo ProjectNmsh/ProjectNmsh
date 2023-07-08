@@ -47,13 +47,13 @@ document.addEventListener("keydown", function(ev) {
 });
 
 function MenuClose() {
-    $.post('https://ps-ui/menuClose', JSON.stringify({"ok":true}));
+    $.post('https://nmsh-ui/menuClose', JSON.stringify({"ok":true}));
     $(".item").remove();
     Open = false
 }
 
 function MenuSelect(id) {
     let data = Items[id];
-    $.post(`https://ps-ui/MenuSelect`, JSON.stringify({"data":data, "ok":true}));
+    $.post(`https://nmsh-ui/MenuSelect`, JSON.stringify({"data":data, "ok":true}));
     MenuClose();
 }

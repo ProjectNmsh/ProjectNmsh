@@ -13,7 +13,7 @@ function Target.IsOX()
 end
 
 function Target.IsQB()
-    return GetResourceState("qb-target") ~= "missing"
+    return GetResourceState("nmsh-target") ~= "missing"
 end
 
 local function RemoveTargetPeds(peds)

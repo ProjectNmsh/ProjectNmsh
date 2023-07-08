@@ -1,7 +1,7 @@
 lib.locale()
 Config = {
     framework = 'qb', -- QB and ESX preconfigured edit the framework.lua to add functionality to other frameworks
-    renewedMultiJob = true, -- QBCORE ONLY! https://github.com/Renewed-Scripts/qb-phone  
+    renewedMultiJob = true, -- QBCORE ONLY! https://github.com/Renewed-Scripts/nmsh-phone  
     progressbar = 'circle', -- circle or rectangle (Anything other than circle will default to rectangle)
     currency ='USD', -- USD, EUR, GBP ect.....
     atms = {

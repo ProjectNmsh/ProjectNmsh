@@ -11,10 +11,10 @@ $(function() {
 
     document.onkeyup = function (data) {
         if (data.which == 27) { // Escape key
-            $.post('https://qb-radio/escape', JSON.stringify({}));
+            $.post('https://nmsh-radio/escape', JSON.stringify({}));
             QBRadio.SlideDown()
         } else if (data.which == 13) { // Enter key
-            $.post('https://qb-radio/joinRadio', JSON.stringify({
+            $.post('https://nmsh-radio/joinRadio', JSON.stringify({
                 channel: $("#channel").val()
             }));
         }
@@ -26,7 +26,7 @@ QBRadio = {}
 $(document).on('click', '#submit', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/joinRadio', JSON.stringify({
+    $.post('https://nmsh-radio/joinRadio', JSON.stringify({
         channel: $("#channel").val()
     }));
 });
@@ -34,13 +34,13 @@ $(document).on('click', '#submit', function(e){
 $(document).on('click', '#disconnect', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/leaveRadio');
+    $.post('https://nmsh-radio/leaveRadio');
 });
 
 $(document).on('click', '#volumeUp', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/volumeUp', JSON.stringify({
+    $.post('https://nmsh-radio/volumeUp', JSON.stringify({
         channel: $("#channel").val()
     }));
 });
@@ -48,7 +48,7 @@ $(document).on('click', '#volumeUp', function(e){
 $(document).on('click', '#volumeDown', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/volumeDown', JSON.stringify({
+    $.post('https://nmsh-radio/volumeDown', JSON.stringify({
         channel: $("#channel").val()
     }));
 });
@@ -56,7 +56,7 @@ $(document).on('click', '#volumeDown', function(e){
 $(document).on('click', '#decreaseradiochannel', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/decreaseradiochannel', JSON.stringify({
+    $.post('https://nmsh-radio/decreaseradiochannel', JSON.stringify({
         channel: $("#channel").val()
     }));
 });
@@ -64,7 +64,7 @@ $(document).on('click', '#decreaseradiochannel', function(e){
 $(document).on('click', '#increaseradiochannel', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/increaseradiochannel', JSON.stringify({
+    $.post('https://nmsh-radio/increaseradiochannel', JSON.stringify({
         channel: $("#channel").val()
     }));
 });
@@ -72,7 +72,7 @@ $(document).on('click', '#increaseradiochannel', function(e){
 $(document).on('click', '#poweredOff', function(e){
     e.preventDefault();
 
-    $.post('https://qb-radio/poweredOff', JSON.stringify({
+    $.post('https://nmsh-radio/poweredOff', JSON.stringify({
         channel: $("#channel").val()
     }));
 });

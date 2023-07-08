@@ -134,7 +134,7 @@ function startGame(time){
     let u = "fail";
         if(status)
             u = "success";
-    xhr.open("POST", `https://ps-ui/circle-${u}`, true);
+    xhr.open("POST", `https://nmsh-ui/circle-${u}`, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({}));
     streak = 0;

@@ -39,10 +39,10 @@ files {
 	'client/framework/esx.lua',
 	'client/framework/qb.lua',
 	'client/compat/qtarget.lua',
-	'client/compat/qb-target.lua',
+	'client/compat/nmsh-target.lua',
 }
 
 provide 'qtarget'
-provide 'qb-target'
+provide 'nmsh-target'
 
 dependency 'ox_lib'

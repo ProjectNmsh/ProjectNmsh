@@ -17,7 +17,7 @@ local currentCops = 0
 
 local function Notify(text, type, time)
     if Config.Boosting.Notifications == "phone" then
-        TriggerEvent('qb-phone:client:CustomNotification',
+        TriggerEvent('nmsh-phone:client:CustomNotification',
             Lang:t('boosting.info.phonenotify'),
             text,
             "fas fa-user-secret",
@@ -25,7 +25,7 @@ local function Notify(text, type, time)
             time
         )
     elseif Config.Boosting.Notifications == "npwd" then
-        TriggerServerEvent('qb-phone:server:sendNewMail', {
+        TriggerServerEvent('nmsh-phone:server:sendNewMail', {
             sender = Lang:t('boosting.info.phonenotify'),
             subject = 'Boosting',
             message = text,
@@ -140,7 +140,7 @@ RegisterNetEvent('lockpicks:UseLockpick', function()
                         status = false
                     }
                 })
-                exports['ps-dispatch']:CarBoosting(vehicle)
+                exports['nmsh-dispatch']:CarBoosting(vehicle)
             else
                 TriggerServerEvent('jl-laptop:server:CancelBoost', NetID, Plate)
             end
@@ -272,7 +272,7 @@ local function StartVin()
             TriggerServerEvent("jl-laptop:server:fuckvin", NetID, model, mods)
             TriggerServerEvent('jl-laptop:server:finishBoost', NetID, true)
             Entity(car).state.isvinCar = false
-            exports['qb-target']:RemoveTargetEntity(car, "Scratch Vin")
+            exports['nmsh-target']:RemoveTargetEntity(car, "Scratch Vin")
             ClearPedTasks(PlayerPedId())
         end, function() -- Play When Cancel
         ClearPedTasks(PlayerPedId())
@@ -285,7 +285,7 @@ local function MeVinYeah()
 
     local state = Entity(car).state
     if state.isvinCar then
-        exports['qb-target']:AddTargetEntity(car, {
+        exports['nmsh-target']:AddTargetEntity(car, {
             options = {
                 {
                     action = function()
@@ -437,7 +437,7 @@ RegisterNetEvent('jl-laptop:client:HackCar', function()
             local State = Entity(car).state.Boosting
             if State and State.boostHacks > 0 and not State.boostCooldown then
                 local pushingP = promise.new()
-                exports['ps-ui']:Scrambler(function(cb)
+                exports['nmsh-ui']:Scrambler(function(cb)
                     pushingP:resolve(cb)
                 end, psUI[math.random(1, #psUI)], 30, 0)
                 local success = Citizen.Await(pushingP)
@@ -718,7 +718,7 @@ RegisterNUICallback("boosting/expire", function(data, cb)
 end)
 
 CreateThread(function()
-    exports['qb-target']:AddGlobalVehicle({
+    exports['nmsh-target']:AddGlobalVehicle({
         options = {
             {
                 label = "Check Vin",

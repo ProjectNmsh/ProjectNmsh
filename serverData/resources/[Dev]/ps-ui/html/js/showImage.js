@@ -24,13 +24,13 @@ $(function () {
 
     document.onkeyup = function (data) {
         if (data.which == 27) {
-            $.post(`https://ps-ui/showItemImage-callback`, JSON.stringify({}));
+            $.post(`https://nmsh-ui/showItemImage-callback`, JSON.stringify({}));
             return
         }
     };
 
     $("#showImageClose").click(function () {
-        $.post(`https://ps-ui/showItemImage-callback`, JSON.stringify({}));
+        $.post(`https://nmsh-ui/showItemImage-callback`, JSON.stringify({}));
         return
     })
 })

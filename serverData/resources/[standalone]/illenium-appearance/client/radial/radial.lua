@@ -14,7 +14,7 @@ function Radial.IsOX()
 end
 
 function Radial.IsQB()
-    local resName = "qb-radialmenu"
+    local resName = "nmsh-radialmenu"
     if GetResourceState(resName) ~= "missing" then
         Radial.ResourceName = resName
         return true
@@ -64,7 +64,7 @@ end
 
 AddEventHandler("onResourceStop", function(resource)
     if resource == GetCurrentResourceName() then
-        if Config.UseOxRadial and GetResourceState("ox_lib") == "started" or GetResourceState("qb-radialmenu") == "started" then
+        if Config.UseOxRadial and GetResourceState("ox_lib") == "started" or GetResourceState("nmsh-radialmenu") == "started" then
             Radial.RemoveOption()
         end
     end

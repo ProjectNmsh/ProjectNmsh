@@ -42,7 +42,7 @@ local LookingForContracts = {}
 
 local function Notify(src, text, type, time)
     if Config.Boosting.Notifications == "phone" then
-        TriggerClientEvent('qb-phone:client:CustomNotification', src,
+        TriggerClientEvent('nmsh-phone:client:CustomNotification', src,
             Lang:t('boosting.info.phonenotify'),
             text,
             "fas fa-user-secret",
@@ -50,7 +50,7 @@ local function Notify(src, text, type, time)
             time
         )
     elseif Config.Boosting.Notifications == "npwd" then
-        TriggerEvent('qb-phone:server:sendNewMail', {
+        TriggerEvent('nmsh-phone:server:sendNewMail', {
             sender = Lang:t('boosting.info.phonenotify'),
             subject = 'Boosting',
             message = text,
@@ -214,7 +214,7 @@ QBCore.Functions.CreateCallback('jl-laptop:server:CanStartBoosting', function(so
 
     if currentRuns[CID] then return cb("running") end
     if not currentContracts[CID][id] then return cb("notfound") end
-    if Config.RenewedPhone and not exports['qb-phone']:hasEnough(src, "gne", currentContracts[CID][id].cost) then
+    if Config.RenewedPhone and not exports['nmsh-phone']:hasEnough(src, "gne", currentContracts[CID][id].cost) then
         return cb("notenough")
     elseif not Config.RenewedPhone and Player.PlayerData.money.crypto < currentContracts[CID][id].cost then
         return cb("notenough")
@@ -245,7 +245,7 @@ QBCore.Functions.CreateCallback('jl-laptop:server:CanStartBoosting', function(so
         if SpawnCar(src) then
 
             if Config.RenewedPhone then
-                exports['qb-phone']:RemoveCrypto(src, "gne", currentContracts[CID][id].cost)
+                exports['nmsh-phone']:RemoveCrypto(src, "gne", currentContracts[CID][id].cost)
             else
                 if not
                     Player.Functions.RemoveMoney("crypto", currentContracts[CID][id].cost,
@@ -498,7 +498,7 @@ RegisterNetEvent('jl-laptop:server:finishBoost', function(netId, isvin)
         end
         local reward = math.ceil(currentRuns[CID].cost * math.random(2, 3))
         if Config.RenewedPhone then
-            exports['qb-phone']:AddCrypto(src, "gne", reward)
+            exports['nmsh-phone']:AddCrypto(src, "gne", reward)
         else
             Player.Functions.AddMoney("crypto", reward, Lang:t('boosting.info.rewardboost'))
         end

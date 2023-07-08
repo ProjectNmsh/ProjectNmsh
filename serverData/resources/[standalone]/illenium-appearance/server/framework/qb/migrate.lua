@@ -37,7 +37,7 @@ local function MigrateQBClothing(source)
                 position = Config.NotifyOptions.position
             })
         else
-            TriggerClientEvent("illenium-appearance:client:migration:load-qb-clothing-skin", source, allPlayerSkins[i])
+            TriggerClientEvent("illenium-appearance:client:migration:load-nmsh-clothing-skin", source, allPlayerSkins[i])
             while not continue do
                 Wait(10)
             end
@@ -55,7 +55,7 @@ local function MigrateQBClothing(source)
     })
 end
 
-RegisterNetEvent("illenium-appearance:server:migrate-qb-clothing-skin", function(citizenid, appearance)
+RegisterNetEvent("illenium-appearance:server:migrate-nmsh-clothing-skin", function(citizenid, appearance)
     local src = source
     Database.PlayerSkins.DeleteByCitizenID(citizenid)
     Database.PlayerSkins.Add(citizenid, appearance.model, json.encode(appearance), 1)
@@ -82,7 +82,7 @@ lib.addCommand("migrateskins", {
     local resourceName = args.resourceName
     if resourceName == "fivem-appearance" then
         MigrateFivemAppearance(source)
-    elseif resourceName == "qb-clothing" then
+    elseif resourceName == "nmsh-clothing" then
         CreateThread(function()
             MigrateQBClothing(source)
         end)

@@ -9,7 +9,7 @@ local getEntityOptions = require 'client.api'.getEntityOptions
 require 'client.debug'
 require 'client.defaults'
 require 'client.compat.qtarget'
-require 'client.compat.qb-target'
+require 'client.compat.nmsh-target'
 
 local raycastFromCamera, getNearbyZones, drawZoneSprites, getCurrentZone in utils
 local SendNuiMessage = SendNuiMessage

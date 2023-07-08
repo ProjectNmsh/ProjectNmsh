@@ -35,7 +35,7 @@ end)
 -- Prolly a better minigame for this and needs a drilling anim
 local function breakCrate(entity)
     if haveItem('drill') then
-        exports['ps-ui']:Thermite(function(success)
+        exports['nmsh-ui']:Thermite(function(success)
             if success then
                 TriggerServerEvent('jl-laptop:server:crateOpened', NetworkGetNetworkIdFromEntity(entity))
                 if crateBlip then RemoveBlip(crateBlip) end
@@ -53,7 +53,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 
         for netID, _ in pairs(crates) do
             local obj = NetworkGetEntityFromNetworkId(netID)
-            exports['qb-target']:AddTargetEntity(obj, {
+            exports['nmsh-target']:AddTargetEntity(obj, {
                 options = {
                     {
                         label = Lang:t('darkweb.target.breakcrateopen'),
@@ -106,7 +106,7 @@ RegisterNetEvent('darkweb:client:cratedrop', function(netID)
         SetBlipAsShortRange(crateBlip, true)
     end
 
-    exports['qb-target']:AddTargetEntity(obj, {
+    exports['nmsh-target']:AddTargetEntity(obj, {
         options = {
             {
                 label = Lang:t('darkweb.target.breakcrateopen'),

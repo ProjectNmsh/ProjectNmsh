@@ -81,7 +81,7 @@ function Process(action, start, tick, finish)
     Action = action
 	if Action.icon then
 		if QBCore.Shared.Items[tostring(Action.icon)] then
-			local img = "nui://qb-inventory/html/" -- default qb-core inventory link
+			local img = "nui://nmsh-inventory/html/" -- default qb-core inventory link
 			if not string.find(QBCore.Shared.Items[tostring(Action.icon)].image, "http") then -- 👀 Slipped in support for custom html links too
 				if not string.find(QBCore.Shared.Items[tostring(Action.icon)].image, "images/") then --search for if the icon images have /images in the listing
 					img = img.."images/"

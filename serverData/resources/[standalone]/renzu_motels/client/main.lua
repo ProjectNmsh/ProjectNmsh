@@ -790,7 +790,7 @@ MotelZone = function(data)
     })
 end
 
---qb-interior func
+--nmsh-interior func
 local house
 local inhouse = false
 function Teleport(x, y, z, h ,exit)
@@ -802,7 +802,7 @@ function Teleport(x, y, z, h ,exit)
     end)
 	if exit then
 		inhouse = false
-		TriggerEvent('qb-weathersync:client:EnableSync')
+		TriggerEvent('nmsh-weathersync:client:EnableSync')
 		for k,id in pairs(shelzones) do
 			removeTargetZone(id)
 		end
@@ -836,7 +836,7 @@ EnterShell = function(data,login)
         Wait(10)
     end
 	inhouse = true
-	TriggerEvent('qb-weathersync:client:DisableSync')
+	TriggerEvent('nmsh-weathersync:client:DisableSync')
 	RequestModel(model)
 	while not HasModelLoaded(model) do
 	    Wait(1000)

@@ -86,7 +86,7 @@ RegisterNetEvent("QBCore:Client:OnPlayerLoaded", function()
     InitAppearance()
 end)
 
-RegisterNetEvent("qb-clothes:client:CreateFirstCharacter", function()
+RegisterNetEvent("nmsh-clothes:client:CreateFirstCharacter", function()
     QBCore.Functions.GetPlayerData(function(pd)
         PlayerData = pd
         setClientParams()

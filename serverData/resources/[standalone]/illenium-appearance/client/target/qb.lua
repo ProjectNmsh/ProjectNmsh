@@ -3,15 +3,15 @@ if not Config.UseTarget then return end
 if not Target.IsQB() then return end
 
 function Target.RemoveZone(zone)
-    exports["qb-target"]:RemoveZone(zone)
+    exports["nmsh-target"]:RemoveZone(zone)
 end
 
 function Target.AddTargetEntity(entity, parameters)
-    exports["qb-target"]:AddTargetEntity(entity, parameters)
+    exports["nmsh-target"]:AddTargetEntity(entity, parameters)
 end
 
 function Target.AddBoxZone(name, coords, size, parameters)
-    exports["qb-target"]:AddBoxZone(name, coords, size.x, size.y, {
+    exports["nmsh-target"]:AddBoxZone(name, coords, size.x, size.y, {
         name = name,
         debugPoly = Config.Debug,
         minZ = coords.z - 2,
@@ -21,7 +21,7 @@ function Target.AddBoxZone(name, coords, size, parameters)
 end
 
 function Target.AddPolyZone(name, points, parameters)
-    exports["qb-target"]:AddPolyZone(name, points, {
+    exports["nmsh-target"]:AddPolyZone(name, points, {
         name = name,
         debugPoly = Config.Debug,
         minZ = points[1].z - 2,
@@ -30,5 +30,5 @@ function Target.AddPolyZone(name, points, parameters)
 end
 
 function Target.IsTargetStarted()
-    return GetResourceState("qb-target") == "started"
+    return GetResourceState("nmsh-target") == "started"
 end

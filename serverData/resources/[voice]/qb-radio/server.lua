@@ -1,10 +1,10 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 QBCore.Functions.CreateUseableItem("radio", function(source)
-    TriggerClientEvent('qb-radio:use', source)
+    TriggerClientEvent('nmsh-radio:use', source)
 end)
 
-QBCore.Functions.CreateCallback('qb-radio:radiocheck', function(source, cb)
+QBCore.Functions.CreateCallback('nmsh-radio:radiocheck', function(source, cb)
     local Player = QBCore.Functions.GetPlayer(source)
     if Player ~= nil then
         if Player.Functions.GetItemByName("radio") ~= nil and not Player.PlayerData.metadata["isdead"] and not Player.PlayerData.metadata["inlaststand"] then

@@ -39,5 +39,5 @@ server_exports {
     'GetWeather'
 }
 
-provide 'qb-weathersync'
+provide 'nmsh-weathersync'
 provide 'vSync'

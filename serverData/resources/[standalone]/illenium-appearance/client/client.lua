@@ -409,9 +409,9 @@ local function RegisterDeleteOutfitMenu(id, parent, outfits, deleteEvent)
 end
 
 RegisterNetEvent("illenium-appearance:client:OutfitManagementMenu", function(args)
-    local bossMenuEvent = "qb-bossmenu:client:OpenMenu"
+    local bossMenuEvent = "nmsh-bossmenu:client:OpenMenu"
     if args.type == "Gang" then
-        bossMenuEvent = "qb-gangmenu:client:OpenMenu"
+        bossMenuEvent = "nmsh-gangmenu:client:OpenMenu"
     end
 
     local outfits = lib.callback.await("illenium-appearance:server:getManagementOutfits", false, args.type, Framework.GetGender())

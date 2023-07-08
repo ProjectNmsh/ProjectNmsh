@@ -31,12 +31,12 @@ function SubmitInput() {
     for (var i = 0; i < Inputs; i++) {
         returnData[i] = document.getElementById("input-"+i).value;
     }
-    $.post('https://ps-ui/input-callback', JSON.stringify({ 'input': returnData }));
+    $.post('https://nmsh-ui/input-callback', JSON.stringify({ 'input': returnData }));
     CloseInput()
 }
 
 function CloseInput() {
-    $.post('https://ps-ui/input-close', JSON.stringify({"ok":true}));
+    $.post('https://nmsh-ui/input-close', JSON.stringify({"ok":true}));
     $(".input").fadeOut(0);
     document.querySelector('.input').innerHTML = '';
     Input = false;

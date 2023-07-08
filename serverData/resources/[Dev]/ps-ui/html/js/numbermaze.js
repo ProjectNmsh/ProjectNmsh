@@ -58,7 +58,7 @@ function CheckMaze() {
         setTimeout(function() { 
             $(".numbermaze-hack").fadeOut();
             ResetNumberMaze();
-            $.post(`https://ps-ui/maze-callback`, JSON.stringify({ 'success': false }));
+            $.post(`https://nmsh-ui/maze-callback`, JSON.stringify({ 'success': false }));
         }, 4000);
         
         return;
@@ -71,7 +71,7 @@ function CheckMaze() {
         setTimeout(function() { 
             $(".numbermaze-hack").fadeOut();
             ResetNumberMaze();
-            $.post(`https://ps-ui/maze-callback`, JSON.stringify({ 'success': true }));
+            $.post(`https://nmsh-ui/maze-callback`, JSON.stringify({ 'success': true }));
         }, 4000);
     }
 }
@@ -234,7 +234,7 @@ document.addEventListener("keydown", function(ev) {
                 maze_started = false;
                 game_playing = false;
                 ResetNumberMaze();
-                $.post(`https://ps-ui/maze-callback`, JSON.stringify({ 'success': false }));
+                $.post(`https://nmsh-ui/maze-callback`, JSON.stringify({ 'success': false }));
                 $(".numbermaze-hack").fadeOut(500)
                 break;
         }

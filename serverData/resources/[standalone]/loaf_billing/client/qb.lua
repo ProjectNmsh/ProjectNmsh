@@ -12,7 +12,7 @@ CreateThread(function()
     function ConfirmTransfer(data)
         local label, billId, playerName, playerId, oldData = table.unpack(data)
 
-        exports["qb-menu"]:openMenu({
+        exports["nmsh-menu"]:openMenu({
             {
                 header = Strings["confirm_transfer"]:format(label, playerName),
                 isMenuHeader = true
@@ -64,7 +64,7 @@ CreateThread(function()
             }
         })
 
-        exports["qb-menu"]:openMenu(elements)
+        exports["nmsh-menu"]:openMenu(elements)
     end
 
     function BillMenu(data)
@@ -95,7 +95,7 @@ CreateThread(function()
         end
         table.insert(elements, {header = Strings["back"], params = {event = BillsMenu, args = signed, isAction = true}})
 
-        exports["qb-menu"]:openMenu(elements)
+        exports["nmsh-menu"]:openMenu(elements)
     end
 
     function BillsMenu(signed)
@@ -129,11 +129,11 @@ CreateThread(function()
             table.insert(elements, {header = Strings["back"], params = {event = OpenBillsMenu, isAction = true}})
         end
 
-        exports["qb-menu"]:openMenu(elements)
+        exports["nmsh-menu"]:openMenu(elements)
     end
 
     function OpenBillsMenu()
-        exports["qb-menu"]:openMenu({
+        exports["nmsh-menu"]:openMenu({
             {
                 header = Strings["select_menu"],
                 isMenuHeader = true

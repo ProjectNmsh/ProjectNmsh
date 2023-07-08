@@ -12,12 +12,12 @@ CreateThread(function()
         Gangs = QBCore.Shared.Gangs
 
         -- Backwards Compatability
-        ExportHandler("qb-management", "GetAccount", GetAccountMoney)
-        ExportHandler("qb-management", "GetGangAccount", GetAccountMoney)
-        ExportHandler("qb-management", "AddMoney", AddAccountMoney)
-        ExportHandler("qb-management", "AddGangMoney", AddAccountMoney)
-        ExportHandler("qb-management", "RemoveMoney", RemoveAccountMoney)
-        ExportHandler("qb-management", "RemoveGangMoney", RemoveAccountMoney)
+        ExportHandler("nmsh-management", "GetAccount", GetAccountMoney)
+        ExportHandler("nmsh-management", "GetGangAccount", GetAccountMoney)
+        ExportHandler("nmsh-management", "AddMoney", AddAccountMoney)
+        ExportHandler("nmsh-management", "AddGangMoney", AddAccountMoney)
+        ExportHandler("nmsh-management", "RemoveMoney", RemoveAccountMoney)
+        ExportHandler("nmsh-management", "RemoveGangMoney", RemoveAccountMoney)
     elseif Framework == 'esx'then
         ESX = exports['es_extended']:getSharedObject()
         ESX.RefreshJobs()
@@ -128,7 +128,7 @@ end
 function GetJobs(Player)
     if Framework == 'qb' then
         if Config.renewedMultiJob then
-            local jobs = exports['qb-phone']:getJobs(Player.PlayerData.citizenid)
+            local jobs = exports['nmsh-phone']:getJobs(Player.PlayerData.citizenid)
             local temp = {}
             for k,v in pairs(jobs) do
                 temp[#temp+1] = {

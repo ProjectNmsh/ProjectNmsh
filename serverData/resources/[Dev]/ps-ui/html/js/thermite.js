@@ -44,13 +44,13 @@ function CheckThermite() {
         good_positions.forEach( pos => {
             blocks[pos].classList.add('proper');
         });
-        $.post(`https://ps-ui/thermite-callback`, JSON.stringify({ 'success': false }));
+        $.post(`https://nmsh-ui/thermite-callback`, JSON.stringify({ 'success': false }));
         ResetThermite();
         return;
     }
     if (right === mode_data[mode][0]) {
         StopThermiteTimer();
-        $.post(`https://ps-ui/thermite-callback`, JSON.stringify({ 'success': true }));
+        $.post(`https://nmsh-ui/thermite-callback`, JSON.stringify({ 'success': true }));
         ResetThermite();
     }
 }
@@ -167,7 +167,7 @@ document.addEventListener("keydown", function(ev) {
               thermite_started = false;
               game_playing = false;
               ResetThermite();
-              $.post(`https://ps-ui/thermite-callback`, JSON.stringify({ 'success': false }));
+              $.post(`https://nmsh-ui/thermite-callback`, JSON.stringify({ 'success': false }));
               $(".thermite").fadeOut();
               break;
       }

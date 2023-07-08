@@ -6,7 +6,7 @@ Management.ItemIDs = {
 }
 
 function Management.IsQB()
-    local resName = "qb-management"
+    local resName = "nmsh-management"
     if GetResourceState(resName) ~= "missing" then
         Management.ResourceName = resName
         return true

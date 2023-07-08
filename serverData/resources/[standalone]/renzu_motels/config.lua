@@ -1,6 +1,6 @@
 config = {}
 config.wardrobe = 'illenium-appearance' -- choose your skin menu
-config.target = false -- false = markers zones type. true = ox_target, qb-target
+config.target = false -- false = markers zones type. true = ox_target, nmsh-target
 config.business = true -- allowed players to purchase the motel
 config.autokickIfExpire = false -- auto kick occupants if rent is due. if false owner of motel must kick the occupants
 config.breakinJobs = { -- jobs can break in to door using gunfire in doors
@@ -17,8 +17,8 @@ config.wardrobes = { -- skin menus
 	['illenium-appearance'] = function()
 		return TriggerEvent('illenium-appearance:client:openOutfitMenu')
 	end,
-	['qb-clothing'] = function()
-		return TriggerEvent('qb-clothing:client:openOutfitMenu')
+	['nmsh-clothing'] = function()
+		return TriggerEvent('nmsh-clothing:client:openOutfitMenu')
 	end,
 	['esx_skin'] = function()
 		TriggerEvent('esx_skin:openSaveableMenu')

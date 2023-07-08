@@ -1,5 +1,5 @@
 if GetResourceState('ox_target') == 'started' 
-or GetResourceState('ox_target') ~= 'started' and GetResourceState('qb-target') ~= 'started' or not config.target then return end
+or GetResourceState('ox_target') ~= 'started' and GetResourceState('nmsh-target') ~= 'started' or not config.target then return end
 
 MotelFunction = function(data)
 	if not data.Mlo and data.type ~= 'door' then return end
@@ -54,7 +54,7 @@ MotelFunction = function(data)
 		options = options
 	}
 	local targetid = data.index .. '_' .. data.type
-	exports['qb-target']:AddBoxZone(targetid,data.coord,0.40,0.40,{
+	exports['nmsh-target']:AddBoxZone(targetid,data.coord,0.40,0.40,{
 		name = targetid,
 		debugPoly = false,
 		minZ = data.coord.z-0.2,
@@ -64,7 +64,7 @@ MotelFunction = function(data)
 end
 
 removeTargetZone = function(id)
-	return exports['qb-target']:RemoveZone(id)
+	return exports['nmsh-target']:RemoveZone(id)
 end
 
 ShellTargets = function(data,offsets,loc,house)
@@ -110,7 +110,7 @@ ShellTargets = function(data,offsets,loc,house)
 		end
 
 		local targetid = data.motel .. '_' .. k..'_'..data.index
-		exports['qb-target']:AddBoxZone(targetid, loc+v, 0.75, 0.75, {
+		exports['nmsh-target']:AddBoxZone(targetid, loc+v, 0.75, 0.75, {
 			name = targetid,
 			debugPoly = false,
 			minZ = (loc+v).z-0.45,
