@@ -26,15 +26,10 @@ Config.NotificationType = { --[ 'esx' / 'qbcore' / 'mythic_old' / 'mythic_new' /
 }
 
 Config.Command = {
-    OpenUI = 'weather', --The command for staff to open the UI.
+    OpenUI = 'time', --The command for staff to open the UI.
 
     Perms = { --You decide which permission groups can use the staff command ^.
-        ['esx'] = {'superadmin', 'admin', 'mod'},
-        ['qbcore'] = {'god', 'admin'},
-        ['vrp'] = {'change_me', 'change_me'},
-        ['aceperms'] = {'change_me', 'change_me'},
-        ['identifiers'] = {'steam:xxxxx', 'license:xxxxx'},
-        ['other'] = {'change_me', 'change_me'}
+        ['qbcore'] = {'god', 'admin'}
     }
 }
 

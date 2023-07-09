@@ -24,7 +24,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ---------------------------------------------------
 ]]
-
 STORAGE = { }
 
 local save_prefix = 'lvc_'..community_id..'_'
@@ -33,19 +32,26 @@ local backup_tone_table = {}
 local custom_tone_names = false
 local SIRENS_backup_string = nil
 local profiles = { }
-				
+
+--	forward local fn declaration
+local IsNewerVersion
+ 
 ------------------------------------------------
 --Deletes all saved KVPs for that vehicle profile
 --	This should never be removed. It is the only easy way for end users to delete LVC data.
 RegisterCommand('lvcfactoryreset', function(source, args)
-	local choice = HUD:FrontEndAlert('Warning', 'Are you sure you want to delete all saved LVC data and Factory Reset?')
+	local choice = HUD:FrontEndAlert(Lang:t('warning.warning'), Lang:t('warning.factory_reset'), Lang:t('warning.facory_reset_options'))
 	if choice then
-		STORAGE:DeleteKVPs(save_prefix)
-		STORAGE:ResetSettings()
-		UTIL:Print('Success: cleared all save data.', true)
-		HUD:ShowNotification('~g~Success~s~: You have deleted all save data and reset LVC.', true)
+		STORAGE:FactoryReset()
 	end
 end)
+
+function STORAGE:FactoryReset()
+	STORAGE:DeleteKVPs(save_prefix)
+	STORAGE:ResetSettings()
+	UTIL:Print(Lang:t('info.factory_reset_success_console'), true)
+	HUD:ShowNotification(Lang:t('info.factory_reset_success_frontend'), true)
+end
 
 --Prints all KVP keys and values to console
 --if GetResourceMetadata(GetCurrentResourceName(), 'debug_mode', 0) == 'true' then
@@ -62,18 +68,18 @@ end)
 				UTIL:Print('^4LVC ^5STORAGE Found: ^7"'..key..'" "'..GetResourceKvpFloat(key)..'", FLOAT', true)
 			end
 			key = FindKvp(handle)
-			Citizen.Wait(0)
+			Wait(0)
 		end
 		UTIL:Print('^4LVC ^5STORAGE: ^7Finished Dumping KVPs...')
 	end)
 --end
 ------------------------------------------------
 -- Resource Start Initialization
-Citizen.CreateThread(function()
-	Citizen.Wait(500)
+CreateThread(function()
 	TriggerServerEvent('lvc:GetRepoVersion_s')
 	STORAGE:FindSavedProfiles()
 end)
+
 --[[Function for Deleting KVPs]]
 function STORAGE:DeleteKVPs(prefix)
 	local handle = StartFindKvp(prefix);
@@ -82,7 +88,7 @@ function STORAGE:DeleteKVPs(prefix)
 		DeleteResourceKvp(key)
 		UTIL:Print('^3LVC Info: Deleting Key \'' .. key .. '\'', true)
 		key = FindKvp(handle)
-		Citizen.Wait(0)
+		Wait(0)
 	end
 end
 
@@ -120,7 +126,6 @@ end
 --[[Saves all KVP values.]]
 function STORAGE:SaveSettings()
 	UTIL:Print('^4LVC: ^5STORAGE: ^7Saving Settings...')
-	local settings_string = nil
 	SetResourceKvp(save_prefix..'save_version', STORAGE:GetCurrentVersion())
 
 	--HUD Settings
@@ -147,8 +152,6 @@ function STORAGE:SaveSettings()
 										 airhorn_intrp 		= tone_airhorn_intrp,
 										 main_reset_standby = tone_main_reset_standby,
 										 park_kill 			= park_kill,
-										 horn_on_cycle		= horn_on_cycle,
-										 airhorn_behavior	= airhorn_behavior,
 										 tone_options 		= tone_options_encoded,															  
 									   }
 							
@@ -223,7 +226,7 @@ function STORAGE:LoadSettings(profile_name)
 		end
 		
 		--Profile Specific Settings
-		if UTIL:GetVehicleProfileName() ~= nil then
+		if UTIL:GetVehicleProfileName() ~= false then
 			local profile_name = profile_name or string.gsub(UTIL:GetVehicleProfileName(), ' ', '_')	
 			if profile_name ~= nil then
 				local profile_save_data = GetResourceKvpString(save_prefix..'profile_'..profile_name..'!')
@@ -236,15 +239,11 @@ function STORAGE:LoadSettings(profile_name)
 						tone_airhorn_intrp 		= profile_save_data.airhorn_intrp
 						tone_main_reset_standby = profile_save_data.main_reset_standby
 						park_kill 				= profile_save_data.park_kill
-						if profile_save_data.horn_on_cycle ~= nil then
-							horn_on_cycle			= profile_save_data.horn_on_cycle		
-						end
-						if profile_save_data.airhorn_behavior ~= nil then
-							airhorn_behavior		= profile_save_data.airhorn_behavior		
-						end
 						local tone_options = json.decode(profile_save_data.tone_options)
 							if tone_options ~= nil then
 								for tone_id, option in pairs(tone_options) do
+									tone_id = tonumber(tone_id)
+									option = tonumber(option)
 									if SIRENS[tone_id] ~= nil then
 										UTIL:SetToneOption(tone_id, option)
 									end
@@ -288,7 +287,6 @@ function STORAGE:ResetSettings()
 	UTIL:Print('^4LVC ^5STORAGE: ^7Resetting Settings...')
 
 	--Storage State
-	settings_init 			= false
 	custom_tone_names 		= false
 	profiles = { }
 	STORAGE:FindSavedProfiles()
@@ -298,8 +296,6 @@ function STORAGE:ResetSettings()
 	tone_main_reset_standby = reset_to_standby_default
 	tone_airhorn_intrp 		= airhorn_interrupt_default
 	park_kill 				= park_kill_default
-	horn_on_cycle			= horn_on_cycle_default or false
-	airhorn_behavior		= airhorn_behavior_default or 4
 
 	--HUD State
 	HUD:SetHudState(hud_first_default)
@@ -357,11 +353,18 @@ function STORAGE:FindSavedProfiles()
 			end
 		end
 		key = FindKvp(handle)
-		Citizen.Wait(0)
+		Wait(0)
 	end
 end
 
 function STORAGE:GetSavedProfiles()
+	local cur_profile = UTIL:GetVehicleProfileName()
+	for i, profile in ipairs(profiles) do
+		if profile == cur_profile then
+			table.remove(profiles, i)
+		end
+	end
+	
 	return profiles
 end
 ------------------------------------------------
@@ -383,32 +386,24 @@ end
 ------------------------------------------------
 --HELPER FUNCTIONS for main siren settings saving:end
 --Compare Version Strings: Is version newer than test_version
-function IsNewerVersion(version, test_version)
+IsNewerVersion = function(version, test_version)
 	if version == nil or test_version == nil then
-		return false
+		return 'unknown'
 	end
-	
-	_, _, s1, s2, s3 = string.find( version, '(%d+)%.(%d+)%.(%d+)' )
-	_, _, c1, c2, c3 = string.find( test_version, '(%d+)%.(%d+)%.(%d+)' )
-	
-	if s1 > c1 then				-- s1.0.0 Vs c1.0.0
+
+	if type(version) == 'string' then
+		version = semver(version)
+	end
+	if type(test_version) == 'string' then
+		test_version = semver(test_version)
+	end
+
+	if version > test_version then
 		return 'older'
-	elseif s1 < c1 then
+	elseif version < test_version then
 		return 'newer'
-	else
-		if s2 > c2 then			-- 0.s2.0 Vs 0.c2.0
-			return 'older'
-		elseif s2 < c2 then
-			return 'newer'
-		else
-			if s3 > c3 then		-- 0.0.s3 Vs 0.0.c3
-				return 'older'
-			elseif s3 < c3 then
-				return 'newer'
-			else
-				return 'equal'
-			end
-		end
+	elseif version == test_version then
+		return 'equal'
 	end
 end
 

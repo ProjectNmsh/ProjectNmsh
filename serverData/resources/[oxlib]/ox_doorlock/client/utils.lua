@@ -254,10 +254,10 @@ CreateThread(function()
 			ox = true,
 			exp = exports.ox_target
 		}
-	elseif GetResourceState('nmsh-target'):find('start') then
+	elseif GetResourceState('qb-target'):find('start') then
 		target = {
 			qb = true,
-			exp = exports['nmsh-target']
+			exp = exports['qb-target']
 		}
 	elseif GetResourceState('qtarget'):find('start') then
 		target = {

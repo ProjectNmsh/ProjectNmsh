@@ -35,8 +35,8 @@ local HUD_backlight_state = false
 
 ---------------------------------------------------------------------
 --[[Gets initial HUD scale from JS]]
-Citizen.CreateThread(function()
-	Citizen.Wait(1000)
+CreateThread(function()
+	Wait(500)
 	SendNUIMessage({
 	  _type = 'hud:getHudScale',
 	})
@@ -44,7 +44,7 @@ end)
 
 ---------------------------------------------------------------------
 --[[Handles HUD back light control.]]
-Citizen.CreateThread(function()
+CreateThread(function()
 	local current_backlight_state
 	while true do
 		if player_is_emerg_driver then
@@ -57,16 +57,16 @@ Citizen.CreateThread(function()
 				elseif (veh_lights == 0 and veh_headlights == 0) and HUD:GetHudBacklightState() == true then
 					HUD:SetHudBacklightState(false)
 				end
-				Citizen.Wait(500)
+				Wait(500)
 			end
 		end
-		Citizen.Wait(1000)
+		Wait(1000)
 	end
 end)
 
 ---------------------------------------------------------------------
 --[[Handles hiding hud when hud is hidden or game is paused.]]
-Citizen.CreateThread(function()
+CreateThread(function()
 	while true do
 		if show_HUD or HUD_temp_hidden then
 			if (not player_is_emerg_driver) or (IsHudHidden() == 1) or (IsPauseMenuActive() == 1) then
@@ -79,7 +79,7 @@ Citizen.CreateThread(function()
 				HUD_temp_hidden = false
 			end
 		end
-		Citizen.Wait(500)
+		Wait(500)
 	end
 end)
 
@@ -104,8 +104,7 @@ function HUD:GetHudScale()
 	SendNUIMessage({
 	  _type = 'hud:getHudScale'
 	})
-	HUD_scale = HUD_scale or 0.6
-	return HUD_scale
+	return HUD_scale or 0.6
 end
 
 --[[Setter for HUD scale. Updates JS & CSS.]]
@@ -119,7 +118,7 @@ function HUD:SetHudScale(scale)
 end
 
 --[[Callback for JS -> LUA to set HUD_scale with current CSS]]
-RegisterNUICallback( 'hud:sendHudScale', function(scale, cb)
+RegisterNUICallback('hud:sendHudScale', function(scale, cb)
 	HUD_scale = scale
 end )
 
@@ -283,43 +282,43 @@ end
 
 ------------------------------------------------
 --Full screen Confirmation Message
-function HUD:FrontEndAlert(title, subtitle)
-	AddTextEntry('FACES_WARNH2', 'Warning')
-	AddTextEntry('QM_NO_0', 'Are you sure you want to delete all saved LVC data and Factory Reset?')
+function HUD:FrontEndAlert(title, subtitle, options)
+	AddTextEntry('FACES_WARNH2', title)
+	AddTextEntry('QM_NO_0', subtitle)
 	local result = -1
 	while result == -1 do
 		DrawFrontendAlert('FACES_WARNH2', 'QM_NO_0', 0, 0, '', 0, -1, 0, '', '', false, 0)
-		HUD:ShowText(0.5, 0.75, 0, '~g~No: Escape \t ~r~Yes: Enter', 0.75)
+		HUD:ShowText(0.5, 0.75, 0, options, 0.75)
 		if IsDisabledControlJustReleased(2, 202) then
 			return false
 		end		
 		if IsDisabledControlJustReleased(2, 201) then
 			return true
 		end
-		Citizen.Wait(0)
+		Wait(0)
 	end
 end
 
 ------------------------------------------------
 --Get User Input from Keyboard
 function HUD:KeyboardInput(input_title, existing_text, max_length)
-	AddTextEntry('Custom_Keyboard_Title', input_title)
-	DisplayOnscreenKeyboard(1, 'Custom_Keyboard_Title', '', existing_text, '', '', '', max_length) 
+	AddTextEntry('custom_keyboard_title', input_title)
+	DisplayOnscreenKeyboard(1, 'custom_keyboard_title', '', existing_text, '', '', '', max_length) 
 
 	while UpdateOnscreenKeyboard() ~= 1 and UpdateOnscreenKeyboard() ~= 2 do
-		Citizen.Wait(0)
+		Wait(0)
 	end
 		
 	if UpdateOnscreenKeyboard() ~= 2 then
 		local result = GetOnscreenKeyboardResult() 
-		Citizen.Wait(500) 
+		Wait(500) 
 		if result ~= '' then
 			return result 
 		else 
 			return nil
 		end
 	else
-		Citizen.Wait(500)
+		Wait(500)
 		return nil 
 	end
 end

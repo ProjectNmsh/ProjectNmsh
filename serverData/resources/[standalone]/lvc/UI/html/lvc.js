@@ -19,7 +19,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ---------------------------------------------------
 */
 
-var resourceName = "";
 var time_folder = "day/";
 var ta_pattern = "ta/pattern_3/";
 var audioPlayer = null;
@@ -125,8 +124,11 @@ window.addEventListener('message', function(event) {
 	}else if ( type == "hud:getHudScale" ){
 		sendData( "hud:sendHudScale", scale = scale );
 	}else if ( type == "hud:setHudPosition" ){
-		elements.sirenbox.style.left = event.data.pos.left;
-		elements.sirenbox.style.top = event.data.pos.top;
+		try{
+			elements.sirenbox.style.left = event.data.pos.left;
+			elements.sirenbox.style.top = event.data.pos.top;
+		}catch(error)
+		{}
 	}else if ( type == "hud:resetPosition" ){
 		elements.sirenbox.style.left = backup.left;
 		elements.sirenbox.style.top = backup.top;
@@ -152,7 +154,7 @@ $( document ).contextmenu( function() {
 
 // This function is used to send data back through to the LUA side 
 function sendData( name, data ) {
-	$.post( "https://"+ resourceName +"/" + name, JSON.stringify( data ), function( datab ) {
+	$.post( "https://lvc/" + name, JSON.stringify( data ), function( datab ) {
 		if ( datab != "ok" ) {
 			console.log( datab );
 		}            

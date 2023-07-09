@@ -38,48 +38,51 @@ local tone_ARHRN_id = nil
 
 ---------------------------------------------------------------------
 --[[Return sub-table for sirens or plugin settings tables, given veh, and name of whatever setting.]]
-function UTIL:GetProfileFromTable(print_name, tbl, veh)
+function UTIL:GetProfileFromTable(print_name, tbl, veh, ignore_missing_default)
+	local ignore_missing_default = ignore_missing_default or false
 	local veh_name = GetDisplayNameFromVehicleModel(GetEntityModel(veh))
 	local lead_and_trail_wildcard = veh_name:gsub('%d+', '#')
 	local lead = veh_name:match('%d*%a+')
 	local trail = veh_name:gsub(lead, ''):gsub('%d+', '#')
 	local trail_only_wildcard = string.format('%s%s', lead, trail)
-	
+
 	local profile_table, profile
 	if tbl ~= nil then
 		if tbl[veh_name] ~= nil then							--Does profile exist as outlined in vehicle.meta
 			profile_table = tbl[veh_name]
 			profile = veh_name
-			UTIL:Print(('^4LVC(%s) ^5%s: ^7profile %s found for %s.'):format(STORAGE:GetCurrentVersion(), print_name, profile, veh_name))
+			UTIL:Print(Lang:t('info.profile_found', {ver = STORAGE:GetCurrentVersion(), tbl = print_name, profile = profile, model = veh_name}))
 		elseif tbl[trail_only_wildcard] ~= nil then				--Does profile exist using # as wildcard for any trailing digits.
 			profile_table = tbl[trail_only_wildcard]
 			profile = trail_only_wildcard
-			UTIL:Print(('^4LVC(%s) ^5%s: ^7profile %s found for %s.'):format(STORAGE:GetCurrentVersion(), print_name, profile, veh_name))
+			UTIL:Print(Lang:t('info.profile_found', {ver = STORAGE:GetCurrentVersion(), tbl = print_name, profile = profile, model = veh_name}))
 		elseif tbl[lead_and_trail_wildcard] ~= nil then			--Does profile exist using # as wildcard for any digits.
 			profile_table = tbl[lead_and_trail_wildcard]
 			profile = lead_and_trail_wildcard
-			UTIL:Print(('^4LVC(%s) ^5%s: ^7profile %s found for %s.'):format(STORAGE:GetCurrentVersion(), print_name, profile, veh_name))			
+			UTIL:Print(Lang:t('info.profile_found', {ver = STORAGE:GetCurrentVersion(), tbl = print_name, profile = profile, model = veh_name}))
 		else
 			if tbl['DEFAULT'] ~= nil then
 				profile_table = tbl['DEFAULT']
 				profile = 'DEFAULT'
-				UTIL:Print(('^4LVC(%s) ^5%s: ^7using default profile for %s.'):format(STORAGE:GetCurrentVersion(), print_name, veh_name))
+				UTIL:Print(Lang:t('info.profile_default_console', {ver = STORAGE:GetCurrentVersion(), tbl = print_name, model = veh_name}))
 				if print_name == 'SIRENS' then
-					HUD:ShowNotification(('~b~LVC~s~: Using ~b~DEFAULT~s~ profile for \'~o~ %s ~s~\'.'):format(veh_name))
+					HUD:ShowNotification(Lang:t('info.profile_default_frontend', {model = veh_name}))
 				end
- 			else
+			else
 				profile_table = { }
 				profile = false
-				UTIL:Print(('^3LVC(%s) WARNING: "DEFAULT" table missing from %s table. Using empty table for %s.'):format(STORAGE:GetCurrentVersion(), print_name, veh_name), true)
+				if not ignore_missing_default then
+					UTIL:Print(Lang:t('warning.profile_missing', {ver = STORAGE:GetCurrentVersion(), tbl = print_name, model = veh_name}), true)
+				end
 			end
 		end
 	else
 		profile_table = { }
 		profile = false
-		HUD:ShowNotification(('~b~~h~LVC~h~ ~r~ERROR: %s attempted to get profile from nil table. See console.'):format(print_name), true)
-		UTIL:Print(('^1LVC(%s) ERROR: %s attempted to get profile from nil table. This is typically caused by an invalid character or missing { } brace in SIRENS.lua. (https://git.io/JDVhK)'):format(STORAGE:GetCurrentVersion(), print_name), true)
+		HUD:ShowNotification(Lang:t('error.profile_nil_table', {tbl = print_name}), true)
+		UTIL:Print(Lang:t('error.profile_nil_table_console', {ver = STORAGE:GetCurrentVersion(), tbl = print_name}), true)
 	end
-		
+	
 	return profile_table, profile
 end
 
@@ -100,6 +103,12 @@ end
 --[[Sets profile name and approved_tones table a copy of SIREN_ASSIGNMENTS for this vehicle]]
 function UTIL:UpdateApprovedTones(veh)
 	approved_tones, profile = UTIL:GetProfileFromTable('SIRENS', SIREN_ASSIGNMENTS, veh)
+	
+	if profile == false then
+		UTIL:Print(Lang:t('error.profile_none_found_console', {game_name = GetDisplayNameFromVehicleModel(GetEntityModel(veh))}), true)
+		HUD:ShowNotification(Lang:t('error.profile_none_found_frontend'), true)
+	end
+
 	if profile then
 		if not UTIL:IsApprovedTone('MAIN_MEM') then
 			UTIL:SetToneByPos('MAIN_MEM', 2)
@@ -140,10 +149,6 @@ function UTIL:BuildToneOptions()
 		if SIRENS[id] ~= nil then
 			option = SIRENS[id].Option or 1
 			temp_array[id] = option
-		else
-			HUD:ShowNotification('~b~LVC ~r~Error 204:~s~ tone does not exist. See console.', false)
-			UTIL:Print(('^1LVC(%s) Error: approved tone "%d" does not exist. Verify all approved tones exist in SIRENS table.'):format(STORAGE:GetCurrentVersion(), id))
-			break;
 		end
 	end
 	tone_options = temp_array
@@ -207,12 +212,12 @@ function UTIL:SetToneByPos(tone_string, pos)
 				tone_ARHRN_id = approved_tones[pos]
 			end
 		else
-			HUD:ShowNotification('~b~LVC ~y~Warning 403:~s~ too little sirens assigned.', false)
-			UTIL:Print(('^3LVC(%s) Warning 403: too little sirens assigned. Minimum 3 tones required. (UTIL:SetToneByPos(%s, %s)'):format(STORAGE:GetCurrentVersion(), tone_string, pos), true)
+			HUD:ShowNotification(Lang:t('warning.too_few_tone_frontend', {code = 403}), false)
+			UTIL:Print(Lang:t('warning.too_few_tone_console', {ver = STORAGE:GetCurrentVersion(), code = 403, tone_string = tone_string, pos = pos}), true)
 		end
 	else
-		HUD:ShowNotification('~b~LVC ~y~Warning 404:~s~ attempted to set tone but, was unable to locate approved_tones. See console.', false)
-		UTIL:Print(('^3LVC(%s) Warning 404: attempted to set tone "%s" but, was unable to locate approved_tones table. (UTIL:SetToneByPos(%s, %s). Try factory resetting as this may occur after siren tone assignments change.'):format(STORAGE:GetCurrentVersion(), tone_string, tone_string, pos), true)
+		HUD:ShowNotification(Lang:t('warning.tone_position_nil_frontend', {code = 404}), false)
+		UTIL:Print(Lang:t('warning.tone_position_nil_console', {ver = STORAGE:GetCurrentVersion(), code = 404, tone_string = tone_string, pos = pos}), true)
 	end
 end
 
@@ -237,22 +242,22 @@ end
 
 
 --[[Setter for ToneID by passing string abbreviation of tone (MAIN_MEM, PMANU, etc.) and specific ID.]]
-function UTIL:SetToneByID(tone, tone_id)
+function UTIL:SetToneByID(tone_string, tone_id)
 	if UTIL:IsApprovedTone(tone_id) then
-		if tone == 'MAIN_MEM' then
+		if tone_string == 'MAIN_MEM' then
 			tone_main_mem_id = tone_id
-		elseif tone == 'PMANU' then
+		elseif tone_string == 'PMANU' then
 			tone_PMANU_id = tone_id
-		elseif tone == 'SMANU' then
+		elseif tone_string == 'SMANU' then
 			tone_SMANU_id = tone_id
-		elseif tone == 'AUX' then
+		elseif tone_string == 'AUX' then
 			tone_AUX_id = tone_id
-		elseif tone == 'ARHRN' then
+		elseif tone_string == 'ARHRN' then
 			tone_ARHRN_id = tone_id
 		end
 	else
-		HUD:ShowNotification(('~b~LVC(%s) ~y~Warning 504:~s~ attempted to set tone but, was unable to locate in approved_tones. See console.'):format(STORAGE:GetCurrentVersion()), false)
-		UTIL:Print(('^3LVC(%s) Warning 504: attempted to set tone %s but, was unable to located pos: %s in approved_tones. (UTIL:SetToneByPos(%s, %s). Try factory resetting as this may occur after siren tone assignments change.'):format(STORAGE:GetCurrentVersion(), tone, tone_id, tone, tone_id), true)
+		HUD:ShowNotification(Lang:t('warning.tone_id_nil_frontend', {ver = STORAGE:GetCurrentVersion()}), false)
+		UTIL:Print(Lang:t('warning.tone_id_nil_console', {ver = STORAGE:GetCurrentVersion(), tone_string = tone_string, tone_id = tone_id}), true)
 	end
 end
 
@@ -408,7 +413,7 @@ function UTIL:TogVehicleExtras(veh, extra_id, state, repair)
 				end
 				SetVehicleAutoRepairDisabled(veh, not repair)
 				SetVehicleExtra(veh, extra_id, false)
-				UTIL:Print(('^4LVC: ^7Toggling %s on'):format(extra_id), false)
+				UTIL:Print(Lang:t('info.extra_on', {extra = extra_id}), false)
 				SetVehicleAutoRepairDisabled(veh, false)
 				if repair then
 					for i = 0,6 do
@@ -421,7 +426,7 @@ function UTIL:TogVehicleExtras(veh, extra_id, state, repair)
 		else
 			if IsVehicleExtraTurnedOn(veh, extra_id) then
 				SetVehicleExtra(veh, extra_id, true)
-				UTIL:Print(('^4LVC: ^7Toggling extra %s off'):format(extra_id), false)
+				UTIL:Print(Lang:t('info.extra_off', {extra = extra_id}), false)
 			end
 		end
 	end

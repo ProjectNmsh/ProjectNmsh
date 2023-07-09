@@ -321,12 +321,11 @@ CreateThread(function()
 					if drawSprite and not door.hideUi then
 						local sprite = drawSprite[door.state]
 
-						--Disabled Lame Draw Sprites.
-						--[[ if sprite then
+						if sprite then
 							SetDrawOrigin(door.coords.x, door.coords.y, door.coords.z)
 							DrawSprite(sprite[1], sprite[2], sprite[3], sprite[4], sprite[5], sprite[6] * ratio, sprite[7], sprite[8], sprite[9], sprite[10], sprite[11])
 							ClearDrawOrigin()
-						end ]]
+						end
 					end
 				end
 			end
