@@ -11,7 +11,7 @@ function ShootMeDaddy()
     until Count == 5
     Count = 0
 
-    -- TriggerEvent('mercy-ui/client/play-sound', 'prison-airdefense', 0.4)
+    -- TriggerEvent('nmsh-ui/client/play-sound', 'prison-airdefense', 0.4)
     -- exports['xsound']:PlayUrl('airdefense')
 
     Citizen.Wait(15000)
@@ -46,7 +46,7 @@ end
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(7)
-        if LocalPlayer.state.LoggedIn --[[ and not exports['mercy-hospital']:IsDead() ]] then
+        if LocalPlayer.state.LoggedIn --[[ and not exports['nmsh-hospital']:IsDead() ]] then
             local Coords = GetEntityCoords(PlayerPedId())
             local Distance = #(Coords - vector3(1693.33, 2569.51, 45.55))
             if Distance < 290 then

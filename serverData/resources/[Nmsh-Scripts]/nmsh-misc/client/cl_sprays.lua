@@ -45,20 +45,20 @@ end)
 
 -- [ Events ] --
 
-RegisterNetEvent("mercy-misc/client/used-spay-can", function(Item, Type)
+RegisterNetEvent("nmsh-misc/client/used-spay-can", function(Item, Type)
     EntityModule.DoEntityPlacer(Type, 4.5, false, true, nil, function(DidPlace, Coords, Heading)
         if not DidPlace then
-            return exports['mercy-ui']:Notify("housing-error", "You stopped placing the spray, or something went wrong..", "error")
+            return exports['nmsh-ui']:Notify("housing-error", "You stopped placing the spray, or something went wrong..", "error")
         end
 
-        local DidRemove = CallbackModule.SendCallback("mercy-base/server/remove-item", Item, 1, false, true)
+        local DidRemove = CallbackModule.SendCallback("nmsh-base/server/remove-item", Item, 1, false, true)
         if DidRemove then
-            EventsModule.TriggerServer('mercy-misc/server/spray-place', Coords, Heading, Type)
+            EventsModule.TriggerServer('nmsh-misc/server/spray-place', Coords, Heading, Type)
         end
     end)
 end)
 
-RegisterNetEvent("mercy-misc/client/sync-sprays", function(Data)
+RegisterNetEvent("nmsh-misc/client/sync-sprays", function(Data)
     Config.Sprays[#Config.Sprays + 1] = Data
 end)
 
@@ -79,7 +79,7 @@ function CreateSpray(Coords, Type, Id)
     end
 end
 
-RegisterNetEvent("mercy-misc/client/done-placing-spray", function(Id)
+RegisterNetEvent("nmsh-misc/client/done-placing-spray", function(Id)
     while SprayObject == nil do
         Wait(100)
     end
@@ -89,24 +89,24 @@ end)
 
 function StartProgressPaint(SprayObject, Id)
     DoingProgress = true
-    exports['mercy-inventory']:SetBusyState(true)
-    exports['mercy-assets']:AttachProp('SprayCan')
-    exports['mercy-ui']:ProgressBar('Spraying...', 25000, {
+    exports['nmsh-inventory']:SetBusyState(true)
+    exports['nmsh-assets']:AttachProp('SprayCan')
+    exports['nmsh-ui']:ProgressBar('Spraying...', 25000, {
         ['AnimName'] = 'weed_spraybottle_stand_spraying_01_inspector', 
         ['AnimDict'] = 'anim@amb@business@weed@weed_inspecting_lo_med_hi@', 
         ['AnimFlag'] = 16
     }, nil, true, true, function(DidComplete)
         DoingProgress = false
-        exports['mercy-inventory']:SetBusyState(false)
-        exports['mercy-assets']:RemoveProps()
+        exports['nmsh-inventory']:SetBusyState(false)
+        exports['nmsh-assets']:RemoveProps()
         ClearPedTasks(PlayerPedId())
         SetTimeout(1000, function()
             ClearPedTasksImmediately(PlayerPedId())
         end)
         if DidComplete then
-            exports['mercy-ui']:Notify("spray-started", "You have finished spraying the object!", "success")
+            exports['nmsh-ui']:Notify("spray-started", "You have finished spraying the object!", "success")
         else
-            exports['mercy-ui']:Notify("spray-stopped", "You stopped spraying the object!", "error")
+            exports['nmsh-ui']:Notify("spray-stopped", "You stopped spraying the object!", "error")
         end
     end)
 end

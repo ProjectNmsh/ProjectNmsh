@@ -258,7 +258,7 @@ menu_button:On('select', function(item)
 end)
 
 
-exports['qb-target']:AddBoxZone("Pokemon1", vector3(337.53, -930.37, 29.25), 1, 1, {
+exports['nmsh-target']:AddBoxZone("Pokemon1", vector3(337.53, -930.37, 29.25), 1, 1, {
     name="Pokemon1",
     heading=339.64,
     debugPoly=false,
@@ -276,7 +276,7 @@ exports['qb-target']:AddBoxZone("Pokemon1", vector3(337.53, -930.37, 29.25), 1, 
 })
 
 
-exports['qb-target']:AddBoxZone("Pokemon2", vector3(-143.97, 229.66, 94.95), 1, 1,  {
+exports['nmsh-target']:AddBoxZone("Pokemon2", vector3(-143.97, 229.66, 94.95), 1, 1,  {
     name="Pokemon2",
     heading=0,
     debugPoly=false,

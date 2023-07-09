@@ -1,5 +1,5 @@
-# qb-radio
-qb-radio Nopixel Inspired Radio (v2) for qb-core
+# nmsh-radio
+nmsh-radio Nopixel Inspired Radio (v2) for qb-core
 
 ## Install Video
 - [Youtube](https://youtu.be/bNrmQMvVYno)
@@ -12,7 +12,7 @@ qb-radio Nopixel Inspired Radio (v2) for qb-core
 ## Features
 - Latest Nopixel Inspired Radio
 - Radialmenu join channel option 1 - 6
-- Inventory Image [qb-radio/imgforinvenotry]
+- Inventory Image [nmsh-radio/imgforinvenotry]
 
 ## RadialMenu Events
 Add the trigger to your qb-radialmenu > config.lua (Anywhere you want someone to have access to it) for example:
@@ -21,7 +21,7 @@ Add the trigger to your qb-radialmenu > config.lua (Anywhere you want someone to
             title = 'Channel 1',
             icon = 'radio',
             type = 'client',
-            event = 'qb-radio:client:JoinRadioChannel1',
+            event = 'nmsh-radio:client:JoinRadioChannel1',
             shouldClose = true
 ```
 
@@ -35,8 +35,8 @@ Add the trigger to your qb-radialmenu > config.lua (Anywhere you want someone to
 - [Google search link to radio](https://www.aircraftspruce.com/catalog/avpages/yaesuVertexFTA750L.php)
 
 ## Installation
-- Replace current qb-radio with this version if you want to use it
-- Rename qb-radio-v2 to ----> qb-radio    (Make sure you rename the file or it will not work)
+- Replace current nmsh-radio with this version if you want to use it
+- Rename nmsh-radio-v2 to ----> nmsh-radio    (Make sure you rename the file or it will not work)
 
 - For a radio effect add this to your server.cfg  `setr voice_enableSubmix 1`
 
@@ -52,5 +52,5 @@ New Inventory Image
 ## Support
 - [Ko-fi Link](https://ko-fi.com/trclassic)
 
-## Original qb-radio
-- [qb-radio](https://github.com/qbcore-framework/qb-radio)
+## Original nmsh-radio
+- [nmsh-radio](https://github.com/qbcore-framework/nmsh-radio)

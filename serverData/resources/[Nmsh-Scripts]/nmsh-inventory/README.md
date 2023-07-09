@@ -64,7 +64,7 @@ In collaboration with [OnlyCats](https://github.com/onlycats) who helped reorgan
 * [qb-core](https://github.com/qbcore-framework/qb-core)
 * [qb-logs](https://github.com/qbcore-framework/qb-logs)
 * [qb-traphouse](https://github.com/qbcore-framework/qb-traphouse)
-* [qb-radio](https://github.com/qbcore-framework/qb-radio)
+* [nmsh-radio](https://github.com/qbcore-framework/nmsh-radio)
 * [qb-drugs](https://github.com/qbcore-framework/qb-drugs)
 * [qb-shops](https://github.com/qbcore-framework/qb-shops)
  

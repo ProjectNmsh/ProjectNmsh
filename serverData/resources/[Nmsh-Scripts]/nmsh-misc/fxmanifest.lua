@@ -12,14 +12,14 @@ shared_scripts {
 }
 
 client_scripts {
-    '@mercy-assets/client/cl_errorlog.lua',
-    '@mercy-base/shared/sh_shared.lua',
+    '@nmsh-assets/client/cl_errorlog.lua',
+    '@nmsh-base/shared/sh_shared.lua',
     'client/cl_*.lua',
 }
 
 server_scripts {
-    '@mercy-assets/server/sv_errorlog.lua',
-    '@mercy-base/shared/sh_shared.lua',
+    '@nmsh-assets/server/sv_errorlog.lua',
+    '@nmsh-base/shared/sh_shared.lua',
     'server/sv_*.lua',
 }
 

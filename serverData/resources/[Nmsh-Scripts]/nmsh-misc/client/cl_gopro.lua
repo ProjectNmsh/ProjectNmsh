@@ -51,14 +51,14 @@ end)
 
 -- [ Events ] --
 
-RegisterNetEvent("mercy-misc/client/gopros/view-camera", function(Data)
+RegisterNetEvent("nmsh-misc/client/gopros/view-camera", function(Data)
     local CameraData = GetGoProById(Data.CamId)
-    if not CameraData then return exports['mercy-ui']:Notify("gopro-error", "Cam does not exist?", "error") end
+    if not CameraData then return exports['nmsh-ui']:Notify("gopro-error", "Cam does not exist?", "error") end
 
     local PlayerJob = PlayerModule.GetPlayerData().Job
-    if CameraData.IsEncrypted and (PlayerJob.Name ~= 'police' or not PlayerJob.Duty) then return exports['mercy-ui']:Notify("gopro-error", "You can't connect to this GoPro..", "error") end
+    if CameraData.IsEncrypted and (PlayerJob.Name ~= 'police' or not PlayerJob.Duty) then return exports['nmsh-ui']:Notify("gopro-error", "You can't connect to this GoPro..", "error") end
 
-    exports['mercy-inventory']:SetBusyState(true)
+    exports['nmsh-inventory']:SetBusyState(true)
 
     if CameraData.Blurred then
         SetTimecycleModifier("CAMERA_secuirity_FUZZ")
@@ -71,7 +71,7 @@ RegisterNetEvent("mercy-misc/client/gopros/view-camera", function(Data)
     if GoProCam then
         DestroyCam(GoProCam, true)
         InsideCam, GoProCam = false, nil
-        exports['mercy-ui']:HideInteraction()
+        exports['nmsh-ui']:HideInteraction()
     end
 
     GoProCam = CreateCam("DEFAULT_SCRIPTED_CAMERA", true)
@@ -91,7 +91,7 @@ RegisterNetEvent("mercy-misc/client/gopros/view-camera", function(Data)
     RenderScriptCams(true, false, 0, 1, 0)
     InsideCam = true
 
-    exports['mercy-ui']:SetInteraction('[ESC] Close', 'error')
+    exports['nmsh-ui']:SetInteraction('[ESC] Close', 'error')
 
     Citizen.CreateThread(function()
         local DisablePause = true
@@ -128,8 +128,8 @@ RegisterNetEvent("mercy-misc/client/gopros/view-camera", function(Data)
         if IsControlJustPressed(1, 177) then
             DestroyCam(GoProCam, true)
             InsideCam, GoProCam = false, nil
-            exports['mercy-ui']:HideInteraction()
-            exports['mercy-inventory']:SetBusyState(false)
+            exports['nmsh-ui']:HideInteraction()
+            exports['nmsh-inventory']:SetBusyState(false)
         end
 
         Citizen.Wait(4)
@@ -143,22 +143,22 @@ RegisterNetEvent("mercy-misc/client/gopros/view-camera", function(Data)
     SetSeethrough(false)    
 end)
 
-RegisterNetEvent('mercy-misc/client/use-gopro', function(IsEncrypted)
+RegisterNetEvent('nmsh-misc/client/use-gopro', function(IsEncrypted)
     EntityModule.DoEntityPlacer('prop_spycam', 4.5, false, true, nil, function(DidPlace, Coords, Heading)
-        if not DidPlace then return exports['mercy-ui']:Notify("GoPro-error", "You stopped placing the GoPro or an error occured..", "error") end
-        local DidRemove = CallbackModule.SendCallback("mercy-base/server/remove-item", IsEncrypted and 'gopropd' or 'gopro', 1, false, true)
+        if not DidPlace then return exports['nmsh-ui']:Notify("GoPro-error", "You stopped placing the GoPro or an error occured..", "error") end
+        local DidRemove = CallbackModule.SendCallback("nmsh-base/server/remove-item", IsEncrypted and 'gopropd' or 'gopro', 1, false, true)
         if DidRemove then
             local IsVehicle = false
             local Vehicle = VehicleModule.GetClosestVehicle()
             if Vehicle['Distance'] <= 2.0 then
                 IsVehicle = true
             end
-            EventsModule.TriggerServer('mercy-misc/server/gopro-place', Coords, Heading, IsEncrypted, IsVehicle, Vehicle['Vehicle'])
+            EventsModule.TriggerServer('nmsh-misc/server/gopro-place', Coords, Heading, IsEncrypted, IsVehicle, Vehicle['Vehicle'])
         end
     end)
 end)
 
-RegisterNetEvent('mercy-misc/client/gopro-action', function(Type, Data)
+RegisterNetEvent('nmsh-misc/client/gopro-action', function(Type, Data)
     if Type == 1 then -- Change Full Data
         Config.GoPros = Data
     end
@@ -184,14 +184,14 @@ RegisterNetEvent('mercy-misc/client/gopro-action', function(Type, Data)
     end
 end)
 
-RegisterNetEvent('mercy-misc/client/gopro-blurcamera', function(Data, Entity)
+RegisterNetEvent('nmsh-misc/client/gopro-blurcamera', function(Data, Entity)
     local GoPro = GetGoProId(Entity)
-    local Outcome = exports['mercy-ui']:StartSkillTest(1, { 1, 5 }, { 12000, 18000 }, false)
+    local Outcome = exports['nmsh-ui']:StartSkillTest(1, { 1, 5 }, { 12000, 18000 }, false)
     if Outcome then
-        TriggerServerEvent("mercy-misc/server/gopro-action", GoPro, "SetBlurred", true)
-        exports['mercy-ui']:Notify("gopro-error", "Smudged camera!", "success")
+        TriggerServerEvent("nmsh-misc/server/gopro-action", GoPro, "SetBlurred", true)
+        exports['nmsh-ui']:Notify("gopro-error", "Smudged camera!", "success")
     else
-        exports['mercy-ui']:Notify("gopro-error", "Failed..", "error")
+        exports['nmsh-ui']:Notify("gopro-error", "Failed..", "error")
     end
 end)
 
@@ -267,7 +267,7 @@ end
 
 function InitGoPros()
     -- Get gopro config from server.
-    exports['mercy-ui']:AddEyeEntry(GetHashKey("prop_spycam"), {
+    exports['nmsh-ui']:AddEyeEntry(GetHashKey("prop_spycam"), {
         Type = 'Model',
         Model = 'prop_spycam',
         SpriteDistance = 5.0,
@@ -277,10 +277,10 @@ function InitGoPros()
                 Icon = 'fas fa-fingerprint',
                 Label = 'Smudge',
                 EventType = 'Client',
-                EventName = 'mercy-misc/client/gopro-blurcamera',
+                EventName = 'nmsh-misc/client/gopro-blurcamera',
                 EventParams = '',
                 Enabled = function(Entity)
-                    return (not exports['mercy-misc']:IsGoProBlurred(Entity))
+                    return (not exports['nmsh-misc']:IsGoProBlurred(Entity))
                 end,
             },
         }

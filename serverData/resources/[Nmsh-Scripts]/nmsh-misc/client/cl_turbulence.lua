@@ -3,7 +3,7 @@ local IsDriver = false
 local TurbulenceMin = 9.2
 local TurbulenceMax = 19.2
 
-RegisterNetEvent("mercy-threads/entered-vehicle", function() 
+RegisterNetEvent("nmsh-threads/entered-vehicle", function() 
     local Vehicle = GetVehiclePedIsIn(PlayerPedId())
     local Model = GetEntityModel(Vehicle)
     if not IsThisModelAPlane(Model) and not IsThisModelAHeli(Model) then return end
@@ -31,7 +31,7 @@ RegisterNetEvent("mercy-threads/entered-vehicle", function()
                 end
 
                 if IsThisModelAPlane(Model) and GetIsVehicleEngineRunning(Vehicle) then
-                    exports['mercy-ui']:Notify("turbulence-message", "How do I start this thing?", 'error')
+                    exports['nmsh-ui']:Notify("turbulence-message", "How do I start this thing?", 'error')
                     SetVehicleEngineOn(Vehicle, 0, 1, 1)
                     SetVehicleUndriveable(Vehicle, true)
                 end
@@ -43,6 +43,6 @@ RegisterNetEvent("mercy-threads/entered-vehicle", function()
     end)
 end)
 
-RegisterNetEvent("mercy-threads/exited-vehicle", function()
+RegisterNetEvent("nmsh-threads/exited-vehicle", function()
     InVehicle = false
 end)

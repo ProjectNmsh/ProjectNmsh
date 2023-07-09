@@ -36,11 +36,11 @@ function Queue:IsWhitelisted(user)
 	local identifierDiscord = discordId;
 
 	if identifierDiscord then
-		local roles = exports['mercy-api']:GetDiscordRoles(user);
+		local roles = exports['nmsh-api']:GetDiscordRoles(user);
 		if not (roles == false) then 
 			for i = 1, #roles do 
 				for roleID, list in pairs(Config.Rankings) do
-					if exports['mercy-api']:CheckEqual(roles[i], roleID) then 
+					if exports['nmsh-api']:CheckEqual(roles[i], roleID) then 
 						return true;
 					end
 				end
@@ -73,14 +73,14 @@ function Queue:SetupPriority(user)
 		--local roleName = Config.Default_Role_Name;
 		local roleName = '';
 		if identifierDiscord and (Queue.Players[license] == nil) then
-			local roles = exports['mercy-api']:GetDiscordRoles(user)
+			local roles = exports['nmsh-api']:GetDiscordRoles(user)
 			local lastRolePrio = 99999999999999999999;
 			local msg = nil;
 			if not (roles == false) then
 				for i = 1, #roles do
 					for roleID, list in pairs(Config.Rankings) do
 						local rolePrio = list[1];
-						if exports['mercy-api']:CheckEqual(roles[i], roleID) then
+						if exports['nmsh-api']:CheckEqual(roles[i], roleID) then
 							-- Return the index back to the Client script
 							table.insert(theirPrios, rolePrio);
 							if lastRolePrio > tonumber(rolePrio) then 
@@ -116,7 +116,7 @@ function Queue:SetupPriority(user)
 		Queue.SortedKeys = SortedKeys;
 		local username = GetPlayerName(user);
 		if identifierDiscord then 
-			local discordName = exports['mercy-api']:GetDiscordName(user);
+			local discordName = exports['nmsh-api']:GetDiscordName(user);
 			Queue.PlayerInfo[license] = { username, Queue.Players[license], roleName, discordName};
 		else 
 			Queue.PlayerInfo[license] = { username, Queue.Players[license], roleName };

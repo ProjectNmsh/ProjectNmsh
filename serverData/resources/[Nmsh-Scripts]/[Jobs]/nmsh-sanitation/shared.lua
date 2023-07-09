@@ -1,5 +1,5 @@
 Shared = {
-    ['TargetScript'] = 'qb-target',
+    ['TargetScript'] = 'nmsh-target',
     ['PhoneScript'] = 'qb-phone',
     ['Garbage'] = {
         ['vehicle'] = {

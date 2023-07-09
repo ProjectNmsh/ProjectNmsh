@@ -27,7 +27,7 @@ if Config.UseBlips then
           TriggerEvent('AppleTrees')
         else
           for _, v in pairs(ATreeZones) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -50,7 +50,7 @@ else
           TriggerEvent('AppleTrees')
         else
           for _, v in pairs(ATreeZones) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -99,7 +99,7 @@ end)
 
 RegisterNetEvent('AppleTrees', function()
   for _, v in pairs(ATreeZones) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), 1, 1, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), 1, 1, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -150,19 +150,19 @@ if Config.UseBlips then
           TriggerEvent('AnimalFarming4')
         else
           for _, v in pairs(CowFarming1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(CowFarming2) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(CowFarming3) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(CowFarming4) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -188,19 +188,19 @@ else
             TriggerEvent('AnimalFarming4')
           else
             for _, v in pairs(CowFarming1) do
-              exports['qb-target']:RemoveZone(v.Name)
+              exports['nmsh-target']:RemoveZone(v.Name)
               inZone = false
             end
             for _, v in pairs(CowFarming2) do
-              exports['qb-target']:RemoveZone(v.Name)
+              exports['nmsh-target']:RemoveZone(v.Name)
               inZone = false
             end
             for _, v in pairs(CowFarming3) do
-              exports['qb-target']:RemoveZone(v.Name)
+              exports['nmsh-target']:RemoveZone(v.Name)
               inZone = false
             end
             for _, v in pairs(CowFarming4) do
-              exports['qb-target']:RemoveZone(v.Name)
+              exports['nmsh-target']:RemoveZone(v.Name)
               inZone = false
             end
           end
@@ -294,7 +294,7 @@ end)
 
 RegisterNetEvent('AnimalFarming', function()
   for _, v in pairs(CowFarming1) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -322,7 +322,7 @@ end)
 
 RegisterNetEvent('AnimalFarming2', function()
   for _, v in pairs(CowFarming2) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -351,7 +351,7 @@ end)
 
 RegisterNetEvent('AnimalFarming3', function()
   for _, v in pairs(CowFarming3) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -380,7 +380,7 @@ end)
 
 RegisterNetEvent('AnimalFarming4', function()
   for _, v in pairs(CowFarming4) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -407,7 +407,7 @@ RegisterNetEvent('AnimalFarming4', function()
 end)
 
 
-exports['qb-target']:AddBoxZone("GetCowBucket", vector3(419.13, 6470.74, 28.82), 1.4, 0.5, {
+exports['nmsh-target']:AddBoxZone("GetCowBucket", vector3(419.13, 6470.74, 28.82), 1.4, 0.5, {
   name = "GetCowBucket",
   heading=315,
   debugPoly = false,
@@ -452,7 +452,7 @@ if Config.UseBlips then
           TriggerEvent('qb-simplefarming:pumpkin')
         else
           for _, v in pairs(PumpkinFarming1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -475,7 +475,7 @@ else
           TriggerEvent('qb-simplefarming:pumpkin')
         else
           for _, v in pairs(PumpkinFarming1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -536,7 +536,7 @@ end)
 
 RegisterNetEvent('qb-simplefarming:pumpkin', function()
   for _, v in pairs(PumpkinFarming1) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -582,7 +582,7 @@ if Config.UseBlips then
           TriggerEvent('CornField')
         else
           for _, v in pairs(CornField1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -605,7 +605,7 @@ else
           TriggerEvent('CornField')
         else
           for _, v in pairs(CornField1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -658,7 +658,7 @@ end)
 
 RegisterNetEvent('CornField', function()
   for _, v in pairs(CornField1) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -709,19 +709,19 @@ if Config.UseBlips then
           TriggerEvent('Tomatoes')
         else
           for _, v in pairs(GrapeFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(GPeppersFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(CPeppersFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(TomatoesField) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -747,19 +747,19 @@ else
           TriggerEvent('Tomatoes')
         else
           for _, v in pairs(GrapeFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(GPeppersFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(CPeppersFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(TomatoesField) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -902,7 +902,7 @@ end)
 
 RegisterNetEvent('GrapeField', function()
   for _, v in pairs(GrapeFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -925,7 +925,7 @@ end)
 
 RegisterNetEvent('GreenPeppers', function()
   for _, v in pairs(GPeppersFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -947,7 +947,7 @@ end)
 
 RegisterNetEvent('ChillPeppers', function()
   for _, v in pairs(CPeppersFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -970,7 +970,7 @@ end)
 
 RegisterNetEvent('Tomatoes', function()
   for _, v in pairs(TomatoesField) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1020,19 +1020,19 @@ if Config.UseBlips then
           TriggerEvent('BigTomField')
         else
           for _, v in pairs(BigGrapeFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(BigGreenPepperFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(BigChillyPepperFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(BigTomatoesFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -1058,19 +1058,19 @@ else
           TriggerEvent('BigTomField')
         else
           for _, v in pairs(BigGrapeFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(BigGreenPepperFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(BigChillyPepperFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(BigTomatoesFields) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -1081,7 +1081,7 @@ end
 
 RegisterNetEvent('BigGrapeField', function()
   for _, v in pairs(BigGrapeFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1104,7 +1104,7 @@ end)
 
 RegisterNetEvent('BigGreenPField', function()
   for _, v in pairs(BigGreenPepperFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1126,7 +1126,7 @@ end)
 
 RegisterNetEvent('BigChillyField', function()
   for _, v in pairs(BigChillyPepperFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1149,7 +1149,7 @@ end)
 
 RegisterNetEvent('BigTomField', function()
   for _, v in pairs(BigTomatoesFields) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1194,67 +1194,67 @@ if Config.UseBlips then
           TriggerEvent('PigPens')
         else
           for _, v in pairs(PigPens1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens2) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens3) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens4) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens5) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens6) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens7) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens8) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens9) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens10) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens11) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens12) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens13) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens14) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens15) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens16) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -1277,67 +1277,67 @@ else
           TriggerEvent('PigPens')
         else
           for _, v in pairs(PigPens1) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens2) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens3) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens4) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens5) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens6) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens7) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens8) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens9) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens10) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens11) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens12) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens13) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens14) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens15) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
           for _, v in pairs(PigPens16) do
-            exports['qb-target']:RemoveZone(v.Name)
+            exports['nmsh-target']:RemoveZone(v.Name)
             inZone = false
           end
         end
@@ -1480,7 +1480,7 @@ end)
 
 RegisterNetEvent('PigPens', function()
   for _, v in pairs(PigPens1) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1511,7 +1511,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens2) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1542,7 +1542,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens3) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1573,7 +1573,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens4) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1604,7 +1604,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens5) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1635,7 +1635,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens6) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1666,7 +1666,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens7) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1697,7 +1697,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens8) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1728,7 +1728,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens9) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1759,7 +1759,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens10) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1790,7 +1790,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens11) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1821,7 +1821,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens12) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1852,7 +1852,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens13) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1883,7 +1883,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens14) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1914,7 +1914,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens15) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1945,7 +1945,7 @@ RegisterNetEvent('PigPens', function()
     })
   end
   for _, v in pairs(PigPens16) do
-    exports['qb-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
+    exports['nmsh-target']:AddBoxZone(v.Name, vector3(v.Coords.x, v.Coords.y, v.Coords.z), v.length, v.width, {
       name=v.Name,
       heading= v.heading,
       debugPoly=false,
@@ -1977,7 +1977,7 @@ RegisterNetEvent('PigPens', function()
   end
 end)
 
-exports['qb-target']:AddBoxZone("dairyfarmer", DairyProcessor.targetZone, 1, 1, {
+exports['nmsh-target']:AddBoxZone("dairyfarmer", DairyProcessor.targetZone, 1, 1, {
 	name = "dairyfarmer",
 	heading = DairyProcessor.targetHeading,
 	debugPoly = false,
@@ -1995,7 +1995,7 @@ exports['qb-target']:AddBoxZone("dairyfarmer", DairyProcessor.targetZone, 1, 1, 
 	distance = 1.0
 })
 
-exports['qb-target']:AddBoxZone("piggyfarmer", PigFarmerTargetZone, 0.6, 0.8, {
+exports['nmsh-target']:AddBoxZone("piggyfarmer", PigFarmerTargetZone, 0.6, 0.8, {
 	name = "piggyfarmer",
 	heading = PigFarmerTzHeading,
 	debugPoly = false,
@@ -2059,7 +2059,7 @@ RegisterNetEvent('qb-simplefarming:menuprocessor', function()
         }
     },
 }
-exports['qb-menu']:openMenu(Processor)
+exports['nmsh-menu']:openMenu(Processor)
 end)
 
 RegisterNetEvent('qb-simplefarming:menufcow', function()
@@ -2102,11 +2102,11 @@ RegisterNetEvent('qb-simplefarming:menufcow', function()
         }
     },
 }
-exports['qb-menu']:openMenu(MeatCooking)
+exports['nmsh-menu']:openMenu(MeatCooking)
 end)
 
 
-exports['qb-target']:AddBoxZone("grammahouse", vector3(2438.07, 4975.82, 46.81), 1.0, 1.0, {
+exports['nmsh-target']:AddBoxZone("grammahouse", vector3(2438.07, 4975.82, 46.81), 1.0, 1.0, {
 	name = "grammahouse",
 	heading = 315,
 	debugPoly = false,
@@ -2124,7 +2124,7 @@ exports['qb-target']:AddBoxZone("grammahouse", vector3(2438.07, 4975.82, 46.81),
 	distance = 1.0
 })
 
-exports['qb-target']:AddBoxZone("processingped", FoodProcessor.targetZone, 1, 1, {
+exports['nmsh-target']:AddBoxZone("processingped", FoodProcessor.targetZone, 1, 1, {
 	name = "processingtrader",
 	heading = FoodProcessor.targetHeading,
 	debugPoly = false,
@@ -2142,7 +2142,7 @@ exports['qb-target']:AddBoxZone("processingped", FoodProcessor.targetZone, 1, 1,
 	distance = 1.0
 })
 
-exports['qb-target']:AddBoxZone("sellerped", Seller.targetZone, 1, 1, {
+exports['nmsh-target']:AddBoxZone("sellerped", Seller.targetZone, 1, 1, {
 	name = "seller",
 	heading = Seller.targetHeading,
 	debugPoly = false,

@@ -7,16 +7,16 @@ Config.PedHash = 0x94562DD7                            -- Hash numbers for ped m
 
 -- Blips
 FoodProcessor = {
-    targetZone = vector3(2853.98, 4557.02, 46.15),      -- qb-target vector
-    targetHeading = 5,                                  -- qb-target box zone
+    targetZone = vector3(2853.98, 4557.02, 46.15),      -- nmsh-target vector
+    targetHeading = 5,                                  -- nmsh-target box zone
     coords = vector4(2853.98, 4557.02, 46.15, 25.64),   -- Move Location (Ped and blip)
     SetBlipSprite = 568,                                -- Blip Icon (https://docs.fivem.net/docs/game-references/blips/)
     SetBlipDisplay = 6,                                 -- Blip Behavior (https://docs.fivem.net/natives/?_0x9029B2F3DA924928)
     SetBlipScale = 0.65,                                -- Blip Size
     SetBlipColour = 35,                                 -- Blip Color
     BlipLabel = "Food Processor",                       -- Blip Label
-    minZ = 43.95,                                       -- qb-target Min
-    maxZ = 47.95,                                       -- qb-target Max
+    minZ = 43.95,                                       -- nmsh-target Min
+    maxZ = 47.95,                                       -- nmsh-target Max
 }
 DairyProcessor = {
     targetZone = vector3(2567.92, 4684.44, 33.05),
@@ -48,10 +48,10 @@ Seller = {
 Config.PigFood = 5                                      -- Food Amount (Pig Food)
 Config.FoodPrice = 5                                    --  Pig Farm Food Price
 PigFarmer = vector4(2166.11, 5003.84, 40.39, 312.56)    -- Ped Location
-PigFarmerTargetZone = vector3(2166.11, 5003.84, 40.39)  -- QB-Target location
-PigFarmerTzHeading = 305                                -- QB-Target Heading
-PigFarmerMinZ = 40				                    	-- QB-Target MinZ
-PigFarmerMaxZ = 42				                    	-- QB-Target MaxZ
+PigFarmerTargetZone = vector3(2166.11, 5003.84, 40.39)  -- nmsh-target location
+PigFarmerTzHeading = 305                                -- nmsh-target Heading
+PigFarmerMinZ = 40				                    	-- nmsh-target MinZ
+PigFarmerMaxZ = 42				                    	-- nmsh-target MaxZ
 
 -- Processing Items
 Config.AppleProcessing = 3                              -- Trading Amount
