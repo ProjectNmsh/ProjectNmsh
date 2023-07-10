@@ -6,6 +6,10 @@ version '1.2.0'
 
 client_script 'client/main.lua'
 
+shared_scripts {
+    '@ox_lib/init.lua'
+}
+
 ui_page 'html/index.html'
 
 files {

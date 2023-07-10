@@ -8,6 +8,10 @@ client_scripts {
     'client/*.lua'
 }
 
+shared_scripts {
+    '@ox_lib/init.lua'
+}
+
 ui_page 'html/index.html'
 
 files {

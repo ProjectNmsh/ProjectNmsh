@@ -40,6 +40,8 @@ QBConfig.Notify.NotificationStyling = {
     progress = true -- Display Progress Bar
 }
 
+QBConfig.NotifyPosition = 'top-right' -- 'top' | 'top-right' | 'top-left' | 'bottom' | 'bottom-right' | 'bottom-left'
+
 -- These are how you define different notification variants
 -- The "color" key is background of the notification
 -- The "icon" key is the css-icon code, this project uses `Material Icons` & `Font Awesome`

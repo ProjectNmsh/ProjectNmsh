@@ -80,38 +80,52 @@ RegisterNUICallback('getNotifyConfig', function(_, cb)
     cb(QBCore.Config.Notify)
 end)
 
-function QBCore.Functions.Notify(text, texttype, length)
-    -- if type(text) == "table" then
-        -- local ttext = text.text or 'Placeholder'
-        -- local caption = text.caption or 'Placeholder'
-        -- texttype = texttype or 'primary'
-    --     length = length or 5000
-    --     SendNUIMessage({
-    --         action = 'notify',
-    --         type = texttype,
-    --         length = length,
-    --         text = ttext,
-    --         caption = caption
-    --     })
-    -- else
-    --     texttype = texttype or 'primary'
-    --     length = length or 5000
-    --     SendNUIMessage({
-    --         action = 'notify',
-    --         type = texttype,
-    --         length = length,
-    --         text = text
-    --     })
-    -- end
-    local ttext = text.text or 'Placeholder'
-    local caption = text.caption or 'Placeholder'
-    texttype = texttype or 'inform'
-    lib.notify({
-        title = 'Notification',
-        description = text,
-        type = texttype
-    })
+function QBCore.Functions.Notify(text, notifyType, duration)
+    notifyType = notifyType or 'inform'
+    if notifyType == 'primary' then notifyType = 'inform' end
+    duration = duration or 5000
+    local position = QBConfig.NotifyPosition
+    if type(text) == "table" then
+        local title = text.text or 'Placeholder'
+        local description = text.caption or 'Placeholder'
+        lib.notify({ title = title, description = description, duration = duration, type = notifyType, position = position})
+    else
+        lib.notify({ description = text, duration = duration, type = notifyType, position = position})
+    end
 end
+
+-- function QBCore.Functions.Notify(text, texttype, length)
+--     -- if type(text) == "table" then
+--         -- local ttext = text.text or 'Placeholder'
+--         -- local caption = text.caption or 'Placeholder'
+--         -- texttype = texttype or 'primary'
+--     --     length = length or 5000
+--     --     SendNUIMessage({
+--     --         action = 'notify',
+--     --         type = texttype,
+--     --         length = length,
+--     --         text = ttext,
+--     --         caption = caption
+--     --     })
+--     -- else
+--     --     texttype = texttype or 'primary'
+--     --     length = length or 5000
+--     --     SendNUIMessage({
+--     --         action = 'notify',
+--     --         type = texttype,
+--     --         length = length,
+--     --         text = text
+--     --     })
+--     -- end
+--     local ttext = text.text or 'Placeholder'
+--     local caption = text.caption or 'Placeholder'
+--     texttype = texttype or 'inform'
+--     lib.notify({
+--         title = 'Notification',
+--         description = text,
+--         type = texttype
+--     })
+-- end
 
 function QBCore.Debug(resource, obj, depth)
     TriggerServerEvent('QBCore:DebugSomething', resource, obj, depth)
