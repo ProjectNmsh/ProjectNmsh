@@ -4,6 +4,9 @@ Config = Config or {}
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use nmsh-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 
 Config.BossMenus = {
+    ['koi'] = {
+        vector3(-1054.34, -1440.89, -1.38),
+    },
     ['police'] = {
         vector3(461.45, -986.2, 30.73),
     },

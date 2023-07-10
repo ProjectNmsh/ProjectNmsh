@@ -338,11 +338,11 @@ local function CheckWeaponDamage(ped)
         if HasPedBeenDamagedByWeapon(ped, k, 0) then
             detected = true
             if not IsInDamageList(k) then
-                TriggerEvent('chat:addMessage', {
-                    color = { 255, 0, 0},
-                    multiline = false,
-                    args = {Lang:t('info.status'), v.damagereason}
-                })
+              --  TriggerEvent('chat:addMessage', {
+                --    color = { 255, 0, 0},
+                  --  multiline = false,
+                    --args = {Lang:t('info.status'), v.damagereason}
+                --})
                 CurrentDamageList[#CurrentDamageList+1] = k
             end
         end
@@ -521,6 +521,23 @@ local function ProcessDamage(ped)
             end
         end
     end
+end
+
+--Ranjit's emsbag functions
+
+-- Notifys
+function Notify(msg)
+    QBCore.Functions.Notify(msg)
+end
+
+-- Progressbars
+function progressBar(msg)
+    QBCore.Functions.Progressbar("ems bag", msg, 2500, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()end)
 end
 
 -- Events
@@ -710,6 +727,70 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
     ResetAll()
 end)
 
+--Ranjit's emsbag events
+-- Simple Event's , you can create yours and put on nmsh-menu :)
+
+RegisterNetEvent('Ranjit-EmsBag:Client:GiveRadio')
+AddEventHandler("Ranjit-EmsBag:Client:GiveRadio", function()
+    local playerPed = PlayerPedId()
+    TaskStartScenarioInPlace(playerPed, "CODE_HUMAN_MEDIC_TEND_TO_DEAD")
+    progressBar("Taking a Radio ...")
+    TriggerServerEvent("Ranjit-EmsBag:Server:AddItem", "radio", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["radio"], "add", 1)
+end)
+
+RegisterNetEvent('Ranjit-EmsBag:Client:Givebandage')
+AddEventHandler("Ranjit-EmsBag:Client:Givebandage", function()
+    local playerPed = PlayerPedId()
+    TaskStartScenarioInPlace(playerPed, "CODE_HUMAN_MEDIC_TEND_TO_DEAD")
+    progressBar("Taking Bandage ...")
+    TriggerServerEvent("Ranjit-EmsBag:Server:AddItem", "bandage", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["bandage"], "add", 1)
+end)
+RegisterNetEvent('Ranjit-EmsBag:Client:Givepainkillers')
+AddEventHandler("Ranjit-EmsBag:Client:Givepainkillers", function()
+    local playerPed = PlayerPedId()
+    TaskStartScenarioInPlace(playerPed, "CODE_HUMAN_MEDIC_TEND_TO_DEAD")
+    progressBar("Taking Painkillers ...")
+    TriggerServerEvent("Ranjit-EmsBag:Server:AddItem", "painkillers", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["painkillers"], "add", 1)
+end)
+RegisterNetEvent('Ranjit-EmsBag:Client:Givefirstaid')
+AddEventHandler("Ranjit-EmsBag:Client:Givefirstaid", function()
+    local playerPed = PlayerPedId()
+    TaskStartScenarioInPlace(playerPed, "CODE_HUMAN_MEDIC_TEND_TO_DEAD")
+    progressBar("Taking Firstaid ...")
+    TriggerServerEvent("Ranjit-EmsBag:Server:AddItem", "firstaid", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["firstaid"], "add", 1)
+end)
+RegisterNetEvent('Ranjit-EmsBag:Client:Giveweapon_flashlight')
+AddEventHandler("Ranjit-EmsBag:Client:Giveweapon_flashlight", function()
+    local playerPed = PlayerPedId()
+    TaskStartScenarioInPlace(playerPed, "CODE_HUMAN_MEDIC_TEND_TO_DEAD")
+    progressBar("Taking Flashlight ...")
+    TriggerServerEvent("Ranjit-EmsBag:Server:AddItem", "weapon_flashlight", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["weapon_flashlight"], "add", 1)
+end)
+
+
+RegisterNetEvent('Ranjit-EmsBag:Client:MenuAmbulanceBag', function()
+    local playerPed = PlayerPedId()
+    if IsEntityDead(playerPed) then return Notify("You cannot Open Bag while dead", "error") end
+    if IsPedSwimming(playerPed) then return Notify("You cannot Open Bag in the water.", "error") end
+    if IsPedSittingInAnyVehicle(playerPed) then return Notify("You cannot Open Bag inside a vehicle", "error") end
+    exports['nmsh-menu']:openMenu({
+        { header = "[🚑] Ambulance Box", txt = "", isMenuHeader = true },
+        { header = "[👜] Open AmbulanceBag",  params = { event = "Ranjit-EmsBag:Client:StorageAmbulanceBag" } },
+        { header = "[🩹]Take Bandage ",  params = { event = "Ranjit-EmsBag:Client:Givebandage" } },
+        { header = "[💊] Take Painkillers ",  params = { event = "Ranjit-EmsBag:Client:Givepainkillers" } },
+        { header = "[💉] Take Firstaid ",  params = { event = "Ranjit-EmsBag:Client:Givefirstaid" } },
+        { header = "[🔦] Take FlashLight ",  params = { event = "Ranjit-EmsBag:Client:Giveweapon_flashlight" } },
+        { header = "[📻] Take Radio",  params = { event = "Ranjit-EmsBag:Client:GiveRadio" } },
+        -- You can add more menus with your's personal events...
+        { header = "", txt = "❌ Close", params = { event = "nmsh-menu:closeMenu" } },
+    })
+end)
+
 -- Threads
 
 CreateThread(function()
@@ -883,6 +964,18 @@ end)
 if Config.UseTarget then
     CreateThread(function()
         for k, v in pairs(Config.Locations["checking"]) do
+
+            QBCore.Functions.LoadModel(Config.CheckingPed)
+            while not HasModelLoaded(Config.CheckingPed) do
+                Wait(100)
+            end
+            CheckingPed = CreatePed(0, Config.CheckingPed, v.x, v.y, v.z-1.0, v.w, false, true)
+            TaskStartScenarioInPlace(CheckingPed, true)
+            FreezeEntityPosition(CheckingPed, true)
+            SetEntityInvincible(CheckingPed, true)
+            SetBlockingOfNonTemporaryEvents(CheckingPed, true)
+            TaskStartScenarioInPlace(CheckingPed, Config.CheckingPedScenario, 0, true)
+
             exports['nmsh-target']:AddBoxZone("checking"..k, vector3(v.x, v.y, v.z), 3.5, 2, {
                 name = "checking"..k,
                 heading = -72,

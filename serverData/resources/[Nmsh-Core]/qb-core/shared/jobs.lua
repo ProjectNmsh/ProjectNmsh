@@ -15,6 +15,26 @@ QBShared.Jobs = {
             },
         },
 	},
+    ["koi"] = {
+        label = "KOI Restaurant",
+        offDutyPay = true,
+        defaultDuty = false,
+        grades = {
+            ['0'] = {
+                name = 'Employee',
+                payment = 30,
+            },
+            ['1'] = {
+                name = 'Vice Manager',
+                payment = 70,
+            },
+            ['2'] = {
+                name = 'Manager',
+                isboss = true,
+                payment = 130,
+            },
+        },
+    },
     ['oilwell'] = {
         label = 'Oil Company',
         defaultDuty = true,

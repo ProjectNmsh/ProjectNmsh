@@ -1,5 +1,5 @@
 Config = {
-	Guild_ID = 'GUILD_ID_HERE', -- Set to the ID of your guild (or your Primary guild if using Multiguild)
+	Guild_ID = '1127350548732055642', -- Set to the ID of your guild (or your Primary guild if using Multiguild)
 	Multiguild = false, -- Set to true if you want to use multiple guilds
 	Guilds = {
 		-- ["main"] = "985482949359177749", -- Replace this with a name, like "main"

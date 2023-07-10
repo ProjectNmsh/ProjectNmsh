@@ -1,0 +1,111 @@
+@import url('https://fonts.cdnfonts.com/css/akrobat');
+
+body {
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  user-select: none; -webkit-user-drag: none;
+}
+
+#wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	background: linear-gradient(142deg, #650e18 0%, #000000a8 35%, #000000a8 65%, #650e18 100%);
+}
+
+#wrapper h1 {
+	position: absolute;
+	width: 100%;
+	top: 15%;
+	left: 0%;
+	color: white;
+	font-family: 'Akrobat Black';
+	font-size: 3.6rem;
+	text-align: center;
+	text-shadow: white 0px 3px 40px;
+	text-transform: uppercase;
+}
+
+#wrapper h2 {
+	position: absolute;
+	width: 100%;
+	top: 12.5%;
+	left: 0%;
+	color: #9b4551;
+	font-family: 'Akrobat ExtraBold';
+	font-size: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#wrapper h3 {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0%;
+	color: white;
+	font-family: 'Akrobat ExtraBold';
+	font-size: 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#wrapper h4 {
+	position: absolute;
+	width: 100%;
+	top: 35%;
+	left: 0%;
+    color: #aa3d4a;
+	font-family: 'Akrobat Black';
+	font-size: 3.5rem;
+	letter-spacing: .2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#wrapper #killer {
+	color: #9b4551;
+	font-family: 'Akrobat Black';
+	font-size: 2.2rem;
+}
+
+#wrapper img {
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
+	width: 5%;
+	height: 10%;
+}
+
+#wrapper button {
+	position: relative;
+	min-height: 6vh;
+	top: 66%;
+	left: 30%;
+	padding-left: .8vw;
+	padding-right: .8vw;
+	font-size: 1.5rem;
+	font-family: 'Akrobat ExtraBold';
+	color: white;
+	background: #881724;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	transition: .4s;
+	margin-right: 20px;
+	text-align: center;
+	min-width: 250px;
+}
+
+#wrapper button:hover {
+	color: #881724;
+	background: white;
+}
+
+#wrapper #call_emergency.disabled {
+	pointer-events: none;
+	opacity: .8;
+}  

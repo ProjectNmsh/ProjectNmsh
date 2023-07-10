@@ -342,7 +342,7 @@ end)
 
 -- Commands
 
-QBCore.Commands.Add('911e', Lang:t('info.ems_report'), {{name = 'message', help = Lang:t('info.message_sent')}}, false, function(source, args)
+--[[QBCore.Commands.Add('911e', Lang:t('info.ems_report'), {{name = 'message', help = Lang:t('info.message_sent')}}, false, function(source, args)
 	local src = source
 	local message
 	if args[1] then message = table.concat(args, " ") else message = Lang:t('info.civ_call') end
@@ -354,7 +354,7 @@ QBCore.Commands.Add('911e', Lang:t('info.ems_report'), {{name = 'message', help 
             TriggerClientEvent('hospital:client:ambulanceAlert', v.PlayerData.source, coords, message)
         end
     end
-end)
+end)]]
 
 QBCore.Commands.Add("status", Lang:t('info.check_health'), {}, false, function(source, _)
 	local src = source

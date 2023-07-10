@@ -222,3 +222,34 @@ local function SignRobbery()
         job = {"LEO", "police"} -- type or jobs that will get the alerts
     })
 end exports('SignRobbery', SignRobbery)
+
+---------------------------
+---- nmsh-koi -------
+---------------------------
+
+local function Sussafe()
+    local currentPos = GetEntityCoords(PlayerPedId())
+    local locationInfo = getStreetandZone(currentPos)
+    local gender = GetPedGender()
+    TriggerServerEvent("dispatch:server:notify", {
+        dispatchcodename = "sussafe", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+        dispatchCode = "10-90",
+        firstStreet = locationInfo,
+        gender = gender,
+        camId = camId,
+        model = nil,
+        plate = nil,
+        priority = 2, -- priority
+        firstColor = nil,
+        automaticGunfire = false,
+        origin = {
+            x = currentPos.x,
+            y = currentPos.y,
+            z = currentPos.z
+        },
+        dispatchMessage = ('Safe crack on KOI'), -- message
+        job = {"LEO", "police"} -- type or jobs that will get the alerts
+    })
+end
+
+exports('Sussafe', Sussafe)

@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'nmsh-AmbulanceJob'
-version '1.2.4'
+description 'QB-AmbulanceJob'
+version '1.2.3'
 
 shared_scripts {
 	'@qb-core/shared/locale.lua',

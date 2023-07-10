@@ -1125,5 +1125,46 @@ QBShared.Items = {
     ["snorlaxvmaxrainbow"] 			 = {["name"] = "snorlaxvmaxrainbow", 			["label"] = "Rainbox Snorlax", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "snorlaxvmaxrainbow.png", 	["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,       ["combinable"] = nil,   ["description"] = "Rainbow Card"},
     ["pokebox"] 					 = {["name"] = "pokebox", 						["label"] = "Pokemon TCG Box", 			["weight"] = 50, 		["type"] = "item", 		["image"] = "pokebox.png", 				["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true, 	   ["combinable"] = nil,  ["description"] = "Pokemon TCG Storage Box"},
 
+
+    ["policetablet"] = {
+        ["name"] = "policetablet",
+        ["label"] = "Police Tablet",
+        ["weight"] = 5000,
+        ["type"] = "item",
+        ["image"] = "policetablet.png",
+        ["unique"] = true,
+        ['useable'] = true,
+        ["shouldClose"] = true,
+        ["combinable"] = nil,
+        ["description"] = "A mobile fingerprint tablet."
+    },
+
+
+        -- KOI Food
+['fish'] 				 	 = {['name'] = 'fish', 			  	  		['label'] = 'Raw Fish', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'rawfish.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Ching Chang Raw fish'},
+['cuttedfish'] 				 	 = {['name'] = 'cuttedfish', 			  	  		['label'] = 'Cutted Fish', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'cuttedfish.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Ching Chang Cutted Fish'},
+['salmon'] 				 	 = {['name'] = 'salmon', 			  	  		['label'] = 'Salmon', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'salmon.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Ching Chang salmon'},
+['rawchicken'] 				 	 = {['name'] = 'rawchicken', 			  	  		['label'] = 'Raw Chicken', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'rawhicken.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Ching Chang Raw Chicken'},
+['fries'] 				 	 = {['name'] = 'fries', 			  	  		['label'] = 'Fries', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'fries.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Ching Chang Fries'},
+['sushi'] 				 	 = {['name'] = 'sushi', 			  	  		['label'] = 'Sushi', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'sushi.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil, ['description'] = 'Ching Chang Sushi'},
+['sushiwithavocado'] 				 	 = {['name'] = 'sushiwithavocado', 			  	  		['label'] = 'Sushi with avocado', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'sushi.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Ching Chang Sushi with avocado'},
+['sushiwithmayospicy'] 				 	 = {['name'] = 'sushiwithmayospicy', 			  	  		['label'] = 'Sushi with mayo spicy', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'sushi.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Sushi with mayo spicy'},
+['sushiwithteriyaki'] 				 	 = {['name'] = 'sushiwithteriyaki', 			  	  		['label'] = 'Sushi with Teriyaki', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'sushi.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Sushi with Teriyaki'},
+['mayospicy'] 				 	 = {['name'] = 'mayospicy', 			  	  		['label'] = 'mayo spicy', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'mayospicy.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = {accept = {'sushi', 'sushiwithavocado'}, reward = 'sushiwithmayospicy',   anim = {['dict'] = 'anim@amb@business@weed@weed_inspecting_high_dry@', ['lib'] = 'weed_inspecting_high_base_inspector', ['text'] = 'Mix sushi', ['timeOut'] = 5000}},   ['description'] = 'mayo spicy'},
+['teriyaki'] 				 	 = {['name'] = 'teriyaki', 			  	  		['label'] = 'Teriyaki', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'teriyaki.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = {accept = {'sushi', 'sushiwithavocado'}, reward = 'sushiwithteriyaki',   anim = {['dict'] = 'anim@amb@business@weed@weed_inspecting_high_dry@', ['lib'] = 'weed_inspecting_high_base_inspector', ['text'] = 'Mix sushi', ['timeOut'] = 5000}},   ['description'] = 'Teriyaki'},
+['wagyuburger'] 				 	 = {['name'] = 'wagyuburger', 			  	  		['label'] = 'Wagyu meat', 				['weight'] = 2200, 		['type'] = 'item', 	['image'] = 'wagyuburger.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'wagyu burger'},
+['eggs'] 				 	 = {['name'] = 'eggs', 			  	  		['label'] = 'eggs', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'eggs.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'eggs'},
+['cookedeggs'] 				 	 = {['name'] = 'cookedeggs', 			  	  		['label'] = 'cooked eggs', 				['weight'] = 2200, 		['type'] = 'item', 		['image'] = 'cookedeggs.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'cooked eggs'},
+["chefknife"]                          = {["name"] = "chefknife",                           ["label"] = "Chef knife",                     ["weight"] = 7000,         ["type"] = "item",   ["image"] = "chefknife.png",                 ["unique"] = true,         ["useable"] = false,     ["combinable"] = nil, ["description"] = "Chef knife", ["created"] = nil, ["decay"] = 18.0},
+["dirtyknife"]           = {["name"] = "dirtyknife",             ["label"] = "Dirty Knife",             ["weight"] = 2200,     ["type"] = "item",      ["image"] = "dirtyknife.png",         ["unique"] = true,         ["useable"] = true,     ["combinable"] = nil, ["description"] = "Dirty chef knife", ["created"] = nil, ["decay"] = 18.0},
+["cookedwagyu"]           = {["name"] = "cookedwagyu",             ["label"] = "Cocked Wagyu",             ["weight"] = 2200,     ["type"] = "item",      ["image"] = "cookedwagyu.png",         ["unique"] = true,         ["useable"] = true,     ["combinable"] = nil, ["description"] = "Cocked wagyu", ["created"] = nil, ["decay"] = 18.0},
+["rice"]           = {["name"] = "rice",             ["label"] = "Rice",             ["weight"] = 2200,     ["type"] = "item",      ["image"] = "rice.png",         ["unique"] = true,         ["useable"] = false,     ["combinable"] = nil, ["description"] = "Rice", ["created"] = nil, ["decay"] = 18.0},
+["avocado"]           = {["name"] = "avocado",             ["label"] = "Avocado",             ["weight"] = 2200,     ["type"] = "item",      ["image"] = "avocado.png",         ["unique"] = true,         ["useable"] = true,     ["combinable"] = nil, ["description"] = "Cocked wagyu", ["created"] = nil, ["decay"] = 18.0},
+["seaweed"]           = {["name"] = "seaweed",             ["label"] = "Nori seaweed",             ["weight"] = 2200,     ["type"] = "item",      ["image"] = "seaweed.png",         ["unique"] = true,         ["useable"] = true,     ["combinable"] = nil, ["description"] = "Cocked wagyu", ["created"] = nil, ["decay"] = 18.0},
+["frychicken"]           = {["name"] = "frychicken",             ["label"] = "Chili Chicken",             ["weight"] = 2200,     ["type"] = "item",      ["image"] = "chicken.png",         ["unique"] = true,         ["useable"] = true,     ["combinable"] = nil, ["description"] = "Chili Chicken", ["created"] = nil, ["decay"] = 18.0},
+    -- KOI payment
+['paymenttablet']                          = {['name'] = 'paymenttablet',                            ['label'] = 'KOI Tablet',                    ['weight'] = 2000,         ['type'] = 'item',         ['image'] = 'tablet.png',                  ['unique'] = false,         ['useable'] = true,     ['shouldClose'] = true,      ['combinable'] = nil,   ['description'] = 'Expensive tablet'},
+
+
 }
 
