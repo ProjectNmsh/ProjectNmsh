@@ -1,9 +1,8 @@
-local ESX = exports.es_extended:getSharedObject()
 local utils = require 'client.utils'
 local groups = { 'job', 'job2' }
 local playerGroups = {}
 local playerItems = utils.getItems()
-local usingOxInventory = utils.hasExport('ox_inventory.Items')
+local usingOxInventory
 
 local function setPlayerData(playerData)
     table.wipe(playerGroups)
@@ -27,9 +26,14 @@ local function setPlayerData(playerData)
     end
 end
 
-if ESX.PlayerLoaded then
-    setPlayerData(ESX.PlayerData)
-end
+SetTimeout(0, function()
+    local ESX = exports.es_extended:getSharedObject()
+    usingOxInventory = utils.hasExport('ox_inventory.Items')
+
+    if ESX.PlayerLoaded then
+        setPlayerData(ESX.PlayerData)
+    end
+end)
 
 RegisterNetEvent('esx:playerLoaded', function(data)
     if source == '' then return end

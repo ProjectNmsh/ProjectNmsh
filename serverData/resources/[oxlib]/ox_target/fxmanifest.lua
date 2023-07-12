@@ -7,7 +7,7 @@ game 'gta5'
 -- Resource Information
 name 'ox_target'
 author 'Overextended'
-version '1.10.2'
+version '1.9.2'
 repository 'https://github.com/overextended/ox_target'
 description ''
 
@@ -39,10 +39,10 @@ files {
 	'client/framework/esx.lua',
 	'client/framework/qb.lua',
 	'client/compat/qtarget.lua',
-	'client/compat/nmsh-target.lua',
+	'client/compat/qb-target.lua',
 }
 
 provide 'qtarget'
-provide 'nmsh-target'
+provide 'qb-target'
 
 dependency 'ox_lib'

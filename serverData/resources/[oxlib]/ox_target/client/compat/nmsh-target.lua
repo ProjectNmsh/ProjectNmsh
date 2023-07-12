@@ -1,5 +1,5 @@
 local function exportHandler(exportName, func)
-    AddEventHandler(('__cfx_export_nmsh-target_%s'):format(exportName), function(setCB)
+    AddEventHandler(('__cfx_export_qb-target_%s'):format(exportName), function(setCB)
         setCB(func)
     end)
 end

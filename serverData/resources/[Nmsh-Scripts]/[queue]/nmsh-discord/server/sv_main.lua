@@ -1,4 +1,4 @@
-local FormattedToken = "Bot ".."TOKEN_HERE"
+local FormattedToken = "Bot ".."OTM1MjUxNzA5MDk2MjMxMDE0.GF1TXJ.WDvV4Dhv7w3X5zAlzx7NRxrdXbSkOlMDjTj5ak" -- Add you bot token
 
 -- Functions
 

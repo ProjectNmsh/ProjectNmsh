@@ -12,11 +12,11 @@ Config = {
 }
 
 Config.Splash = {
-	Header_IMG = '',
-	Enabled = false,
-	Wait = 2, -- How many seconds should splash page be shown for? (Max is 12)
-	Heading1 = "Mercy",
-	Heading2 = "Framework",
-	Discord_Link = '',
-	Website_Link = '',
+	Header_IMG = 'https://cdn.discordapp.com/attachments/1065234419000025148/1128758770252664863/back.png',
+	Enabled = true,
+	Wait = 5, -- How many seconds should splash page be shown for? (Max is 12)
+	Heading1 = "Nmsh",
+	Heading2 = "Files",
+	Discord_Link = 'https://discord.gg/YCwrKzkuvw',
+	Website_Link = 'https://github.com/ProjectNmsh/ProjectNmsh',
 }

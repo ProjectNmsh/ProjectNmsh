@@ -1,24 +1,3 @@
----@class TargetOptions
----@field label string
----@field name? string
----@field icon? string
----@field iconColor? string
----@field distance? number
----@field bones? string | string[]
----@field groups? string | string[] | table<string, number>
----@field items? string | string[] | table<string, number>
----@field anyItem? boolean
----@field canInteract fun(entity?: number, distance: number, coords: vector3, name?: string, bone?: number): boolean?
----@field onSelect? fun(data: TargetOptions | number)
----@field export? string
----@field event? string
----@field serverEvent? string
----@field command? string
----@field resource string
----@field openMenu? string
----@field menuName? string
----@field [string] any
-
 local api = setmetatable({}, {
     __newindex = function(self, index, value)
         rawset(self, index, value)
@@ -67,7 +46,7 @@ local function typeError(variable, expected, received)
 end
 
 ---@param target table
----@param options TargetOptions | TargetOptions[]
+---@param options table
 ---@param resource string
 local function addTarget(target, options, resource)
     local optionsType = type(options)
@@ -78,31 +57,15 @@ local function addTarget(target, options, resource)
 
     local tableType = table.type(options)
 
-    if tableType == 'hash' and options.label then
-        options = { options }
-    elseif tableType ~= 'array' then
+    if tableType ~= 'array' then
         typeError('options', 'array', ('%s table'):format(tableType))
     end
-
-    ---@cast options TargetOptions[]
 
     local num = #target
 
     for i = 1, #options do
-        local option = options[i]
-        option.resource = resource or 'ox_target'
-
-        if not resource then
-            if option.canInteract then
-                option.canInteract = msgpack.unpack(msgpack.pack(option.canInteract))
-            end
-
-            if option.onSelect then
-                option.onSelect = msgpack.unpack(msgpack.pack(option.onSelect))
-            end
-        end
-
         num += 1
+        options[i].resource = resource or 'ox_target'
         target[num] = options[i]
     end
 end
@@ -126,63 +89,58 @@ local function removeTarget(target, remove, resource)
     end
 end
 
----@type table<number, TargetOptions[]>
 local peds = {}
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addGlobalPed(options)
     addTarget(peds, options, GetInvokingResource())
 end
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.removeGlobalPed(options)
     removeTarget(peds, options, GetInvokingResource())
 end
 
----@type table<number, TargetOptions[]>
 local vehicles = {}
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addGlobalVehicle(options)
     addTarget(vehicles, options, GetInvokingResource())
 end
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.removeGlobalVehicle(options)
     removeTarget(vehicles, options, GetInvokingResource())
 end
 
----@type table<number, TargetOptions[]>
 local objects = {}
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addGlobalObject(options)
     addTarget(objects, options, GetInvokingResource())
 end
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.removeGlobalObject(options)
     removeTarget(objects, options, GetInvokingResource())
 end
 
----@type table<number, TargetOptions[]>
 local players = {}
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addGlobalPlayer(options)
     addTarget(players, options, GetInvokingResource())
 end
 
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.removeGlobalPlayer(options)
     removeTarget(players, options, GetInvokingResource())
 end
 
----@type table<number, TargetOptions[]>
 local models = {}
 
 ---@param arr number | number[]
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addModel(arr, options)
     if type(arr) ~= 'table' then arr = { arr } end
     local resource = GetInvokingResource()
@@ -221,11 +179,10 @@ function api.removeModel(arr, options)
     end
 end
 
----@type table<number, TargetOptions[]>
 local entities = {}
 
 ---@param arr number | number[]
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addEntity(arr, options)
     if type(arr) ~= 'table' then arr = { arr } end
     local resource = GetInvokingResource()
@@ -270,11 +227,10 @@ end
 
 RegisterNetEvent('ox_target:removeEntity', api.removeEntity)
 
----@type table<number, TargetOptions[]>
 local localEntities = {}
 
 ---@param arr number | number[]
----@param options TargetOptions | TargetOptions[]
+---@param options table
 function api.addLocalEntity(arr, options)
     if type(arr) ~= 'table' then arr = { arr } end
     local resource = GetInvokingResource()
