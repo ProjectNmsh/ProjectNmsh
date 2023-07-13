@@ -28,7 +28,7 @@ local weapons = {
 	[GetHashKey('WEAPON_REMOTESNIPER')] = {recoil  = 1.2, shake = 0.1},-- REMOTE SNIPER
 	[GetHashKey('WEAPON_GRENADELAUNCHER')] = {recoil = 1.0, shake = 0.08},-- GRENADE LAUNCHER
 	[GetHashKey('WEAPON_GRENADELAUCHER_SMOKE')] = {recoil = 1.0, shake = 0.04},-- GRENADE LAUNCHER SMOKE
-	[GetHashKey('WEAPON_RPG')] = {recoil = 0.0, shake = 0.9},-- RPG
+	[GetHashKey('WEAPON_RPG')] = {recoil = 0.0, shake = 3.0},-- RPG
 	[GetHashKey('WEAPON_STINGER')] = {recoil = 0.0, shake = 0.3},-- STINGER
 	[GetHashKey('WEAPON_MINIGUN')] = {recoil = 0.01, shake = 0.25},  -- MINIGUN
 	[GetHashKey('WEAPON_SNSPISTOL')] = {recoil = 0.2, shake = 0.02},-- SNS PISTOL
