@@ -110,20 +110,6 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Disable 'Combat Walk' after Combat
-Citizen.CreateThread( function()
-	while true do
-		Citizen.Wait(4)
-		if LocalPlayer.state.LoggedIn then
-			if not GetPedConfigFlag(PlayerPedId(), 78, 1) then
-				SetPedUsingActionMode(PlayerPedId(), false, -1, 0)
-			end
-		else
-			Citizen.Wait(450)
-		end
-    end
-end)
-
 -- Disable Blind Firing
 Citizen.CreateThread(function()
     while true do

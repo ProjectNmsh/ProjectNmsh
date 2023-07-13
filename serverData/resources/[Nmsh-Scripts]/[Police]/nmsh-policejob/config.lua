@@ -34,7 +34,7 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.GaragePedModel = "s_m_y_hwaycop_01"
 Config.Locations = {
     ["duty"] = {
-        [1] = vector3(444.16, -980.11, 30.68), -- LSPD
+        [1] = vector3(441.58, -981.83, 30.51), -- LSPD
         [2] = vector3(-447.73, 6015.58, 32.28), -- BCSO
         [3] = vector3(1832.68, 3678.4, 34.28), -- Sandy
     },

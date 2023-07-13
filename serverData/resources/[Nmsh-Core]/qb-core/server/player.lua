@@ -97,6 +97,7 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
     PlayerData.metadata['tracker'] = PlayerData.metadata['tracker'] or false
     PlayerData.metadata['injail'] = PlayerData.metadata['injail'] or 0
     PlayerData.metadata['jailitems'] = PlayerData.metadata['jailitems'] or {}
+    PlayerData.metadata['gameitems'] = PlayerData.metadata['gameitems'] or {}
     PlayerData.metadata['status'] = PlayerData.metadata['status'] or {}
     PlayerData.metadata['phone'] = PlayerData.metadata['phone'] or {}
     PlayerData.metadata['fitbit'] = PlayerData.metadata['fitbit'] or {}

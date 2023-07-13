@@ -122,7 +122,7 @@ function giveExp(number) {
 $(document).on("keydown", function () {
     switch (event.keyCode) {
         case 27: // ESC
-            $.post("https://ak4y-advancedFishing/closeMenu", JSON.stringify());
+            $.post("https://nmsh-advancedFishing/closeMenu", JSON.stringify());
             $(".generalFishMenu").hide();
             $(".upgradeRod").hide();
             $(".marketSelectMenu").hide();
@@ -130,7 +130,7 @@ $(document).on("keydown", function () {
             $(".classSellItemSection").hide();
             if (gameActive) {
                 keyGameStop();
-                $.post("https://ak4y-advancedFishing/failGame", JSON.stringify());
+                $.post("https://nmsh-advancedFishing/failGame", JSON.stringify());
             }
             break;
     }
@@ -208,7 +208,7 @@ $(document).on("click", ".sellItemSellButton", function () {
     let itemCount = $("#buyCount-" + itemId).val();
     if (itemCount > 0) {
         $.post(
-            "https://ak4y-advancedFishing/sellItem",
+            "https://nmsh-advancedFishing/sellItem",
             JSON.stringify({
                 itemId: itemId,
                 itemCount: itemCount,
@@ -409,7 +409,7 @@ $(document).on("click", ".rightItem.takeRewards", function () {
     }
     let divId = this.id;
     $.post(
-        "https://ak4y-advancedFishing/takeRewards",
+        "https://nmsh-advancedFishing/takeRewards",
         JSON.stringify({
             taskId: taskId,
             money: moneyRewards,
@@ -441,7 +441,7 @@ $(document).on("click", ".rightItem.takeRewards", function () {
 });
 
 $(document).on("click", ".cancelRodButton", function () {
-    $.post("https://ak4y-advancedFishing/closeMenu", JSON.stringify());
+    $.post("https://nmsh-advancedFishing/closeMenu", JSON.stringify());
     $(".upgradeRod").hide();
 });
 
@@ -490,7 +490,7 @@ $(document).on("click", ".marketBuyButton", function () {
     let itemCount = $("#count-" + itemId).val();
     if (itemCount > 0) {
         $.post(
-            "https://ak4y-advancedFishing/buyItem",
+            "https://nmsh-advancedFishing/buyItem",
             JSON.stringify({
                 itemId: itemId,
                 itemCount: itemCount,
@@ -504,12 +504,12 @@ $(document).on("click", ".marketBuyButton", function () {
 });
 
 $(document).on("click", "#marketCloseButon", function () {
-    $.post("https://ak4y-advancedFishing/closeMenu", JSON.stringify());
+    $.post("https://nmsh-advancedFishing/closeMenu", JSON.stringify());
     $(".classMarketSection").hide();
 });
 
 $(document).on("click", "#sellCloseButon", function () {
-    $.post("https://ak4y-advancedFishing/closeMenu", JSON.stringify());
+    $.post("https://nmsh-advancedFishing/closeMenu", JSON.stringify());
     $(".classSellItemSection").hide();
 });
 
@@ -523,14 +523,14 @@ $(document).on("click", ".upTopItem", function () {
 
 $(document).on("click", ".upgradeRodButton", function () {
     $.post(
-        "https://ak4y-advancedFishing/upgradeRod",
+        "https://nmsh-advancedFishing/upgradeRod",
         JSON.stringify({
             hedef: hedef,
             price: selectedPrice,
         }),
         function (data) {
             if (data) {
-                $.post("https://ak4y-advancedFishing/closeMenu", JSON.stringify());
+                $.post("https://nmsh-advancedFishing/closeMenu", JSON.stringify());
                 $(".upgradeRod").hide();
             }
         }
@@ -602,7 +602,7 @@ function update() {
             missedCount++;
             if (gameActive) {
                 keyGameStop();
-                $.post("https://ak4y-advancedFishing/failGame", JSON.stringify());
+                $.post("https://nmsh-advancedFishing/failGame", JSON.stringify());
             }
         }
     });
@@ -621,14 +621,14 @@ document.onkeyup = ({ key }) => {
                 clearTimeout(updateInterval);
                 setTimeout(() => {
                     keyGameStop();
-                    $.post("https://ak4y-advancedFishing/successGame", JSON.stringify());
+                    $.post("https://nmsh-advancedFishing/successGame", JSON.stringify());
                 }, 150);
             }
         }
     } else {
         if (gameActive) {
             keyGameStop();
-            $.post("https://ak4y-advancedFishing/failGame", JSON.stringify());
+            $.post("https://nmsh-advancedFishing/failGame", JSON.stringify());
         }
 
         missedCount++;
@@ -643,7 +643,7 @@ function keyGameStart() {
 }
 
 function keyGameStop() {
-    $.post("https://ak4y-advancedFishing/closeMenu", JSON.stringify());
+    $.post("https://nmsh-advancedFishing/closeMenu", JSON.stringify());
     gameActive = false;
     clearTimeout(randomKey);
     clearTimeout(updateInterval);

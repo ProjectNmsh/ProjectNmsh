@@ -2590,7 +2590,7 @@ if Config.Trader.active then
             }
         }
 
-        traderEntity = exports['nmsh-target']:SpawnPed({
+        traderEntity = exports['ox_target']:SpawnPed({
             model = trader.model,
             coords = trader.location,
             minusOne = true,

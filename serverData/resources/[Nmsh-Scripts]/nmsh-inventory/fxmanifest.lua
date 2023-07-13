@@ -1,35 +1,40 @@
 fx_version 'cerulean'
 game 'gta5'
-
-description 'nmsh-inventory'
-version '1.0.0'
+lua54 'yes'
 
 shared_scripts {
-	'config.lua',
-	'@nmsh-weapons/config.lua'
+	'@nmsh-weapons/config.lua',
+	"config.lua"
 }
 
 server_scripts {
 	'@oxmysql/lib/MySQL.lua',
-	'server/main.lua'
+	"config.lua",
+	'server/*.lua',
 }
 
-client_script 'client/main.lua'
-
-ui_page {
-	'html/ui.html'
+client_scripts {
+	"client/public.lua",
 }
+
+ui_page "html/antidump.html"
 
 files {
-	'html/ui.html',
-	'html/css/main.css',
-	'html/js/app.js',
+	"html/antidump.html",
+	"html/antidump.js",
 	'html/images/*.svg',
 	'html/images/*.png',
 	'html/images/*.jpg',
 	'html/ammo_images/*.png',
 	'html/attachment_images/*.png',
-	'html/*.ttf'
 }
 
-lua54 'yes'
+dependencies {
+	'nmsh-target'
+}
+
+escrow_ignore {
+	'config.lua',
+	'server/secret.lua',
+	'client/public.lua'
+}

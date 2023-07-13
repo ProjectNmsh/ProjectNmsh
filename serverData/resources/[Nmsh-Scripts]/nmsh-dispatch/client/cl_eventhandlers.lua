@@ -30,39 +30,37 @@ end
 ---@param ped number | The Ped ID of the shooter
 ---@param coords table | The Coords of the shooter
 AddEventHandler('CEventShockingGunshotFired', function(witnesses, ped, coords)
-    -- If AutoAlerts are disabled, don't trigger
-    if not Config.Enable['Shooting'] then return end
-    local coords = vector3(coords[1][1], coords[1][2], coords[1][3])
-    -- Use the timer to prevent the event from being triggered multiple times.
-    if Config.Timer['Shooting'] ~= 0 then return end
-    -- The ped that shot the gun must be the player.
-    if PlayerPedId() ~= ped then return end
-    -- This event can be triggered multiple times for a single gunshot, so we only want to run the code once.
-    -- If there are no witnesses, then the player is the shooter.
-    -- Else if there are witnesses, then the player will also be in that table.
-    -- If one of these conditions are met, then we can continue.
-    if witnesses and not isPedAWitness(witnesses, ped) then return end
-    -- If the player is a whitelisted job, then we don't want to trigger the event.
-    -- However, if the player is not whitelisted or Debug mode is true, then we want to trigger the event.
-    if Config.AuthorizedJobs.LEO.Check() and not Config.Debug then return end
-    -- If the weapon is silenced then we don't want to trigger the event.
-    if IsPedCurrentWeaponSilenced(ped) then return end 
-    -- If the weapon is blacklisted then we set the timer to the fail time and return.
-    if BlacklistedWeapon(ped) then Config.Timer['Shooting'] = Config.Shooting.Fail return end
-    -- Check if the Player is inside a No Dispatch Zone , if so dont make a alert
-    if inNoDispatchZone then return end
-    -- Check if the Player is in a Hunting Zone and Give that Alert Instead
-    if inHuntingZone then exports['nmsh-dispatch']:Hunting(); Config.Timer['Shooting'] = Config.Shooting.Success return end
-    local vehicle = GetVehiclePedIsUsing(ped, true)
-    if vehicle ~= 0 then
-        -- If the vehicle isn't whitelisted, don't trigger the event
-        if not vehicleWhitelist[GetVehicleClass(vehicle)] then Config.Timer['Shooting'] = Config.Shooting.Fail return end
-        vehicle = vehicleData(vehicle)
-        exports['nmsh-dispatch']:VehicleShooting(vehicle, ped, coords)
-        Config.Timer['Shooting'] = Config.Shooting.Success
-    else
-        exports['nmsh-dispatch']:Shooting(ped, coords)
-        Config.Timer['Shooting'] = Config.Shooting.Success
+    if not exports["pug-paintball"]:IsInPaintball() then
+        local coords = vector3(coords[1][1], coords[1][2], coords[1][3])
+        -- Use the timer to prevent the event from being triggered multiple times.
+        if Config.Timer['Shooting'] ~= 0 then return end
+        -- The ped that shot the gun must be the player.
+        if PlayerPedId() ~= ped then return end
+        -- This event can be triggered multiple times for a single gunshot, so we only want to run the code once.
+        -- If there are no witnesses, then the player is the shooter.
+        -- Else if there are witnesses, then the player will also be in that table.
+        -- If one of these conditions are met, then we can continue.
+        if witnesses and not isPedAWitness(witnesses, ped) then return end
+        -- If the player is a whitelisted job, then we don't want to trigger the event.
+        -- However, if the player is not whitelisted or Debug mode is true, then we want to trigger the event.
+        if Config.AuthorizedJobs.LEO.Check() and not Config.Debug then return end
+        -- If the weapon is silenced then we don't want to trigger the event.
+        if IsPedCurrentWeaponSilenced(ped) then return end 
+        -- If the weapon is blacklisted then we set the timer to the fail time and return.
+        if BlacklistedWeapon(ped) then Config.Timer['Shooting'] = Config.Shooting.Fail return end
+        -- Check if the Player is in a Hunting Zone and Give that Alert Instead
+        if inHuntingZone then exports['nmsh-dispatch']:Hunting(); Config.Timer['Shooting'] = Config.Shooting.Success return end
+        local vehicle = GetVehiclePedIsUsing(ped, true)
+        if vehicle ~= 0 then
+            if vehicleWhitelist[GetVehicleClass(vehicle)] then
+                vehicle = vehicleData(vehicle)
+                exports['nmsh-dispatch']:VehicleShooting(vehicle, ped, coords)
+                Config.Timer['Shooting'] = Config.Shooting.Success
+            end
+        else
+            exports['nmsh-dispatch']:Shooting(ped, coords)
+            Config.Timer['Shooting'] = Config.Shooting.Success
+        end
     end
 end)
 

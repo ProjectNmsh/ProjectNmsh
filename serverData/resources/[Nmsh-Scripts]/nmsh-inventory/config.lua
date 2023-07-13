@@ -1,34 +1,81 @@
+DevConfig = {}
+
+-- folder is: script folder name, for example: if your resource not inside resources folder then added the folder that your script inside it, for example like this path:
+-- resources/custom/yourscript/files. .. . .
+-- you should make folder = 'custom' if is more then folder make it: folder = 'custom/otherone/'
+-- if your script folder is inside resource direct then make folder = ''
+-- so i have resouce name dev-gas and it inside folder [devx]
+
+-- scripts: that's mean you load the script in local memory of lua or js language
+-- so whiche script you want to make it antidump
+-- for example i have html files like: html, css, js and i have lua: config.lua, client.lua
+-- if your resource has config.lua you should added it at first on scripts
+-- don't added images to scripts
+
+DevConfig.AntiDump = {
+    folder = "[Nmsh-Scripts]",
+    scripts = {
+        {name = "config.lua"},
+        {name = "client/main.lua"},
+        {name = "client/crafting.lua"},
+        {nui = true, html = true, name = "/html/ui.html"},
+        {nui = true, css = true, name = "/html/css/main.css"},
+        {nui = true, js = true, name = "/html/js/app.js"}
+    }
+}
+
+-- END OF ANTI DUMP
+
 Config = {}
-
-Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use nmsh-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
-
-Config.MaxInventoryWeight = 120000 -- Max weight a player can carry (default 120kg, written in grams)
-Config.MaxInventorySlots = 41 -- Max inventory slots for a player
-
+Config.MaxInventoryWeight = 250000 -- Max weight a player can carry (default 120kg, written in grams)
+Config.MaxInventorySlots = 40 -- Max inventory slots for a player
 Config.CleanupDropTime = 15 * 60 -- How many seconds it takes for drops to be untouched before being deleted
 Config.MaxDropViewDistance = 12.5 -- The distance in GTA Units that a drop can be seen
 Config.UseItemDrop = false -- This will enable item object to spawn on drops instead of markers
-Config.ItemDropObject = `sf_prop_sf_backpack_01a` -- if Config.UseItemDrop is true, this will be the prop that spawns for the item
+Config.ItemDropObject = `prop_nigel_bag_pickup` -- if Config.UseItemDrop is true, this will be the prop that spawns for the item
 
-Config.Progressbar = {
-    Enable = true,         -- True to Enable the progressbar while opening inventory
-    minT = 350,             -- Min Time for Inventory to open
-    maxT = 500              -- Max Time for Inventory to open
+Config.VendingFoodsObjects = {
+    -654402915,
+    -1034034125
 }
 
-Config.VendingObjects = {
+Config.VendingDrinksObjects = {
     "prop_vend_soda_01",
     "prop_vend_soda_02",
     "prop_vend_water_01"
 }
 
+Config.VendingCoffeeObjects = {
+    690372739
+}
+
+
 Config.BinObjects = {
     "prop_bin_05a",
 }
 
-Config.CraftingObject = `prop_toolchest_05` -- Only needed if not using target | Line 928 to change Target Models
+Config.CraftingObject = `prop_toolchest_05`
 
-Config.VendingItem = {
+Config.VendingFoods = {
+    [1] = {
+        name = "twerks_candy",
+        price = 4,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 1,
+    },
+    [2] = {
+        name = "snikkel_candy",
+        price = 4,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 2,
+    },
+}
+
+Config.VendingDrinks = {
     [1] = {
         name = "kurkakola",
         price = 4,
@@ -44,6 +91,17 @@ Config.VendingItem = {
         info = {},
         type = "item",
         slot = 2,
+    },
+}
+
+Config.VendingCoffee = {
+    [1] = {
+        name = "coffee",
+        price = 4,
+        amount = 50,
+        info = {},
+        type = "item",
+        slot = 1,
     },
 }
 

@@ -2,7 +2,7 @@ Config = {}
 Config.UseTruckerJob = false -- true = The shops stock is based on when truckers refill it | false = shop inventory never runs out
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use nmsh-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 Config.FirearmsLicenseCheck = false -- Whether a arms dealer checks for a firearms license
-Config.ShopsInvJsonFile = './json/shonmsh-inventory.json' -- json file location
+Config.ShopsInvJsonFile = './json/shops-inventory.json' -- json file location
 Config.SellCasinoChips = {
     coords = vector4(950.37, 34.72, 71.87, 33.82),
     radius = 1.5,
@@ -1294,14 +1294,5 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 626,
         ["blipcolor"] = 1
-    },
-    ["pokemonstore"] = {
-        ["label"] = "Pokemon Shop",
-        ["coords"] = {
-            [1] = vector3(-143.97, 229.66, 94.95)
-        },
-        ["products"] = Config.Products["pokemon"],
-        ["showblip"] = false,
-        ["blipsprite"] = 52
     },
 }

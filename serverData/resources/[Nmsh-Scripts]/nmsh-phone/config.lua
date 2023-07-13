@@ -30,7 +30,7 @@ Config.BlipColor = 4
 Config.BlipIcon = 280
 Config.BlipScale = 0.75
 
-Config.TweetDuration = 8 -- How many hours to load tweets (12 will load the past 12 hours of tweets)
+Config.TweetDuration = 24 -- How many hours to load tweets (12 will load the past 12 hours of tweets)
 Config.MailDuration = 72 -- How many hours to load Mails (72 will load the past 72 hours of Mails)
 
 
@@ -200,18 +200,6 @@ Config.PhoneApplications = {
         slot = 13,
         Alerts = 0,
     },
-    ["crypto"] = {
-        app = "crypto",
-        color = "#000000",
-        color2 = "#000000",
-        icon = "fab fa-bitcoin",
-        tooltipText = "Crypto",
-        style = "font-size: 2.7vh";
-        job = false,
-        blockedjobs = {},
-        slot = 14,
-        Alerts = 0,
-    },
     ["jobcenter"] = {
         app = "jobcenter",
         color = "#151515",
@@ -221,7 +209,7 @@ Config.PhoneApplications = {
         style = "color: #78bdfd; font-size: 2.7vh";
         job = false,
         blockedjobs = {},
-        slot = 15,
+        slot = 14,
         Alerts = 0,
     },
     ["employment"] = {
@@ -232,7 +220,7 @@ Config.PhoneApplications = {
         tooltipText = "Employment",
         job = false,
         blockedjobs = {},
-        slot = 16,
+        slot = 15,
         Alerts = 0,
     },
     ["lsbn"] = {
@@ -243,7 +231,7 @@ Config.PhoneApplications = {
         tooltipText = "LSBN",
         job = false,
         blockedjobs = {},
-        slot = 17,
+        slot = 16,
         Alerts = 0,
     },
     ["taxi"] = {
@@ -256,7 +244,7 @@ Config.PhoneApplications = {
         style = "font-size: 3vh";
         job = false,
         blockedjobs = {},
-        slot = 18,
+        slot = 17,
         Alerts = 0,
     },
     ["casino"] = {
@@ -269,7 +257,7 @@ Config.PhoneApplications = {
         style = "font-size: 2.7vh";
         job = false,
         blockedjobs = {},
-        slot = 19,
+        slot = 18,
         Alerts = 0,
     },
     ["calculator"] = {
@@ -282,7 +270,7 @@ Config.PhoneApplications = {
         style = "font-size: 2.5vh";
         job = false,
         blockedjobs = {},
-        slot = 20,
+        slot = 19,
         Alerts = 0,
     },
     ["gallery"] = {
@@ -295,7 +283,7 @@ Config.PhoneApplications = {
         style = "font-size: 2.7vh";
         job = false,
         blockedjobs = {},
-        slot = 21,
+        slot = 20,
         Alerts = 0,
     },
     ["racing"] = {
@@ -307,7 +295,7 @@ Config.PhoneApplications = {
         style = "font-size: 3vh";
         job = false,
         blockedjobs = {},
-        slot = 22,
+        slot = 21,
         Alerts = 0,
     },
     ["bank"] = {
@@ -319,7 +307,7 @@ Config.PhoneApplications = {
         style = "font-size: 2.7vh";
         job = false,
         blockedjobs = {},
-        slot = 23,
+        slot = 22,
         Alerts = 0,
     },
     ["gopro"] = {
@@ -332,7 +320,7 @@ Config.PhoneApplications = {
         style = "padding-right: .08vh; font-size: 3.3vh";
         job = false,
         blockedjobs = {},
-        slot = 24,
+        slot = 23,
         Alerts = 0,
     },
     ["group-chats"] = {
@@ -345,7 +333,7 @@ Config.PhoneApplications = {
         style = "padding-right: .08vh; font-size: 3.3vh";
         job = false,
         blockedjobs = {},
-        slot = 25,
+        slot = 24,
         Alerts = 0,
     },
     ["meos"] = {
@@ -356,12 +344,12 @@ Config.PhoneApplications = {
         tooltipText = "MDT",
         job = "police",
         blockedjobs = {},
-        slot = 26,
+        slot = 25,
         Alerts = 0,
     },
 }
 
-Config.MaxSlots = 28
+Config.MaxSlots = 27
 
 Config.JobCenter = {
     [1] = {
